@@ -1,0 +1,124 @@
+/*
+ * This is a RANDOMLY GENERATED PROGRAM.
+ *
+ * Generator: csmith 2.3.0
+ * Git version: 30dccd7
+ * Options:   (none)
+ * Seed:      4104202378
+ */
+
+#include "csmith.h"
+
+
+static long __undefined;
+
+/* --- Struct/Union Declarations --- */
+struct S1 {
+   volatile int32_t  f0;
+   uint64_t  f1;
+   volatile int32_t  f2;
+   int8_t  f3;
+};
+
+/* --- GLOBAL VARIABLES --- */
+static uint16_t g_2 = 0xE64FL;
+static struct S1 g_5[3][8][5] = {{{{0xE4960898L,0x295AD7CBC1764019LL,0xF5CE9472L,0x23L},{0xA7A81A82L,1UL,0x815F8425L,9L},{-1L,18446744073709551614UL,-1L,0x0BL},{0L,18446744073709551615UL,0x84D1B33BL,-6L},{-1L,18446744073709551611UL,0x91351DBDL,0xCCL}},{{0x02E9D3B0L,18446744073709551612UL,0x23EE1E16L,0xE4L},{0xA9FC5C2DL,0x50E28AB82AEC7F51LL,-1L,-7L},{0x010944B0L,1UL,-6L,0xC9L},{0L,0xF148A9B2A33634C7LL,1L,-3L},{-1L,0x11012106DF3F1863LL,0x476FC58AL,0x37L}},{{-1L,3UL,0x325CF162L,2L},{0x016488A9L,0x33147F59EC134886LL,0x55D58009L,-1L},{0xB4FF5102L,0x2AEAFD71021F5EB7LL,0x464F6128L,0x29L},{0x03D2CF3EL,18446744073709551615UL,0x6E1580EBL,0x0FL},{-1L,18446744073709551614UL,-1L,0x0BL}},{{-7L,0UL,0xFA3C9E4AL,0x43L},{0x149AF408L,18446744073709551615UL,0L,-4L},{0xA7A81A82L,1UL,0x815F8425L,9L},{0x205A4AACL,1UL,-8L,-1L},{0L,0xF148A9B2A33634C7LL,1L,-3L}},{{1L,18446744073709551611UL,0x4A126529L,0x94L},{-1L,1UL,0x401D8B2DL,-2L},{0x149AF408L,18446744073709551615UL,0L,-4L},{0xB4FF5102L,0x2AEAFD71021F5EB7LL,0x464F6128L,0x29L},{-1L,18446744073709551609UL,0x78DE6117L,0L}},{{-1L,18446744073709551611UL,0x91351DBDL,0xCCL},{0L,18446744073709551615UL,0x5F9D9D8AL,0x31L},{0x149AF408L,18446744073709551615UL,0L,-4L},{-1L,3UL,0x325CF162L,2L},{-9L,0xED423CB8E00457A2LL,0xA34071E9L,0x42L}},{{-9L,0xED423CB8E00457A2LL,0xA34071E9L,0x42L},{1L,18446744073709551611UL,0x4A126529L,0x94L},{0xA7A81A82L,1UL,0x815F8425L,9L},{1L,0xA684A08DEB256CD2LL,-1L,-4L},{0xA7A81A82L,1UL,0x815F8425L,9L}},{{-8L,0x7E161529ABC0A086LL,-1L,0xB2L},{-8L,0x7E161529ABC0A086LL,-1L,0xB2L},{0xB4FF5102L,0x2AEAFD71021F5EB7LL,0x464F6128L,0x29L},{0x02E9D3B0L,18446744073709551612UL,0x23EE1E16L,0xE4L},{0x35984225L,18446744073709551615UL,0x9E62B560L,0x5DL}}},{{{0x205A4AACL,1UL,-8L,-1L},{-1L,0x11012106DF3F1863LL,0x476FC58AL,0x37L},{0x010944B0L,1UL,-6L,0xC9L},{-8L,0x7E161529ABC0A086LL,-1L,0xB2L},{4L,18446744073709551615UL,0xA0B2B040L,-1L}},{{-1L,1UL,0x401D8B2DL,-2L},{0L,0x2A5B4D633C66883CLL,3L,0x99L},{0x9B6842A4L,0UL,0xC4999369L,0x1DL},{4L,18446744073709551615UL,0xA0B2B040L,-1L},{-1L,0x11012106DF3F1863LL,0x476FC58AL,0x37L}},{{0xB9BE056EL,0xF5237AE93AC4895DLL,1L,0x28L},{0xA9FC5C2DL,0x50E28AB82AEC7F51LL,-1L,-7L},{-1L,18446744073709551609UL,0x78DE6117L,0L},{0x35984225L,18446744073709551615UL,0x9E62B560L,0x5DL},{-7L,0UL,0xFA3C9E4AL,0x43L}},{{0x919139F4L,0x02D14A59E478DFCELL,0x49562184L,-4L},{0xC9DF78A4L,0x286E0DAEE255298ALL,-9L,4L},{2L,18446744073709551615UL,-1L,0x4CL},{0xA7A81A82L,1UL,0x815F8425L,9L},{0L,18446744073709551615UL,0x5F9D9D8AL,0x31L}},{{0L,0xF148A9B2A33634C7LL,1L,-3L},{-7L,0UL,0xFA3C9E4AL,0x43L},{0L,18446744073709551615UL,0x84D1B33BL,-6L},{-9L,0xED423CB8E00457A2LL,0xA34071E9L,0x42L},{0x010944B0L,1UL,-6L,0xC9L}},{{-1L,1UL,0x401D8B2DL,-2L},{0x149AF408L,18446744073709551615UL,0L,-4L},{0xB4FF5102L,0x2AEAFD71021F5EB7LL,0x464F6128L,0x29L},{-1L,18446744073709551609UL,0x78DE6117L,0L},{1L,1UL,1L,-1L}},{{-1L,1UL,0x401D8B2DL,-2L},{0x76E5F377L,0UL,-1L,-10L},{0x35984225L,18446744073709551615UL,0x9E62B560L,0x5DL},{0L,0xF148A9B2A33634C7LL,1L,-3L},{0x02E9D3B0L,18446744073709551612UL,0x23EE1E16L,0xE4L}},{{0L,0xF148A9B2A33634C7LL,1L,-3L},{-1L,18446744073709551614UL,-1L,0x0BL},{0xB9BE056EL,0xF5237AE93AC4895DLL,1L,0x28L},{-1L,18446744073709551614UL,-1L,0x0BL},{0L,0xF148A9B2A33634C7LL,1L,-3L}}},{{{0x919139F4L,0x02D14A59E478DFCELL,0x49562184L,-4L},{0L,18446744073709551615UL,0x84D1B33BL,-6L},{0L,18446744073709551615UL,0x5F9D9D8AL,0x31L},{-1L,0x11012106DF3F1863LL,0x476FC58AL,0x37L},{0xC9DF78A4L,0x286E0DAEE255298ALL,-9L,4L}},{{0xB9BE056EL,0xF5237AE93AC4895DLL,1L,0x28L},{4L,18446744073709551615UL,0xA0B2B040L,-1L},{0xE45DB0FFL,0x46C8C5CECCE005ABLL,4L,9L},{-1L,18446744073709551611UL,0x91351DBDL,0xCCL},{0x9AED293EL,18446744073709551609UL,0L,9L}},{{0x76E5F377L,0UL,-1L,-10L},{0xE4960898L,0x295AD7CBC1764019LL,0xF5CE9472L,0x23L},{0x9AED293EL,18446744073709551609UL,0L,9L},{0L,18446744073709551615UL,0x84D1B33BL,-6L},{0xC9DF78A4L,0x286E0DAEE255298ALL,-9L,4L}},{{2L,18446744073709551615UL,-1L,0x4CL},{-1L,18446744073709551611UL,0x91351DBDL,0xCCL},{-1L,3UL,0x325CF162L,2L},{0L,0x2A5B4D633C66883CLL,3L,0x99L},{0L,0xF148A9B2A33634C7LL,1L,-3L}},{{0xC9DF78A4L,0x286E0DAEE255298ALL,-9L,4L},{2L,18446744073709551615UL,-1L,0x4CL},{0xA7A81A82L,1UL,0x815F8425L,9L},{0L,18446744073709551615UL,0x5F9D9D8AL,0x31L},{0x02E9D3B0L,18446744073709551612UL,0x23EE1E16L,0xE4L}},{{0xA7A81A82L,1UL,0x815F8425L,9L},{0x205A4AACL,1UL,-8L,-1L},{0L,0xF148A9B2A33634C7LL,1L,-3L},{0xB9CA2468L,0x5B79C14114C53FB5LL,-4L,9L},{1L,1UL,1L,-1L}},{{-1L,0UL,-3L,0x44L},{0x35984225L,18446744073709551615UL,0x9E62B560L,0x5DL},{-9L,0xED423CB8E00457A2LL,0xA34071E9L,0x42L},{0xB9CA2468L,0x5B79C14114C53FB5LL,-4L,9L},{0x010944B0L,1UL,-6L,0xC9L}},{{-7L,0UL,0xFA3C9E4AL,0x43L},{-1L,0x11012106DF3F1863LL,0x476FC58AL,0x37L},{-1L,0UL,-3L,0x44L},{0L,18446744073709551615UL,0x5F9D9D8AL,0x31L},{0L,18446744073709551615UL,0x5F9D9D8AL,0x31L}}}};
+
+
+/* --- FORWARD DECLARATIONS --- */
+static struct S1  func_1(void);
+
+
+/* --- FUNCTIONS --- */
+/* ------------------------------------------ */
+/* 
+ * reads : g_2 g_5
+ * writes: g_2
+ */
+static struct S1  func_1(void)
+{ /* block id: 0 */
+    g_2++;
+    return g_5[2][7][4];
+}
+
+
+
+
+/* ---------------------------------------- */
+int main (int argc, char* argv[])
+{
+    int i, j, k;
+    int print_hash_value = 0;
+    if (argc == 2 && strcmp(argv[1], "1") == 0) print_hash_value = 1;
+    platform_main_begin();
+    crc32_gentab();
+    func_1();
+    transparent_crc(g_2, "g_2", print_hash_value);
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 8; j++)
+        {
+            for (k = 0; k < 5; k++)
+            {
+                transparent_crc(g_5[i][j][k].f0, "g_5[i][j][k].f0", print_hash_value);
+                transparent_crc(g_5[i][j][k].f1, "g_5[i][j][k].f1", print_hash_value);
+                transparent_crc(g_5[i][j][k].f2, "g_5[i][j][k].f2", print_hash_value);
+                transparent_crc(g_5[i][j][k].f3, "g_5[i][j][k].f3", print_hash_value);
+                if (print_hash_value) printf("index = [%d][%d][%d]\n", i, j, k);
+
+            }
+        }
+    }
+    platform_main_end(crc32_context ^ 0xFFFFFFFFUL, print_hash_value);
+    return 0;
+}
+
+/************************ statistics *************************
+XXX max struct depth: 1
+breakdown:
+   depth: 0, occurrence: 1
+   depth: 1, occurrence: 1
+XXX total union variables: 0
+
+XXX non-zero bitfields defined in structs: 0
+XXX zero bitfields defined in structs: 0
+XXX const bitfields defined in structs: 0
+XXX volatile bitfields defined in structs: 0
+XXX structs with bitfields in the program: 0
+breakdown:
+XXX full-bitfields structs in the program: 0
+breakdown:
+XXX times a bitfields struct's address is taken: 0
+XXX times a bitfields struct on LHS: 0
+XXX times a bitfields struct on RHS: 0
+XXX times a single bitfield on LHS: 0
+XXX times a single bitfield on RHS: 0
+
+XXX max expression depth: 1
+breakdown:
+   depth: 1, occurrence: 3
+
+XXX total number of pointers: 0
+
+XXX times a non-volatile is read: 1
+XXX times a non-volatile is write: 1
+XXX times a volatile is read: 0
+XXX    times read thru a pointer: 0
+XXX times a volatile is write: 0
+XXX    times written thru a pointer: 0
+XXX times a volatile is available for access: 0
+XXX percentage of non-volatile access: 100
+
+XXX forward jumps: 0
+XXX backward jumps: 0
+
+XXX stmts: 2
+XXX max block depth: 0
+breakdown:
+   depth: 0, occurrence: 2
+
+XXX percentage a fresh-made variable is used: 100
+XXX percentage an existing variable is used: 0
+FYI: the random generator makes assumptions about the integer size. See platform.info for more details.
+********************* end of statistics **********************/
+

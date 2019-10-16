@@ -1,0 +1,118 @@
+/*
+ * This is a RANDOMLY GENERATED PROGRAM.
+ *
+ * Generator: csmith 2.3.0
+ * Git version: 30dccd7
+ * Options:   (none)
+ * Seed:      1765071996
+ */
+
+#include "csmith.h"
+
+
+static long __undefined;
+
+/* --- Struct/Union Declarations --- */
+union U4 {
+   volatile int32_t  f0;
+   signed f1 : 27;
+   volatile int64_t  f2;
+};
+
+/* --- GLOBAL VARIABLES --- */
+static union U4 g_2[5][5][8] = {{{{9L},{0x646899DBL},{0L},{0xEF544BD1L},{0x75DF1563L},{-8L},{0x5674643AL},{0x116971DBL}},{{-1L},{0xA597FB6FL},{-6L},{0L},{0L},{-6L},{0xA597FB6FL},{-1L}},{{-8L},{0x61943EC3L},{6L},{6L},{0L},{0x4E785C2FL},{-1L},{0L}},{{1L},{0x1D7FEAE2L},{0L},{0x243B9C30L},{6L},{0x4E785C2FL},{0xF5063F37L},{-6L}},{{0x09495116L},{0x61943EC3L},{-2L},{-5L},{0x646899DBL},{-6L},{4L},{0xDB2B058EL}}},{{{-6L},{0xA597FB6FL},{9L},{0x953E80C6L},{0L},{-8L},{0x1D7FEAE2L},{0x31DDA87BL}},{{9L},{0x1D7FEAE2L},{6L},{-5L},{0x4E4A53E8L},{9L},{0xA7D2AE85L},{0x116971DBL}},{{0xDB2B058EL},{9L},{0x6F32215FL},{-6L},{0x350D8AF8L},{0x61943EC3L},{0x376E30F4L},{0x2AC6AA04L}},{{0x4BD47CDDL},{0x09E13A3AL},{0xA97F51EFL},{0x57994279L},{0xFFDE63B6L},{0L},{0x61943EC3L},{0L}},{{0x8D08F492L},{0xFFDE63B6L},{2L},{6L},{0x213AABDCL},{0xE71B35D5L},{0x7EA1B148L},{0x4E4A53E8L}}},{{{-5L},{5L},{0L},{0x2FFA36FEL},{0x713E19F2L},{0x7EA1B148L},{-1L},{-1L}},{{0xE71B35D5L},{0L},{0L},{0x09495116L},{0L},{0L},{0xFEBDAB6AL},{9L}},{{0x09E13A3AL},{1L},{0L},{-1L},{0x6B405B75L},{0xDB2B058EL},{0x376E30F4L},{0x8D5FEAF8L}},{{0L},{-8L},{-6L},{0x5674643AL},{-6L},{-8L},{0L},{-5L}},{{0x7D594484L},{2L},{-5L},{0L},{0x4384F3ACL},{0x732ADAA2L},{0x4E4A53E8L},{9L}}},{{{9L},{5L},{0x5674643AL},{0x974EDF0EL},{0x4384F3ACL},{0x09495116L},{-1L},{0x5674643AL}},{{0x7D594484L},{1L},{0x10C33490L},{9L},{-6L},{0L},{-1L},{-6L}},{{0L},{0L},{0L},{-6L},{0x6B405B75L},{0x61943EC3L},{2L},{0L}},{{0x09E13A3AL},{-1L},{0x09495116L},{-1L},{0L},{6L},{0xDB2B058EL},{-1L}},{{0xE71B35D5L},{0x4E4A53E8L},{1L},{-1L},{0x713E19F2L},{1L},{-5L},{9L}}},{{{-5L},{-8L},{0x8D5FEAF8L},{0x2AC6AA04L},{0x213AABDCL},{1L},{-8L},{0x48AAB564L}},{{0x8D08F492L},{0xA7D2AE85L},{0xE71B35D5L},{-1L},{0xFFDE63B6L},{0xEF544BD1L},{0L},{0x243B9C30L}},{{0x4BD47CDDL},{1L},{0L},{-1L},{0x350D8AF8L},{4L},{-1L},{0x453D47EBL}},{{0xDB2B058EL},{0L},{0x7F1A969AL},{0xA597FB6FL},{0x4E4A53E8L},{-6L},{0x6B405B75L},{0x376E30F4L}},{{9L},{0x7F1A969AL},{-1L},{0L},{-1L},{1L},{0x4E4A53E8L},{0x4E4A53E8L}}}};
+
+
+/* --- FORWARD DECLARATIONS --- */
+static union U4  func_1(void);
+
+
+/* --- FUNCTIONS --- */
+/* ------------------------------------------ */
+/* 
+ * reads : g_2
+ * writes:
+ */
+static union U4  func_1(void)
+{ /* block id: 0 */
+    return g_2[4][2][6];
+}
+
+
+
+
+/* ---------------------------------------- */
+int main (int argc, char* argv[])
+{
+    int i, j, k;
+    int print_hash_value = 0;
+    if (argc == 2 && strcmp(argv[1], "1") == 0) print_hash_value = 1;
+    platform_main_begin();
+    crc32_gentab();
+    func_1();
+    for (i = 0; i < 5; i++)
+    {
+        for (j = 0; j < 5; j++)
+        {
+            for (k = 0; k < 8; k++)
+            {
+                transparent_crc(g_2[i][j][k].f0, "g_2[i][j][k].f0", print_hash_value);
+                transparent_crc(g_2[i][j][k].f1, "g_2[i][j][k].f1", print_hash_value);
+                if (print_hash_value) printf("index = [%d][%d][%d]\n", i, j, k);
+
+            }
+        }
+    }
+    platform_main_end(crc32_context ^ 0xFFFFFFFFUL, print_hash_value);
+    return 0;
+}
+
+/************************ statistics *************************
+XXX max struct depth: 0
+breakdown:
+   depth: 0, occurrence: 1
+XXX total union variables: 1
+
+XXX non-zero bitfields defined in structs: 1
+XXX zero bitfields defined in structs: 0
+XXX const bitfields defined in structs: 0
+XXX volatile bitfields defined in structs: 0
+XXX structs with bitfields in the program: 1
+breakdown:
+   indirect level: 0, occurrence: 1
+XXX full-bitfields structs in the program: 0
+breakdown:
+XXX times a bitfields struct's address is taken: 0
+XXX times a bitfields struct on LHS: 0
+XXX times a bitfields struct on RHS: 1
+XXX times a single bitfield on LHS: 0
+XXX times a single bitfield on RHS: 0
+
+XXX max expression depth: 1
+breakdown:
+   depth: 1, occurrence: 1
+
+XXX total number of pointers: 0
+
+XXX times a non-volatile is read: 1
+XXX times a non-volatile is write: 0
+XXX times a volatile is read: 0
+XXX    times read thru a pointer: 0
+XXX times a volatile is write: 0
+XXX    times written thru a pointer: 0
+XXX times a volatile is available for access: 0
+XXX percentage of non-volatile access: 100
+
+XXX forward jumps: 0
+XXX backward jumps: 0
+
+XXX stmts: 1
+XXX max block depth: 0
+breakdown:
+   depth: 0, occurrence: 1
+
+XXX percentage a fresh-made variable is used: 100
+XXX percentage an existing variable is used: 0
+FYI: the random generator makes assumptions about the integer size. See platform.info for more details.
+********************* end of statistics **********************/
+

@@ -1,0 +1,1555 @@
+/*
+ * This is a RANDOMLY GENERATED PROGRAM.
+ *
+ * Generator: csmith 2.3.0
+ * Git version: 30dccd7
+ * Options:   (none)
+ * Seed:      3014269122
+ */
+
+#include "csmith.h"
+
+
+static long __undefined;
+
+/* --- Struct/Union Declarations --- */
+/* --- GLOBAL VARIABLES --- */
+static uint32_t g_10 = 2UL;
+static int32_t g_16 = (-4L);
+static int32_t *g_38 = &g_16;
+static int32_t *g_40 = &g_16;
+static int16_t g_48[6][4] = {{(-1L),0xD170L,0x9B34L,0x9B34L},{0x7A68L,0x7A68L,(-1L),0x9B34L},{0xDC6FL,0xD170L,0xDC6FL,(-1L)},{0xDC6FL,(-1L),(-1L),0xDC6FL},{0x7A68L,(-1L),0x9B34L,(-1L)},{(-1L),0xD170L,0x9B34L,0x9B34L}};
+static int32_t g_57 = 0xC167DF2DL;
+static int32_t g_59 = 0L;
+static volatile uint16_t g_61 = 65533UL;/* VOLATILE GLOBAL g_61 */
+static int32_t g_66 = 0x78859B34L;
+static uint64_t g_77 = 18446744073709551615UL;
+static int8_t g_100 = 0L;
+static int32_t *g_107 = &g_59;
+static int32_t **g_106 = &g_107;
+static int32_t g_116 = (-1L);
+static int32_t g_118[3][7][4] = {{{0L,0xA5ABFD0BL,0L,0L},{0xA5ABFD0BL,0xA5ABFD0BL,0xCC220CDAL,0xA5ABFD0BL},{0xA5ABFD0BL,0L,0L,0xA5ABFD0BL},{0L,0xA5ABFD0BL,0L,0L},{0xA5ABFD0BL,0xA5ABFD0BL,0xCC220CDAL,0xA5ABFD0BL},{0xA5ABFD0BL,0L,0xCC220CDAL,0L},{0xCC220CDAL,0L,0xCC220CDAL,0xCC220CDAL}},{{0L,0L,0xA5ABFD0BL,0L},{0L,0xCC220CDAL,0xCC220CDAL,0L},{0xCC220CDAL,0L,0xCC220CDAL,0xCC220CDAL},{0L,0L,0xA5ABFD0BL,0L},{0L,0xCC220CDAL,0xCC220CDAL,0L},{0xCC220CDAL,0L,0xCC220CDAL,0xCC220CDAL},{0L,0L,0xA5ABFD0BL,0L}},{{0L,0xCC220CDAL,0xCC220CDAL,0L},{0xCC220CDAL,0L,0xCC220CDAL,0xCC220CDAL},{0L,0L,0xA5ABFD0BL,0L},{0L,0xCC220CDAL,0xCC220CDAL,0L},{0xCC220CDAL,0L,0xCC220CDAL,0xCC220CDAL},{0L,0L,0xA5ABFD0BL,0L},{0L,0xCC220CDAL,0xCC220CDAL,0L}}};
+static int16_t g_131 = 0xFB07L;
+static int64_t g_149 = 0xD8AA34682653F318LL;
+static uint16_t g_160 = 0xB50DL;
+static uint16_t g_164[7][7][5] = {{{0xCE5EL,0xE1DDL,0x18D2L,0x982AL,1UL},{5UL,0x1A66L,0x1A66L,5UL,0x6CDDL},{4UL,5UL,0xB655L,1UL,0xE1DDL},{0xF5B1L,65527UL,0x6CDDL,0x18D2L,4UL},{5UL,0x982AL,0xCE5EL,1UL,0x1A66L},{0x571DL,0xCADEL,0xA087L,5UL,0xCADEL},{0x6CDDL,65527UL,0xF5B1L,0x982AL,0xBDDAL}},{{65527UL,0xB970L,0xF5B1L,0x8379L,0xF5B1L},{0xBDDAL,0xBDDAL,0xA087L,65535UL,0xE1DDL},{0x18D2L,0xE1DDL,0xCE5EL,0x6CDDL,65535UL},{65535UL,0x2160L,0x6CDDL,0x8379L,65534UL},{0x571DL,0xE1DDL,0xB655L,0xCADEL,1UL},{0xB970L,0xBDDAL,0x1A66L,0xB970L,65535UL},{4UL,0xB970L,0x18D2L,1UL,0xC334L}},{{4UL,65527UL,0xEE1CL,65527UL,4UL},{0xB970L,0xCADEL,0xCE5EL,65534UL,0xBDDAL},{0x571DL,0x982AL,0xB970L,5UL,0x982AL},{65535UL,65527UL,0x82E9L,0xCADEL,0xBDDAL},{0x18D2L,5UL,0xF5B1L,8UL,4UL},{0xBDDAL,0x1A66L,0xB970L,65535UL,0xC334L},{65527UL,0xE1DDL,0x0417L,65535UL,65535UL}},{{0x6CDDL,0xE56FL,0x6CDDL,8UL,1UL},{0x571DL,0xC334L,0x18D2L,0xCADEL,65534UL},{5UL,0xBDDAL,65531UL,5UL,65535UL},{0xF5B1L,5UL,0x18D2L,65534UL,0xE1DDL},{4UL,0x18D2L,0x6CDDL,65527UL,0x0417L},{0x1A66L,0xB970L,65535UL,0xC334L,8UL},{0xEE1CL,0xB970L,65531UL,65531UL,0xB970L}},{{0x982AL,6UL,0x0417L,0xB970L,0x8EE8L},{0x2160L,0x1A66L,0x571DL,0x18D2L,0xCE5EL},{0x8EE8L,8UL,65531UL,65532UL,0xF5B1L},{0x2160L,0x82E9L,0xEE1CL,0x982AL,65532UL},{0x982AL,65534UL,0xCADEL,0x18D2L,0xC334L},{0xEE1CL,0xF5B1L,6UL,0xA087L,0xC334L},{0x1A66L,0x8EE8L,0x8EE8L,0x1A66L,65532UL}},{{0xCE5EL,0x1A66L,0xE56FL,0xC334L,0xF5B1L},{0x0417L,0x2160L,65532UL,6UL,0xCE5EL},{0x1A66L,0xA087L,0xEE1CL,0xC334L,0x8EE8L},{0x6CDDL,0xB970L,0xBDDAL,0x1A66L,0xB970L},{65532UL,0x2160L,0x0417L,0xA087L,8UL},{0x2160L,65531UL,0x0417L,0x18D2L,0x0417L},{8UL,8UL,0xBDDAL,0x982AL,0xF5B1L}},{{6UL,0xF5B1L,0xEE1CL,65532UL,0x982AL},{0x982AL,1UL,65532UL,0x18D2L,0x617CL},{0x6CDDL,0xF5B1L,0xE56FL,0xB970L,0xC334L},{65531UL,8UL,0x8EE8L,65531UL,0x982AL},{0xCE5EL,65531UL,6UL,0xC334L,0x82E9L},{0xCE5EL,0x2160L,0xCADEL,0x2160L,0xCE5EL},{65531UL,0xB970L,0xEE1CL,0x617CL,8UL}}};
+static int64_t g_169 = (-1L);
+static uint32_t g_171[1] = {0UL};
+static uint32_t g_200 = 0x9FFE65B2L;
+static int16_t g_202 = (-3L);
+static uint64_t g_210 = 0x03394B1C0CD3E02FLL;
+static int8_t g_232 = (-9L);
+static int32_t ***g_235[2] = {&g_106,&g_106};
+static int32_t ***g_237 = &g_106;
+static int64_t g_281 = 8L;
+static int16_t g_308 = 0xCF76L;
+static int32_t ****g_341 = &g_237;
+static int32_t ***** volatile g_340 = &g_341;/* VOLATILE GLOBAL g_340 */
+static volatile uint16_t g_372 = 0xD4B0L;/* VOLATILE GLOBAL g_372 */
+static int16_t *g_433 = &g_202;
+static volatile int16_t * const  volatile *g_448[3] = {(void*)0,(void*)0,(void*)0};
+static uint8_t g_461 = 5UL;
+static int32_t *g_525 = (void*)0;
+static int32_t **g_524 = &g_525;
+static volatile uint8_t g_580 = 1UL;/* VOLATILE GLOBAL g_580 */
+static int32_t *** const g_673 = &g_524;
+static int32_t *** const *g_672 = &g_673;
+static int32_t g_681 = (-1L);
+static int32_t ***g_686 = (void*)0;
+static int32_t ****g_685 = &g_686;
+static volatile uint16_t *g_812 = &g_372;
+static volatile uint16_t **g_811 = &g_812;
+static int32_t *g_815 = &g_681;
+static int32_t ** volatile g_814 = &g_815;/* VOLATILE GLOBAL g_814 */
+static volatile int32_t g_856[10][5][5] = {{{0x096BDE72L,(-1L),0xEC829D57L,9L,0x9199F536L},{0L,0x096BDE72L,0x97B4E547L,(-5L),0xAD965040L},{7L,(-5L),0x9199F536L,0x9596DADDL,6L},{0x55AB1C99L,0x0ED7CB1CL,0x9199F536L,3L,0xF28D8758L},{0xE3B7D2F4L,5L,0x97B4E547L,5L,0xE3B7D2F4L}},{{0x9596DADDL,0L,0xEC829D57L,0xC353EE67L,(-5L)},{9L,7L,0xF28D8758L,0xB5E44A37L,(-1L)},{0xE3B7D2F4L,0x096BDE72L,0x4AD46D9AL,0L,(-5L)},{(-2L),0xB5E44A37L,7L,0x0ED7CB1CL,0xE3B7D2F4L},{(-5L),0xF28D8758L,(-1L),0xB5E44A37L,0xF28D8758L}},{{0L,0xA8B125D9L,5L,0xE3B7D2F4L,6L},{0xCFEECCCAL,0xA8B125D9L,0xC353EE67L,0x9199F536L,0xAD965040L},{3L,0xF28D8758L,0xF28D8758L,3L,0x9199F536L},{0x096BDE72L,0xB5E44A37L,1L,0x0ED7CB1CL,0xCFEECCCAL},{0x4CD81D06L,0x9596DADDL,(-9L),(-10L),(-2L)}},{{0x9199F536L,(-10L),1L,0x0ED7CB1CL,0x97B4E547L},{0xC353EE67L,3L,0x096BDE72L,7L,0xC6B0C2F8L},{0x60EA3412L,0xCFEECCCAL,(-9L),1L,(-1L)},{0x0ED7CB1CL,0xA7A0A1E5L,0x97B4E547L,(-1L),(-10L)},{0x0ED7CB1CL,0x9199F536L,3L,0xF28D8758L,0xF28D8758L}},{{0x60EA3412L,0x9596DADDL,0x60EA3412L,0xA7A0A1E5L,0x9199F536L},{0xC353EE67L,(-1L),(-10L),3L,0x60EA3412L},{0x9199F536L,0xC6B0C2F8L,0L,0xF28D8758L,0xC6B0C2F8L},{0x4CD81D06L,0xEC829D57L,(-10L),0x60EA3412L,4L},{0x9596DADDL,1L,0x60EA3412L,0xCFEECCCAL,(-9L)}},{{7L,0xC6B0C2F8L,3L,7L,0xCFEECCCAL},{(-2L),0xF28D8758L,0x97B4E547L,0xA92BA83AL,0xCFEECCCAL},{0xC6B0C2F8L,(-2L),(-9L),0x9199F536L,(-9L)},{0x9199F536L,0x9199F536L,0x096BDE72L,0x0ED7CB1CL,4L},{0x4AD46D9AL,3L,1L,5L,0xC6B0C2F8L}},{{(-1L),1L,(-9L),0xCFEECCCAL,0x60EA3412L},{0x0ED7CB1CL,3L,0xAD965040L,(-1L),0x9199F536L},{0xA92BA83AL,0x9199F536L,0x4CD81D06L,(-1L),0xF28D8758L},{(-1L),(-2L),0x60EA3412L,3L,(-10L)},{0xC353EE67L,0xF28D8758L,5L,3L,(-1L)}},{{(-10L),0xC6B0C2F8L,(-1L),(-1L),0xC6B0C2F8L},{0xC6B0C2F8L,1L,(-10L),(-1L),0x97B4E547L},{0x9596DADDL,0xEC829D57L,0xB5E44A37L,0xCFEECCCAL,(-2L)},{5L,0xC6B0C2F8L,0x4CD81D06L,5L,0xCFEECCCAL},{0x9596DADDL,(-1L),0x97B4E547L,0x0ED7CB1CL,1L}},{{0xC6B0C2F8L,0x9596DADDL,0x55AB1C99L,0x9199F536L,(-2L)},{(-10L),0x9199F536L,1L,0xA92BA83AL,4L},{0xC353EE67L,0xA7A0A1E5L,1L,7L,0x4CD81D06L},{(-1L),0xCFEECCCAL,0x55AB1C99L,0xCFEECCCAL,(-1L)},{0xA92BA83AL,3L,0x97B4E547L,0x60EA3412L,0x9199F536L}},{{0x0ED7CB1CL,(-10L),0x4CD81D06L,0xF28D8758L,(-1L)},{(-1L),0x9596DADDL,0xB5E44A37L,3L,0x9199F536L},{0x4AD46D9AL,0xF28D8758L,(-10L),0xA7A0A1E5L,(-1L)},{0x9199F536L,0x4CD81D06L,(-1L),0xF28D8758L,0x4CD81D06L},{0xC6B0C2F8L,0xEC829D57L,5L,(-1L),4L}}};
+static volatile int32_t * volatile g_855 = &g_856[1][2][3];/* VOLATILE GLOBAL g_855 */
+static uint64_t *g_859 = &g_77;
+static uint64_t **g_858[3][10][3] = {{{(void*)0,&g_859,(void*)0},{&g_859,&g_859,(void*)0},{&g_859,(void*)0,&g_859},{(void*)0,&g_859,&g_859},{&g_859,&g_859,(void*)0},{(void*)0,&g_859,&g_859},{(void*)0,&g_859,&g_859},{&g_859,&g_859,&g_859},{&g_859,&g_859,&g_859},{&g_859,&g_859,&g_859}},{{(void*)0,&g_859,(void*)0},{&g_859,&g_859,&g_859},{(void*)0,&g_859,(void*)0},{&g_859,&g_859,&g_859},{&g_859,&g_859,&g_859},{&g_859,&g_859,&g_859},{&g_859,&g_859,(void*)0},{&g_859,&g_859,(void*)0},{(void*)0,&g_859,&g_859},{&g_859,&g_859,(void*)0}},{{(void*)0,&g_859,(void*)0},{&g_859,&g_859,&g_859},{&g_859,&g_859,&g_859},{&g_859,&g_859,&g_859},{(void*)0,&g_859,(void*)0},{(void*)0,&g_859,&g_859},{&g_859,&g_859,(void*)0},{(void*)0,&g_859,&g_859},{(void*)0,&g_859,&g_859},{&g_859,&g_859,&g_859}}};
+static uint32_t g_913 = 4294967295UL;
+static uint64_t g_960[3][8][4] = {{{0x5C00BF6C46B4DD48LL,0xEE25695A38C3F328LL,0x156FF12E537FB570LL,0xE8EE64347590CEE4LL},{0UL,0UL,0xC925F650A20F5AD6LL,18446744073709551615UL},{0UL,0xD7EB94B093A9E6A3LL,0x156FF12E537FB570LL,0UL},{0x5C00BF6C46B4DD48LL,18446744073709551615UL,0xFA0F42FCB1B8D328LL,0x156FF12E537FB570LL},{0UL,0xD09B75BFF69A9B41LL,0UL,0xF721CE10137DE554LL},{9UL,0x529EC8816453DA56LL,0xD7EB94B093A9E6A3LL,1UL},{0UL,0UL,18446744073709551612UL,0x156FF12E537FB570LL},{0xA2FED6ACE5760FADLL,0UL,0x2C4252FD3B178822LL,18446744073709551609UL}},{{0xEE25695A38C3F328LL,0xD7EB94B093A9E6A3LL,0xFA0F42FCB1B8D328LL,0UL},{0x082258C24DD6DBB3LL,18446744073709551615UL,0xE8EE64347590CEE4LL,0xE8EE64347590CEE4LL},{0x554BFCA70D3E6B1ALL,0x554BFCA70D3E6B1ALL,0x2C4252FD3B178822LL,1UL},{0UL,0x8703F9F3F6FAB920LL,0x9F8EBE067C2191F8LL,1UL},{0UL,18446744073709551615UL,0x082258C24DD6DBB3LL,0x9F8EBE067C2191F8LL},{0xEE25695A38C3F328LL,18446744073709551615UL,0UL,1UL},{18446744073709551615UL,0x8703F9F3F6FAB920LL,18446744073709551606UL,1UL},{0x5C00BF6C46B4DD48LL,0x554BFCA70D3E6B1ALL,0xD7EB94B093A9E6A3LL,0xE8EE64347590CEE4LL}},{{0xA2FED6ACE5760FADLL,18446744073709551615UL,0xC925F650A20F5AD6LL,0UL},{18446744073709551609UL,0xD7EB94B093A9E6A3LL,0x082258C24DD6DBB3LL,18446744073709551609UL},{0x5C00BF6C46B4DD48LL,0UL,0xE8EE64347590CEE4LL,0x156FF12E537FB570LL},{1UL,0UL,0UL,1UL},{0x554BFCA70D3E6B1ALL,0x529EC8816453DA56LL,0x156FF12E537FB570LL,0xF721CE10137DE554LL},{0UL,0xD09B75BFF69A9B41LL,0UL,0x156FF12E537FB570LL},{18446744073709551609UL,18446744073709551615UL,0x2C4252FD3B178822LL,0UL},{9UL,0xD7EB94B093A9E6A3LL,18446744073709551606UL,18446744073709551615UL}}};
+static int16_t **g_994[1][2] = {{&g_433,&g_433}};
+static int16_t *** volatile g_993 = &g_994[0][1];/* VOLATILE GLOBAL g_993 */
+static uint16_t **g_1031 = (void*)0;
+static volatile uint8_t g_1062 = 0x4AL;/* VOLATILE GLOBAL g_1062 */
+static int64_t *g_1107 = (void*)0;
+static volatile int64_t * volatile ** volatile g_1169 = (void*)0;/* VOLATILE GLOBAL g_1169 */
+static int64_t g_1178 = 0x9163477433F7E7A0LL;
+static int32_t g_1330 = (-3L);
+static volatile int8_t g_1331 = 0x7DL;/* VOLATILE GLOBAL g_1331 */
+static int64_t g_1411 = 0x24B0A393341210B2LL;
+static volatile int64_t g_1413 = 5L;/* VOLATILE GLOBAL g_1413 */
+static int8_t *g_1438 = &g_100;
+static volatile uint8_t *g_1495 = &g_1062;
+static volatile uint8_t **g_1494[6] = {(void*)0,&g_1495,&g_1495,(void*)0,&g_1495,&g_1495};
+static int32_t *****g_1501 = &g_685;
+static volatile uint16_t g_1528[4][8][5] = {{{0x0860L,0x6E93L,1UL,0xA151L,65535UL},{65526UL,9UL,65532UL,65526UL,65526UL},{65535UL,0UL,65535UL,1UL,0xC21CL},{65535UL,5UL,65526UL,5UL,65535UL},{65535UL,65529UL,0xDE2CL,0xA151L,0xDE2CL},{65528UL,65528UL,65526UL,65535UL,0UL},{1UL,0x6E93L,65535UL,65529UL,0xDE2CL},{5UL,65535UL,65532UL,65532UL,65535UL}},{{0xDE2CL,0x6E93L,0x21D2L,0x10F7L,0xC21CL},{9UL,65528UL,9UL,65532UL,65526UL},{1UL,65529UL,0xC21CL,65529UL,1UL},{9UL,5UL,65528UL,65535UL,65528UL},{0xDE2CL,0UL,0xC21CL,0xA151L,0x0860L},{5UL,9UL,9UL,5UL,65528UL},{1UL,0xA151L,0x21D2L,1UL,1UL},{65528UL,9UL,65532UL,65526UL,65526UL}},{{65535UL,0UL,65535UL,1UL,0xC21CL},{65535UL,5UL,65526UL,5UL,65535UL},{65535UL,65529UL,0xDE2CL,0xA151L,0xDE2CL},{65528UL,65528UL,65526UL,65535UL,0UL},{1UL,0x6E93L,65535UL,65529UL,0xDE2CL},{5UL,65535UL,65532UL,65532UL,65535UL},{0xDE2CL,0x6E93L,0x21D2L,0x10F7L,0xC21CL},{9UL,65528UL,9UL,65532UL,65526UL}},{{1UL,65529UL,0xC21CL,65529UL,1UL},{9UL,5UL,65528UL,65535UL,65528UL},{0xDE2CL,0UL,0xC21CL,0xA151L,0x0860L},{5UL,9UL,9UL,5UL,65528UL},{1UL,0xA151L,0x21D2L,1UL,1UL},{65528UL,9UL,65532UL,65526UL,65526UL},{65535UL,0UL,65535UL,1UL,0xC21CL},{65535UL,5UL,65526UL,5UL,65535UL}}};
+static uint16_t g_1560 = 0xD031L;
+static volatile uint64_t g_1595 = 0x1045B985AE27D957LL;/* VOLATILE GLOBAL g_1595 */
+static volatile uint64_t *g_1594 = &g_1595;
+static volatile uint64_t ** const  volatile g_1593 = &g_1594;/* VOLATILE GLOBAL g_1593 */
+static volatile uint64_t ** const  volatile * volatile g_1592 = &g_1593;/* VOLATILE GLOBAL g_1592 */
+static volatile uint64_t ** const  volatile * volatile * volatile g_1591 = &g_1592;/* VOLATILE GLOBAL g_1591 */
+static const int8_t **g_1706 = (void*)0;
+static int8_t *g_1711 = &g_232;
+static int8_t **g_1710 = &g_1711;
+static uint64_t * volatile * volatile g_1738 = (void*)0;/* VOLATILE GLOBAL g_1738 */
+static uint64_t * volatile * volatile *g_1737[3] = {&g_1738,&g_1738,&g_1738};
+static uint64_t * volatile * volatile **g_1736 = &g_1737[2];
+static int32_t *****g_1757 = &g_341;
+static int32_t ****g_1960 = &g_237;
+static uint64_t ****g_2023[2] = {(void*)0,(void*)0};
+static volatile uint32_t g_2059 = 0UL;/* VOLATILE GLOBAL g_2059 */
+static uint32_t g_2126 = 4294967295UL;
+static uint8_t g_2245 = 1UL;
+static int8_t g_2268 = 0xBFL;
+static int32_t *g_2302 = &g_681;
+static uint64_t *** const  volatile g_2314 = &g_858[1][1][1];/* VOLATILE GLOBAL g_2314 */
+static uint64_t *****g_2375 = &g_2023[1];
+static int64_t g_2455 = (-1L);
+static uint16_t g_2468 = 0xEFDDL;
+static uint16_t g_2470[1] = {0UL};
+static int32_t g_2473 = 0x0BD63B63L;
+static int64_t * const *g_2486[1] = {&g_1107};
+static int64_t * const **g_2485[5][1] = {{&g_2486[0]},{&g_2486[0]},{&g_2486[0]},{&g_2486[0]},{&g_2486[0]}};
+static uint8_t **g_2543 = (void*)0;
+static uint8_t ***g_2542 = &g_2543;
+static volatile int32_t g_2600 = 0xBF9ADAF3L;/* VOLATILE GLOBAL g_2600 */
+static int32_t g_2643 = 6L;
+static const uint16_t g_2653 = 1UL;
+static const uint16_t *g_2652 = &g_2653;
+static volatile int8_t ** volatile g_2736 = (void*)0;/* VOLATILE GLOBAL g_2736 */
+static volatile int8_t ** volatile * volatile g_2735[10][8] = {{&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736},{&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736},{&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736},{&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736},{&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736},{&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736},{&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736},{&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736},{&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736},{&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736,&g_2736}};
+static volatile int8_t ** volatile * volatile * volatile g_2734 = &g_2735[6][6];/* VOLATILE GLOBAL g_2734 */
+static volatile int8_t ** volatile * volatile * volatile *g_2733 = &g_2734;
+static int8_t * const ** const g_2743 = (void*)0;
+static int8_t * const ** const *g_2742 = &g_2743;
+static int8_t * const ** const **g_2741 = &g_2742;
+static int64_t ** const *g_2775[1] = {(void*)0};
+static int64_t ** const **g_2774 = &g_2775[0];
+static uint8_t g_2858 = 0xEEL;
+static uint8_t * const g_2857 = &g_2858;
+static uint8_t * const *g_2856 = &g_2857;
+static uint8_t * const **g_2855 = &g_2856;
+static volatile uint32_t g_2955 = 0UL;/* VOLATILE GLOBAL g_2955 */
+static volatile uint32_t g_2965 = 0x3E592982L;/* VOLATILE GLOBAL g_2965 */
+static uint16_t g_2972 = 65534UL;
+static int32_t g_3024[2][4][3] = {{{0xFB3D29D0L,0x88D778F9L,0x88D778F9L},{2L,(-1L),2L},{0xFB3D29D0L,0xFB3D29D0L,0x88D778F9L},{0xCDA2C949L,(-1L),0xCDA2C949L}},{{0xFB3D29D0L,0x88D778F9L,0x88D778F9L},{2L,(-1L),2L},{0xFB3D29D0L,0xFB3D29D0L,0x88D778F9L},{0xCDA2C949L,(-1L),0xCDA2C949L}}};
+static uint16_t g_3079 = 0UL;
+static uint64_t * const *g_3166 = &g_859;
+static uint64_t * const **g_3165 = &g_3166;
+static uint64_t * const ***g_3164[5][7] = {{&g_3165,&g_3165,(void*)0,(void*)0,&g_3165,(void*)0,(void*)0},{&g_3165,&g_3165,(void*)0,(void*)0,&g_3165,(void*)0,(void*)0},{&g_3165,&g_3165,(void*)0,(void*)0,&g_3165,(void*)0,(void*)0},{&g_3165,&g_3165,(void*)0,(void*)0,&g_3165,(void*)0,(void*)0},{&g_3165,&g_3165,(void*)0,(void*)0,&g_3165,(void*)0,(void*)0}};
+static uint64_t * const ****g_3163 = &g_3164[4][0];
+static volatile uint8_t g_3180[5][8][2] = {{{0x2BL,0x76L},{0xC3L,0x2BL},{255UL,255UL},{255UL,0x2BL},{0xC3L,0x76L},{0x2BL,0x76L},{0xC3L,0x2BL},{255UL,255UL}},{{255UL,0x2BL},{0xC3L,0x76L},{0x2BL,0x76L},{0xC3L,0x2BL},{255UL,255UL},{255UL,0x2BL},{0xC3L,0x76L},{0x2BL,0x76L}},{{0xC3L,0x2BL},{255UL,255UL},{255UL,0x2BL},{0xC3L,0x76L},{0x2BL,0x76L},{0xC3L,0x2BL},{255UL,255UL},{255UL,0x2BL}},{{0xC3L,0x76L},{0x2BL,0x76L},{0xC3L,0x2BL},{255UL,255UL},{255UL,0x2BL},{0xC3L,0x76L},{0x2BL,0x76L},{0xC3L,0x2BL}},{{255UL,255UL},{255UL,0x2BL},{0xC3L,0x76L},{0x2BL,0x76L},{0xC3L,0x2BL},{255UL,0x2BL},{0x2BL,0xC3L},{0xFFL,255UL}}};
+static uint32_t g_3181 = 0xDCF24AE2L;
+static uint16_t g_3185[6] = {1UL,1UL,1UL,1UL,1UL,1UL};
+static uint8_t g_3203 = 4UL;
+static uint64_t g_3217 = 0x6742FB213869889FLL;
+static const int16_t **g_3271 = (void*)0;
+static const int16_t ***g_3270 = &g_3271;
+static int16_t ***g_3347[8][5][6] = {{{&g_994[0][1],&g_994[0][0],&g_994[0][1],&g_994[0][1],&g_994[0][1],&g_994[0][1]},{&g_994[0][1],&g_994[0][1],&g_994[0][1],&g_994[0][1],&g_994[0][1],&g_994[0][1]},{&g_994[0][0],(void*)0,&g_994[0][0],&g_994[0][0],&g_994[0][1],&g_994[0][1]},{&g_994[0][1],(void*)0,&g_994[0][1],&g_994[0][1],&g_994[0][0],&g_994[0][1]},{(void*)0,&g_994[0][1],&g_994[0][1],&g_994[0][1],&g_994[0][0],&g_994[0][0]}},{{&g_994[0][1],&g_994[0][0],&g_994[0][1],&g_994[0][1],&g_994[0][1],&g_994[0][1]},{(void*)0,&g_994[0][1],&g_994[0][1],(void*)0,&g_994[0][1],(void*)0},{&g_994[0][1],&g_994[0][1],&g_994[0][1],&g_994[0][0],&g_994[0][0],&g_994[0][0]},{&g_994[0][1],&g_994[0][1],&g_994[0][0],&g_994[0][1],&g_994[0][0],(void*)0},{&g_994[0][1],&g_994[0][1],&g_994[0][0],&g_994[0][1],&g_994[0][0],&g_994[0][0]}},{{&g_994[0][1],&g_994[0][0],&g_994[0][1],&g_994[0][0],&g_994[0][1],&g_994[0][1]},{&g_994[0][1],&g_994[0][1],&g_994[0][0],(void*)0,&g_994[0][1],(void*)0},{(void*)0,&g_994[0][1],&g_994[0][1],&g_994[0][1],&g_994[0][0],&g_994[0][1]},{&g_994[0][1],&g_994[0][1],&g_994[0][0],&g_994[0][1],&g_994[0][1],&g_994[0][1]},{(void*)0,&g_994[0][1],&g_994[0][0],&g_994[0][1],&g_994[0][1],&g_994[0][0]}},{{&g_994[0][1],&g_994[0][1],&g_994[0][0],&g_994[0][0],(void*)0,&g_994[0][1]},{&g_994[0][0],&g_994[0][1],&g_994[0][0],&g_994[0][1],(void*)0,(void*)0},{&g_994[0][1],&g_994[0][1],&g_994[0][1],&g_994[0][1],&g_994[0][1],&g_994[0][1]},{&g_994[0][1],&g_994[0][1],&g_994[0][1],&g_994[0][0],&g_994[0][0],&g_994[0][1]},{&g_994[0][1],(void*)0,&g_994[0][1],&g_994[0][0],&g_994[0][0],&g_994[0][0]}},{{&g_994[0][1],&g_994[0][0],&g_994[0][1],&g_994[0][0],&g_994[0][1],&g_994[0][1]},{&g_994[0][0],&g_994[0][1],&g_994[0][1],&g_994[0][0],&g_994[0][0],&g_994[0][1]},{&g_994[0][1],&g_994[0][1],(void*)0,&g_994[0][1],&g_994[0][1],&g_994[0][1]},{(void*)0,&g_994[0][1],&g_994[0][1],&g_994[0][0],&g_994[0][1],(void*)0},{&g_994[0][0],&g_994[0][1],&g_994[0][0],&g_994[0][0],&g_994[0][0],&g_994[0][1]}},{{&g_994[0][1],&g_994[0][1],&g_994[0][0],&g_994[0][1],&g_994[0][1],(void*)0},{&g_994[0][1],&g_994[0][0],&g_994[0][0],&g_994[0][1],&g_994[0][0],(void*)0},{&g_994[0][1],(void*)0,(void*)0,&g_994[0][0],&g_994[0][0],&g_994[0][1]},{&g_994[0][1],&g_994[0][1],&g_994[0][0],&g_994[0][0],&g_994[0][1],&g_994[0][1]},{&g_994[0][1],&g_994[0][1],&g_994[0][1],&g_994[0][0],(void*)0,&g_994[0][0]}},{{&g_994[0][0],&g_994[0][0],&g_994[0][1],&g_994[0][1],&g_994[0][1],&g_994[0][1]},{&g_994[0][1],&g_994[0][0],&g_994[0][0],&g_994[0][1],&g_994[0][1],&g_994[0][1]},{&g_994[0][0],&g_994[0][1],&g_994[0][0],&g_994[0][1],&g_994[0][0],&g_994[0][0]},{&g_994[0][1],(void*)0,&g_994[0][1],(void*)0,(void*)0,&g_994[0][1]},{&g_994[0][1],(void*)0,&g_994[0][0],&g_994[0][1],&g_994[0][1],&g_994[0][1]}},{{&g_994[0][0],&g_994[0][1],&g_994[0][1],&g_994[0][1],&g_994[0][0],&g_994[0][1]},{&g_994[0][1],(void*)0,&g_994[0][1],&g_994[0][0],&g_994[0][1],&g_994[0][0]},{&g_994[0][0],&g_994[0][1],&g_994[0][0],(void*)0,(void*)0,&g_994[0][0]},{&g_994[0][0],&g_994[0][1],&g_994[0][1],(void*)0,(void*)0,&g_994[0][1]},{(void*)0,(void*)0,&g_994[0][1],&g_994[0][1],&g_994[0][1],&g_994[0][1]}}};
+static int16_t ****g_3346 = &g_3347[3][2][4];
+static uint8_t g_3348 = 0x7AL;
+static const int32_t g_3375[10] = {0L,0xAD6A2D0AL,0L,0xAD6A2D0AL,0L,0xAD6A2D0AL,0L,0xAD6A2D0AL,0L,0xAD6A2D0AL};
+static uint32_t g_3399[8][6] = {{8UL,0x3874922DL,0xD5AC9A83L,1UL,0xD5AC9A83L,0x3874922DL},{8UL,0x3874922DL,0xD5AC9A83L,1UL,0xD5AC9A83L,0x3874922DL},{8UL,0x3874922DL,0xD5AC9A83L,1UL,0xD5AC9A83L,0x3874922DL},{8UL,0x3874922DL,0xD5AC9A83L,1UL,0xD5AC9A83L,0x3874922DL},{8UL,0x3874922DL,0xD5AC9A83L,1UL,0xD5AC9A83L,0x3874922DL},{8UL,0x3874922DL,0xD5AC9A83L,1UL,0xD5AC9A83L,0x3874922DL},{8UL,0x3874922DL,0xD5AC9A83L,1UL,0xD5AC9A83L,0x3874922DL},{8UL,0x3874922DL,0xD5AC9A83L,1UL,0xD5AC9A83L,0x3874922DL}};
+static uint32_t *g_3414 = &g_10;
+static uint32_t **g_3413 = &g_3414;
+static volatile uint32_t g_3430 = 1UL;/* VOLATILE GLOBAL g_3430 */
+static const int32_t ** volatile g_3531 = (void*)0;/* VOLATILE GLOBAL g_3531 */
+static const int32_t *g_3533 = (void*)0;
+static const int32_t ** volatile g_3532[8][9][3] = {{{(void*)0,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,(void*)0,&g_3533},{(void*)0,&g_3533,&g_3533},{(void*)0,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{(void*)0,(void*)0,&g_3533},{&g_3533,&g_3533,&g_3533}},{{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,(void*)0,&g_3533}},{{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,(void*)0,(void*)0},{(void*)0,&g_3533,(void*)0},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,(void*)0},{(void*)0,&g_3533,(void*)0},{&g_3533,&g_3533,&g_3533}},{{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,(void*)0},{&g_3533,(void*)0,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{(void*)0,(void*)0,&g_3533},{(void*)0,(void*)0,&g_3533},{&g_3533,&g_3533,&g_3533}},{{&g_3533,&g_3533,(void*)0},{&g_3533,&g_3533,&g_3533},{&g_3533,(void*)0,(void*)0},{&g_3533,&g_3533,&g_3533},{(void*)0,&g_3533,(void*)0},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533}},{{&g_3533,(void*)0,&g_3533},{&g_3533,(void*)0,&g_3533},{(void*)0,&g_3533,&g_3533},{&g_3533,&g_3533,(void*)0},{&g_3533,&g_3533,&g_3533},{&g_3533,(void*)0,&g_3533},{&g_3533,(void*)0,(void*)0},{&g_3533,&g_3533,(void*)0},{(void*)0,&g_3533,(void*)0}},{{(void*)0,&g_3533,(void*)0},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,(void*)0},{&g_3533,(void*)0,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533},{(void*)0,(void*)0,&g_3533}},{{(void*)0,(void*)0,&g_3533},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,(void*)0},{&g_3533,&g_3533,&g_3533},{&g_3533,(void*)0,(void*)0},{&g_3533,&g_3533,&g_3533},{(void*)0,&g_3533,(void*)0},{&g_3533,&g_3533,&g_3533},{&g_3533,&g_3533,&g_3533}}};
+static int8_t ***g_3544 = (void*)0;
+static int8_t ****g_3543[8] = {&g_3544,&g_3544,&g_3544,&g_3544,&g_3544,&g_3544,&g_3544,&g_3544};
+static int8_t *****g_3542 = &g_3543[5];
+static const int32_t * volatile g_3556[2][1][4] = {{{&g_116,&g_57,&g_116,&g_57}},{{&g_116,&g_57,&g_116,&g_57}}};
+static const int32_t * volatile *g_3555 = &g_3556[0][0][1];
+static const int32_t * volatile ** volatile g_3554 = &g_3555;/* VOLATILE GLOBAL g_3554 */
+static uint32_t g_3614 = 0xAB936EA2L;
+static uint16_t g_3645[5][5] = {{0x9446L,0x9446L,0xF30BL,0x774DL,0x1C8AL},{7UL,0x1C92L,0x1C92L,7UL,0x9446L},{7UL,0x774DL,0x5A90L,0x5A90L,0x774DL},{0x9446L,0x1C92L,0x5A90L,0xF30BL,0xF30BL},{0x1C92L,0x9446L,0x1C92L,0x5A90L,0xF30BL}};
+static int64_t **g_3713[9][10][2] = {{{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,(void*)0}},{{(void*)0,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,(void*)0},{(void*)0,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,(void*)0}},{{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,(void*)0},{(void*)0,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107}},{{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,(void*)0},{(void*)0,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,&g_1107}},{{&g_1107,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,(void*)0},{(void*)0,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,(void*)0}},{{(void*)0,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107}},{{&g_1107,(void*)0},{(void*)0,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,(void*)0},{(void*)0,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107}},{{&g_1107,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,(void*)0},{(void*)0,(void*)0},{&g_1107,&g_1107}},{{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,(void*)0},{(void*)0,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107},{&g_1107,(void*)0},{&g_1107,&g_1107},{&g_1107,&g_1107}}};
+static int64_t ***g_3712 = &g_3713[6][7][0];
+static int64_t ****g_3711[6] = {&g_3712,&g_3712,&g_3712,&g_3712,&g_3712,&g_3712};
+static uint16_t * volatile g_3763 = &g_164[4][4][0];/* VOLATILE GLOBAL g_3763 */
+static uint16_t * volatile * volatile g_3762[9][7] = {{&g_3763,&g_3763,(void*)0,(void*)0,&g_3763,&g_3763,&g_3763},{&g_3763,&g_3763,(void*)0,(void*)0,(void*)0,&g_3763,&g_3763},{&g_3763,&g_3763,&g_3763,&g_3763,&g_3763,&g_3763,&g_3763},{&g_3763,&g_3763,(void*)0,(void*)0,&g_3763,&g_3763,&g_3763},{&g_3763,&g_3763,&g_3763,&g_3763,&g_3763,(void*)0,&g_3763},{(void*)0,(void*)0,&g_3763,&g_3763,&g_3763,&g_3763,&g_3763},{&g_3763,&g_3763,&g_3763,(void*)0,&g_3763,(void*)0,&g_3763},{&g_3763,&g_3763,&g_3763,&g_3763,&g_3763,&g_3763,&g_3763},{(void*)0,(void*)0,&g_3763,&g_3763,&g_3763,&g_3763,&g_3763}};
+static uint16_t * volatile * volatile *g_3761 = &g_3762[0][3];
+static uint16_t * volatile * volatile * volatile * volatile g_3760 = &g_3761;/* VOLATILE GLOBAL g_3760 */
+static uint16_t g_3790[7] = {0xB636L,0xB636L,65526UL,0xB636L,0xB636L,65526UL,0xB636L};
+static int64_t g_3871 = 0xF79071DBBD85006DLL;
+static uint32_t g_3888 = 0x6A13CDF9L;
+static uint16_t ***g_3911 = (void*)0;
+static uint16_t ****g_3910 = &g_3911;
+static int64_t g_3984 = 0xB164E0D5F19E776DLL;
+static volatile int8_t *g_4069 = (void*)0;
+static volatile int8_t **g_4068[3] = {&g_4069,&g_4069,&g_4069};
+static int64_t g_4095[6][7][6] = {{{0xB9C3AFCD9D848C54LL,0x145C3D882D44ABD3LL,0L,(-1L),0x72A06C58463A7A15LL,9L},{0xE1788B8404FAF6FFLL,9L,(-1L),0x795B58359CDDB63ALL,0x62533AB483DB6091LL,1L},{0L,1L,0x2BECA27F39171E73LL,0x1C5246B7A58EA88BLL,0L,(-5L)},{(-1L),0L,0x4AF99DA920B22EACLL,(-7L),2L,0xA25748C76E30DEFBLL},{0x71413140BDDFE463LL,4L,(-8L),6L,0xD27D19078FFDA1CBLL,0x000F3C701254E544LL},{9L,0xA25748C76E30DEFBLL,0xF0B1D029CDD3FF21LL,1L,0x68AB38025F6510E2LL,(-3L)},{0xF1CF4335A2D2FC4FLL,1L,0x0C8F63E4CA18BCFALL,0L,(-5L),0x62533AB483DB6091LL}},{{0x5C7F2671006698DELL,7L,6L,0x7B7DA001E3DD6E2BLL,0x590559FE2C199DC0LL,(-1L)},{(-7L),0L,0x5C7F2671006698DELL,0x5C7558E1044C30D7LL,0xDB9F27AA69ADF266LL,0x63D8E04C68253612LL},{0L,0xB9C3AFCD9D848C54LL,(-2L),0xE91298B24C0DB238LL,1L,0x1DAC421DFE61EAC2LL},{0xF33CE11ED90F0066LL,(-1L),0xDB9F27AA69ADF266LL,1L,1L,0xDB9F27AA69ADF266LL},{(-1L),(-1L),0L,0xE3D2997C2271CD41LL,3L,0xA550A04DBE5F1F09LL},{0x8059F0C334285C94LL,(-1L),0xB9C3AFCD9D848C54LL,(-1L),0x71413140BDDFE463LL,0L},{0x72A06C58463A7A15LL,0x8059F0C334285C94LL,0xB9C3AFCD9D848C54LL,1L,(-1L),0xA550A04DBE5F1F09LL}},{{1L,1L,0L,0x000F3C701254E544LL,0xB4B8FDDA1BB27C0FLL,0xDB9F27AA69ADF266LL},{0x000F3C701254E544LL,0xB4B8FDDA1BB27C0FLL,0xDB9F27AA69ADF266LL,0xF1CF4335A2D2FC4FLL,(-8L),0x1DAC421DFE61EAC2LL},{0x09A1C5D733704510LL,0xC95C5DB7F6773555LL,(-2L),0L,0x795B58359CDDB63ALL,0x63D8E04C68253612LL},{0x795B58359CDDB63ALL,0L,0x5C7F2671006698DELL,9L,(-2L),(-1L)},{(-6L),0xD0772DD555A6987ALL,6L,0x5C7F2671006698DELL,0x42286F68C7F3FCF1LL,0x62533AB483DB6091LL},{4L,(-5L),0x0C8F63E4CA18BCFALL,(-6L),0xC95C5DB7F6773555LL,(-3L)},{(-7L),(-6L),0xF0B1D029CDD3FF21LL,(-6L),0L,0x000F3C701254E544LL}},{{0xD0772DD555A6987ALL,0xF0B1D029CDD3FF21LL,(-8L),0L,2L,(-6L)},{0x1C5246B7A58EA88BLL,0x0735B4E346C3B54BLL,0L,(-1L),0x2BECA27F39171E73LL,0xF32E473C7ECF497ELL},{0L,(-4L),0xE158DBDACFB263C1LL,(-3L),0xD27D19078FFDA1CBLL,0x2BECA27F39171E73LL},{4L,(-5L),0xDB9F27AA69ADF266LL,0x1EF4B423B60A99C4LL,(-6L),0x5C7F2671006698DELL},{1L,(-6L),6L,4L,0xE3D2997C2271CD41LL,(-1L)},{2L,0L,0xF0B1D029CDD3FF21LL,0x1DAC421DFE61EAC2LL,0x7B7DA001E3DD6E2BLL,(-8L)},{0x0735B4E346C3B54BLL,0x000F3C701254E544LL,1L,0L,(-1L),(-1L)}},{{0x4AF99DA920B22EACLL,0x63999DF669BC3176LL,0L,7L,0x62533AB483DB6091LL,(-1L)},{0L,0L,9L,(-5L),9L,0L},{1L,(-1L),0x447F7958DEF61430LL,0x3745907BB9E6A74DLL,6L,0L},{0L,0L,3L,0x3267F178AB116C0ELL,0x0C869EB2D2D9B0F5LL,0x1DAC421DFE61EAC2LL},{0L,0L,0L,0x42286F68C7F3FCF1LL,6L,0L},{0xA550A04DBE5F1F09LL,(-1L),0x292772C35A5F8929LL,9L,9L,(-1L)},{0x5C7558E1044C30D7LL,0L,0x2BECA27F39171E73LL,6L,0x62533AB483DB6091LL,(-1L)}},{{0L,0x63999DF669BC3176LL,0x795B58359CDDB63ALL,0xE91298B24C0DB238LL,(-1L),0x000F3C701254E544LL},{0x5C7F2671006698DELL,0x000F3C701254E544LL,0L,0xA25748C76E30DEFBLL,0x7B7DA001E3DD6E2BLL,0xB9C3AFCD9D848C54LL},{0xB4B8FDDA1BB27C0FLL,0L,0x3267F178AB116C0ELL,0xF0B1D029CDD3FF21LL,0xE3D2997C2271CD41LL,0x5E8E8FEA54D9AAACLL},{5L,(-6L),(-8L),1L,(-6L),(-1L)},{(-1L),(-5L),0x1DAC421DFE61EAC2LL,1L,0xD27D19078FFDA1CBLL,0x68AB38025F6510E2LL},{9L,(-4L),0xE3D2997C2271CD41LL,(-1L),0x2BECA27F39171E73LL,6L},{0xE1788B8404FAF6FFLL,0x0735B4E346C3B54BLL,1L,0x5EFEDADA38CD5549LL,2L,0L}}};
+
+
+/* --- FORWARD DECLARATIONS --- */
+static uint64_t  func_1(void);
+static const uint32_t  func_6(uint32_t  p_7);
+static int32_t  func_11(int16_t  p_12, uint32_t  p_13);
+static int64_t  func_19(int16_t  p_20, int32_t * const  p_21);
+static int32_t * func_23(int32_t * p_24, uint32_t * p_25);
+static uint32_t * func_26(int32_t  p_27, int64_t  p_28, uint32_t * p_29);
+static uint32_t  func_30(uint16_t  p_31, uint32_t  p_32);
+static uint16_t  func_41(int32_t * p_42, int64_t  p_43, int8_t  p_44, int16_t  p_45, int32_t * p_46);
+static int32_t * func_49(uint64_t  p_50, uint64_t  p_51);
+static int8_t  func_85(uint16_t  p_86, int32_t  p_87, int32_t ** p_88, int32_t  p_89);
+
+
+/* --- FUNCTIONS --- */
+/* ------------------------------------------ */
+/* 
+ * reads : g_3165 g_3166 g_859 g_77
+ * writes:
+ */
+static uint64_t  func_1(void)
+{ /* block id: 0 */
+    uint32_t l_8 = 0UL;
+    uint32_t *l_9 = &l_8;
+    int32_t l_2451 = 0x8AEE0746L;
+    int64_t *l_2454[6] = {(void*)0,(void*)0,(void*)0,(void*)0,(void*)0,(void*)0};
+    int32_t l_2456 = 0xB135E689L;
+    uint16_t *l_2467 = &g_2468;
+    uint16_t *l_2469[2][1];
+    int32_t *l_2471 = (void*)0;
+    int32_t *l_2472 = &g_2473;
+    int32_t *l_2474 = (void*)0;
+    int32_t *l_2475 = (void*)0;
+    int32_t *l_2476 = &l_2451;
+    int32_t l_2477 = 0x6C583D23L;
+    int32_t l_2491[1][3];
+    uint64_t l_2492 = 18446744073709551613UL;
+    const uint32_t l_2523 = 0xB3EE35A2L;
+    int32_t *****l_2610 = &g_685;
+    int32_t *****l_2611 = (void*)0;
+    int16_t l_2616 = (-2L);
+    int32_t ***** const l_2617[1] = {&g_685};
+    uint8_t l_2695 = 6UL;
+    int16_t **l_2717 = &g_433;
+    const int32_t l_2835 = (-1L);
+    uint8_t ***l_2859[2];
+    int32_t l_2865 = 0x193A0BA7L;
+    int16_t l_2969 = (-1L);
+    uint64_t *****l_2970 = &g_2023[1];
+    uint8_t l_3041 = 255UL;
+    uint8_t l_3052 = 0xCFL;
+    uint32_t l_3068 = 1UL;
+    uint8_t l_3088[2][10] = {{4UL,4UL,4UL,4UL,4UL,4UL,4UL,4UL,4UL,4UL},{4UL,4UL,4UL,4UL,4UL,4UL,4UL,4UL,4UL,4UL}};
+    int32_t l_3157[6];
+    uint32_t l_3171 = 0xACF82070L;
+    int8_t * const *l_3184 = &g_1438;
+    uint64_t ***l_3188 = &g_858[1][6][1];
+    uint16_t l_3199 = 65529UL;
+    int8_t l_3216 = 0x9EL;
+    uint8_t l_3218 = 5UL;
+    const uint64_t * const *l_3229 = (void*)0;
+    int32_t l_3246[4] = {(-3L),(-3L),(-3L),(-3L)};
+    uint32_t l_3299[6][9] = {{0x3AB5B0EEL,0x7F0C8398L,0x3AB5B0EEL,0x62C624F4L,0x62C624F4L,0x3AB5B0EEL,0x7F0C8398L,0x3AB5B0EEL,0x62C624F4L},{0xB8E73E41L,0x3EFA71BAL,0x3EFA71BAL,0xB8E73E41L,0x879C3A72L,0xB8E73E41L,0x3EFA71BAL,0x3EFA71BAL,0xB8E73E41L},{0UL,0x62C624F4L,0xA2A139F6L,0x62C624F4L,0UL,0UL,0x62C624F4L,0xA2A139F6L,0x62C624F4L},{0x3EFA71BAL,0x879C3A72L,0x8FFE1660L,0x8FFE1660L,0x879C3A72L,0x3EFA71BAL,0x879C3A72L,0x8FFE1660L,0x8FFE1660L},{0x62C624F4L,0x62C624F4L,0x3AB5B0EEL,0x7F0C8398L,0x3AB5B0EEL,0x62C624F4L,0x62C624F4L,0x3AB5B0EEL,0x7F0C8398L},{0x8FFE1660L,1UL,0x8FFE1660L,0xB8E73E41L,0xB8E73E41L,0x8FFE1660L,1UL,0x8FFE1660L,0xB8E73E41L}};
+    int32_t l_3308 = 0x7E17709AL;
+    int32_t l_3313 = (-8L);
+    uint32_t l_3314 = 18446744073709551611UL;
+    uint16_t l_3317 = 0xA3DFL;
+    uint64_t * const *l_3323 = &g_859;
+    int32_t * const *l_3335[4][5] = {{&l_2472,&l_2471,&g_2302,&g_40,&l_2471},{(void*)0,&g_2302,&g_2302,(void*)0,&g_40},{&g_815,(void*)0,&g_2302,&l_2471,&l_2471},{&l_2472,(void*)0,&l_2472,&g_40,(void*)0}};
+    int32_t * const **l_3334 = &l_3335[1][2];
+    uint64_t * const ***l_3336 = &g_3165;
+    uint64_t ***l_3337 = &g_858[1][1][1];
+    uint64_t l_3355 = 8UL;
+    int16_t l_3423 = (-1L);
+    int64_t l_3426 = 0x0E7B3B4644B471B7LL;
+    int8_t ***l_3445 = &g_1710;
+    int8_t ****l_3444[3][5] = {{&l_3445,&l_3445,&l_3445,&l_3445,&l_3445},{&l_3445,&l_3445,&l_3445,&l_3445,&l_3445},{&l_3445,&l_3445,&l_3445,&l_3445,&l_3445}};
+    int64_t ** const ***l_3447[4] = {(void*)0,(void*)0,(void*)0,(void*)0};
+    uint16_t l_3590 = 0xED42L;
+    int16_t l_3592 = 0xF866L;
+    int64_t *l_3665 = (void*)0;
+    int8_t l_3667 = 7L;
+    int32_t l_3703[6] = {(-4L),(-4L),(-4L),(-4L),(-4L),(-4L)};
+    int32_t l_3733[10][7][3] = {{{(-9L),0x6D55489BL,0xC2761A73L},{0x9E2D9803L,0xFDD5E322L,0x6D55489BL},{(-1L),1L,0x2F6D2690L},{(-1L),(-1L),0x049D157AL},{(-1L),1L,0x9E2D9803L},{(-1L),0xD5638A1DL,0x0DE9703DL},{0x9E2D9803L,0x9E2D9803L,0xC3FC06A1L}},{{(-9L),0xC2761A73L,0xB000DC32L},{0x7C2FEDA3L,0x08354E24L,0L},{0x2F6D2690L,0x4B6B0C85L,0xF080C9CBL},{0x51B83EA8L,0x7C2FEDA3L,0L},{0L,0L,0xB000DC32L},{(-1L),(-1L),0xC3FC06A1L},{(-1L),0x4759A476L,0x0DE9703DL}},{{1L,1L,0x9E2D9803L},{7L,0xC3FC06A1L,0x049D157AL},{0x6D55489BL,0xC3FC06A1L,0x2F6D2690L},{0x0DE9703DL,1L,0x6D55489BL},{0xC2761A73L,0x4759A476L,0xC2761A73L},{0xF080C9CBL,(-1L),0xD1EAED16L},{0L,0L,5L}},{{0L,0x7C2FEDA3L,0xC6B11AE7L},{0x08354E24L,0x4B6B0C85L,(-1L)},{0L,0x08354E24L,1L},{0L,0xC2761A73L,7L},{0xF080C9CBL,0x9E2D9803L,0xFDD5E322L},{0xC2761A73L,0xD5638A1DL,1L},{0x0DE9703DL,1L,0x08354E24L}},{{0x6D55489BL,(-1L),0x08354E24L},{7L,1L,1L},{1L,0xFDD5E322L,0xFDD5E322L},{(-1L),0x6D55489BL,7L},{(-1L),0x82FED0BDL,1L},{0L,(-1L),(-1L)},{0x51B83EA8L,1L,0xC6B11AE7L}},{{0x2F6D2690L,(-1L),5L},{0x7C2FEDA3L,0x82FED0BDL,0xD1EAED16L},{(-9L),0x6D55489BL,0xC2761A73L},{0x9E2D9803L,0xFDD5E322L,0x6D55489BL},{(-1L),1L,0x2F6D2690L},{(-1L),(-1L),0x049D157AL},{(-1L),1L,0x9E2D9803L}},{{(-1L),0xD5638A1DL,0xC2761A73L},{0x0DE9703DL,0x0DE9703DL,0xF080C9CBL},{0x82FED0BDL,(-1L),0L},{1L,(-1L),0L},{7L,2L,0x08354E24L},{0x4759A476L,1L,0L},{0L,(-3L),0L}},{{0xD5638A1DL,0x2F6D2690L,0xF080C9CBL},{0xD1EAED16L,1L,0xC2761A73L},{0xC3FC06A1L,0x7C2FEDA3L,0x0DE9703DL},{(-9L),0xF080C9CBL,0x6D55489BL},{1L,0xF080C9CBL,7L},{0xC2761A73L,0x7C2FEDA3L,1L},{(-1L),1L,(-1L)}},{{0x08354E24L,0x2F6D2690L,(-1L)},{1L,(-3L),0L},{(-3L),1L,0x51B83EA8L},{(-1L),2L,0x2F6D2690L},{(-3L),(-1L),0x7C2FEDA3L},{1L,(-1L),(-9L)},{0x08354E24L,0x0DE9703DL,0x9E2D9803L}},{{(-1L),0x049D157AL,(-1L)},{0xC2761A73L,(-1L),(-1L)},{1L,0xD5638A1DL,(-1L)},{(-9L),0xFDD5E322L,(-1L)},{0xC3FC06A1L,0x9E2D9803L,0x9E2D9803L},{0xD1EAED16L,1L,(-9L)},{0xD5638A1DL,0L,0x7C2FEDA3L}}};
+    uint32_t l_3739 = 0x99DD9F4FL;
+    uint64_t l_3782[7][7] = {{0x301C87F6E4E46BFELL,0xAA82334B6250C679LL,0x7C7F765DBD6DBA6FLL,0x301C87F6E4E46BFELL,18446744073709551615UL,0x301C87F6E4E46BFELL,0x7C7F765DBD6DBA6FLL},{0x17EC69E2B751C6ECLL,0x17EC69E2B751C6ECLL,2UL,0UL,0xAA82334B6250C679LL,9UL,0x17EC69E2B751C6ECLL},{0x17EC69E2B751C6ECLL,0x7C7F765DBD6DBA6FLL,0x647057302AFCB27CLL,0xAA82334B6250C679LL,0xA042E484CB44C5D0LL,0xA042E484CB44C5D0LL,0xAA82334B6250C679LL},{0x301C87F6E4E46BFELL,18446744073709551615UL,0x301C87F6E4E46BFELL,0x7C7F765DBD6DBA6FLL,0xAA82334B6250C679LL,0x301C87F6E4E46BFELL,0x182BA124971851B8LL},{0xAA82334B6250C679LL,18446744073709551615UL,0x0198008C3A3F4DCFLL,0UL,18446744073709551615UL,2UL,18446744073709551615UL},{0xAEEFC61068DB51B1LL,0x7C7F765DBD6DBA6FLL,0x7C7F765DBD6DBA6FLL,0xAEEFC61068DB51B1LL,0x182BA124971851B8LL,0x301C87F6E4E46BFELL,0xAA82334B6250C679LL},{0xA042E484CB44C5D0LL,0x17EC69E2B751C6ECLL,0x7C7F765DBD6DBA6FLL,0x647057302AFCB27CLL,0xAA82334B6250C679LL,0xA042E484CB44C5D0LL,0xA042E484CB44C5D0LL}};
+    int16_t l_3783 = 0x238BL;
+    int8_t l_3788 = (-3L);
+    int32_t l_3789 = (-1L);
+    uint16_t ***l_3801 = &g_1031;
+    uint16_t ****l_3800 = &l_3801;
+    const int64_t l_3809 = 0L;
+    uint64_t l_3810 = 18446744073709551615UL;
+    uint32_t l_3830 = 0UL;
+    int32_t l_3838 = (-10L);
+    int64_t l_3845 = 2L;
+    uint16_t l_3892 = 0xA0CBL;
+    uint16_t l_3913 = 0xD5AEL;
+    const uint32_t l_3928 = 18446744073709551615UL;
+    int8_t **l_4039 = &g_1438;
+    int i, j, k;
+    for (i = 0; i < 2; i++)
+    {
+        for (j = 0; j < 1; j++)
+            l_2469[i][j] = &g_2470[0];
+    }
+    for (i = 0; i < 1; i++)
+    {
+        for (j = 0; j < 3; j++)
+            l_2491[i][j] = 0xC5AAA70DL;
+    }
+    for (i = 0; i < 2; i++)
+        l_2859[i] = &g_2543;
+    for (i = 0; i < 6; i++)
+        l_3157[i] = 0xABF16CA6L;
+    return (***g_3165);
+}
+
+
+/* ------------------------------------------ */
+/* 
+ * reads : g_10 g_16 g_48 g_61 g_59 g_77 g_66 g_461 g_672 g_681 g_281 g_164 g_580 g_237 g_106 g_107 g_308 g_235 g_1438 g_100 g_960 g_1411 g_433 g_202 g_1706 g_913 g_855 g_856 g_171 g_1736 g_1711 g_232 g_57 g_815 g_1062 g_859 g_1591 g_1592 g_1593 g_1594 g_1595 g_341 g_340 g_1178 g_812 g_372 g_40 g_118 g_811 g_1710 g_1560 g_1757 g_116 g_814 g_1495 g_160 g_993 g_994 g_1330 g_169 g_2245 g_2268 g_673 g_524 g_525 g_149 g_2126 g_1960 g_1169 g_2314 g_2302 g_200 g_1528
+ * writes: g_16 g_38 g_40 g_48 g_61 g_59 g_10 g_77 g_149 g_66 g_100 g_461 g_672 g_169 g_685 g_171 g_164 g_160 g_232 g_1411 g_681 g_960 g_202 g_1178 g_1706 g_1710 g_913 g_1757 g_200 g_308 g_131 g_107 g_1560 g_341 g_1960 g_1330 g_57 g_994 g_281 g_2245 g_2126 g_2268 g_2302 g_116 g_858 g_2375
+ */
+static const uint32_t  func_6(uint32_t  p_7)
+{ /* block id: 3 */
+    int8_t l_14 = (-1L);
+    int32_t l_2269 = 0x043A4231L;
+    int64_t l_2298 = 4L;
+    uint32_t *l_2301[5];
+    int32_t l_2322 = (-4L);
+    int32_t l_2327[5] = {0xB3A5B190L,0xB3A5B190L,0xB3A5B190L,0xB3A5B190L,0xB3A5B190L};
+    uint16_t l_2332[1][5][3] = {{{65533UL,65533UL,65533UL},{0x4418L,0x4418L,0x4418L},{65533UL,65533UL,65533UL},{0x4418L,0x4418L,0x4418L},{65533UL,65533UL,65533UL}}};
+    int32_t ****l_2420 = &g_235[1];
+    int32_t *****l_2449 = &g_1960;
+    int i, j, k;
+    for (i = 0; i < 5; i++)
+        l_2301[i] = &g_171[0];
+    if (func_11(p_7, l_14))
+    { /* block id: 1057 */
+        uint32_t l_2213 = 7UL;
+        int32_t l_2226 = 0L;
+        uint64_t * const *l_2287 = (void*)0;
+        int32_t l_2321 = 0xD95D173CL;
+        int32_t l_2326 = (-6L);
+        int32_t l_2329 = (-1L);
+        int32_t l_2330[8][10][3] = {{{(-1L),(-8L),7L},{(-1L),0xF39752E2L,0x4C412B3BL},{0xD9029314L,(-8L),(-8L)},{0x4C412B3BL,5L,4L},{0xD9029314L,7L,0xD9029314L},{(-1L),0x71708EF4L,4L},{(-1L),(-1L),(-8L)},{0x9D5842A7L,0x71708EF4L,0x4C412B3BL},{(-8L),7L,7L},{0x9D5842A7L,5L,0x9D5842A7L}},{{(-1L),(-8L),7L},{(-1L),0xF39752E2L,0x4C412B3BL},{0xD9029314L,(-8L),(-8L)},{0x4C412B3BL,0xF39752E2L,0xFB2081F7L},{7L,(-1L),7L},{0x4C412B3BL,0xBC3AFA95L,0xFB2081F7L},{(-8L),(-8L),0xD9029314L},{4L,0xBC3AFA95L,0x9D5842A7L},{0xD9029314L,(-1L),7L},{4L,0xF39752E2L,4L}},{{(-8L),0xD9029314L,7L},{0x4C412B3BL,0x71708EF4L,0x9D5842A7L},{7L,0xD9029314L,0xD9029314L},{0x9D5842A7L,0xF39752E2L,0xFB2081F7L},{7L,(-1L),7L},{0x4C412B3BL,0xBC3AFA95L,0xFB2081F7L},{(-8L),(-8L),0xD9029314L},{4L,0xBC3AFA95L,0x9D5842A7L},{0xD9029314L,(-1L),7L},{4L,0xF39752E2L,4L}},{{(-8L),0xD9029314L,7L},{0x4C412B3BL,0x71708EF4L,0x9D5842A7L},{7L,0xD9029314L,0xD9029314L},{0x9D5842A7L,0xF39752E2L,0xFB2081F7L},{7L,(-1L),7L},{0x4C412B3BL,0xBC3AFA95L,0xFB2081F7L},{(-8L),(-8L),0xD9029314L},{4L,0xBC3AFA95L,0x9D5842A7L},{0xD9029314L,(-1L),7L},{4L,0xF39752E2L,4L}},{{(-8L),0xD9029314L,7L},{0x4C412B3BL,0x71708EF4L,0x9D5842A7L},{7L,0xD9029314L,0xD9029314L},{0x9D5842A7L,0xF39752E2L,0xFB2081F7L},{7L,(-1L),7L},{0x4C412B3BL,0xBC3AFA95L,0xFB2081F7L},{(-8L),(-8L),0xD9029314L},{4L,0xBC3AFA95L,0x9D5842A7L},{0xD9029314L,(-1L),7L},{4L,0xF39752E2L,4L}},{{(-8L),0xD9029314L,7L},{0x4C412B3BL,0x71708EF4L,0x9D5842A7L},{7L,0xD9029314L,0xD9029314L},{0x9D5842A7L,0xF39752E2L,0xFB2081F7L},{7L,(-1L),7L},{0x4C412B3BL,0xBC3AFA95L,0xFB2081F7L},{(-8L),(-8L),0xD9029314L},{4L,0xBC3AFA95L,0x9D5842A7L},{0xD9029314L,(-1L),7L},{4L,0xF39752E2L,4L}},{{(-8L),0xD9029314L,7L},{0x4C412B3BL,0x71708EF4L,0x9D5842A7L},{7L,0xD9029314L,0xD9029314L},{0x9D5842A7L,0xF39752E2L,0xFB2081F7L},{7L,(-1L),7L},{0x4C412B3BL,0xBC3AFA95L,0xFB2081F7L},{(-8L),(-8L),0xD9029314L},{4L,0xBC3AFA95L,0x9D5842A7L},{0xD9029314L,(-1L),7L},{4L,0xF39752E2L,4L}},{{(-8L),0xD9029314L,7L},{0x4C412B3BL,0x71708EF4L,0x9D5842A7L},{7L,0xD9029314L,0xD9029314L},{0x9D5842A7L,0xF39752E2L,0xFB2081F7L},{7L,(-1L),7L},{0x4C412B3BL,0xBC3AFA95L,0xFB2081F7L},{(-8L),(-8L),0xD9029314L},{0xFB2081F7L,4L,4L},{7L,(-8L),(-1L)},{0xFB2081F7L,0x71708EF4L,0xFB2081F7L}}};
+        int32_t ****l_2418 = &g_235[1];
+        int64_t l_2442 = 0x15147F8CD85230C5LL;
+        int i, j, k;
+lbl_2315:
+        for (g_200 = 0; (g_200 <= 2); g_200 += 1)
+        { /* block id: 1060 */
+            uint64_t l_2203 = 1UL;
+            int32_t l_2270 = (-1L);
+            for (g_66 = 0; g_66 < 1; g_66 += 1)
+            {
+                for (g_10 = 0; g_10 < 2; g_10 += 1)
+                {
+                    g_994[g_66][g_10] = &g_433;
+                }
+            }
+            for (g_169 = 0; (g_169 >= 0); g_169 -= 1)
+            { /* block id: 1064 */
+                int32_t l_2225 = (-9L);
+                int32_t l_2271 = 0x5FDD6C55L;
+                uint64_t l_2272 = 0x64004C0D6AF10616LL;
+                ++l_2203;
+                for (g_281 = 2; (g_281 >= 0); g_281 -= 1)
+                { /* block id: 1068 */
+                    int32_t l_2227 = 0xC02EE360L;
+                    int64_t *l_2292[3];
+                    int32_t l_2293 = 0xA5C3DAF8L;
+                    uint32_t *l_2299 = (void*)0;
+                    uint32_t *l_2300 = &g_913;
+                    int i;
+                    for (i = 0; i < 3; i++)
+                        l_2292[i] = (void*)0;
+                    if ((((((g_171[g_169] , (***g_237)) < p_7) , ((safe_mod_func_uint8_t_u_u((safe_div_func_uint64_t_u_u((safe_mod_func_int16_t_s_s((safe_unary_minus_func_int32_t_s((l_2213 & (l_2226 = (((0x53L && (((0x09L < (+((safe_mul_func_uint8_t_u_u((safe_rshift_func_int8_t_s_u(3L, (safe_rshift_func_uint16_t_u_s(0x7FA8L, 7)))), (safe_mod_func_uint16_t_u_u(((safe_div_func_uint8_t_u_u(1UL, p_7)) , 65531UL), 0xE941L)))) || g_171[g_169]))) != 0x0229B02088C4B507LL) == (**g_1710))) >= p_7) >= l_2225))))), 6L)), 0x8CD6C332E49D2A59LL)), l_2227)) & l_2225)) , &g_1706) != &g_1706))
+                    { /* block id: 1070 */
+                        return g_461;
+                    }
+                    else
+                    { /* block id: 1072 */
+                        uint8_t *l_2238 = &g_461;
+                        uint8_t *l_2244 = &g_2245;
+                        uint32_t *l_2273 = &g_2126;
+                        int32_t l_2274 = (-7L);
+                        (****g_1960) ^= ((0xCFL >= 0UL) != (safe_add_func_int32_t_s_s(((safe_lshift_func_uint16_t_u_u((safe_add_func_uint16_t_u_u((safe_rshift_func_int8_t_s_s(((safe_lshift_func_uint8_t_u_s((--(*l_2238)), 2)) & (safe_rshift_func_uint8_t_u_u(((!1UL) , (((*l_2273) |= ((((l_2226 & ((*l_2244) ^= 0x3DL)) != (safe_div_func_uint8_t_u_u((*g_1495), (safe_rshift_func_int8_t_s_u((safe_unary_minus_func_uint16_t_u((safe_mod_func_int8_t_s_s((l_14 | ((+(l_2271 = (safe_rshift_func_uint16_t_u_s((((safe_unary_minus_func_int32_t_s((l_2270 = (safe_div_func_uint16_t_u_u(((safe_div_func_uint32_t_u_u(g_48[5][2], (~(l_2269 = (safe_mod_func_int32_t_s_s((safe_add_func_uint64_t_u_u(((((safe_lshift_func_uint8_t_u_s(g_2268, (*g_1438))) , l_2226) , (void*)0) == (***g_672)), l_2203)), l_14)))))) | g_57), g_1560))))) , 0x8C36471EDBFDF841LL) || (-9L)), p_7)))) & g_913)), l_2225)))), g_149))))) | l_2272) >= p_7)) <= g_171[g_169])), 6))), (*g_1711))), p_7)), l_2274)) ^ 18446744073709551615UL), p_7)));
+                        if ((*****g_340))
+                            break;
+                    }
+                    for (g_2268 = 2; (g_2268 >= 0); g_2268 -= 1)
+                    { /* block id: 1084 */
+                        int64_t **l_2278 = &g_1107;
+                        int64_t ***l_2277 = &l_2278;
+                        int64_t ****l_2279 = &l_2277;
+                        int32_t l_2286[4] = {1L,1L,1L,1L};
+                        int i;
+                        (***g_237) = ((0L < (~((safe_unary_minus_func_uint64_t_u(((g_1169 == ((*l_2279) = l_2277)) ^ (((safe_sub_func_uint64_t_u_u((safe_lshift_func_uint8_t_u_s(((l_2270 &= (safe_sub_func_int16_t_s_s((((-8L) && (&g_1960 != (void*)0)) || l_2213), (l_2203 == (((p_7 && p_7) && l_2272) >= l_14))))) ^ p_7), (**g_1710))), l_2286[1])) , l_2287) == l_2287)))) ^ 0xE7B85461L))) > g_171[g_169]);
+                        (*g_106) = &l_2227;
+                        return g_10;
+                    }
+                    g_2302 = func_26((l_2227 = (g_171[0] , (safe_sub_func_int64_t_s_s((l_2271 && (**g_811)), 0x33FEF3BFE2B3C890LL)))), (g_149 |= ((safe_mod_func_int8_t_s_s(((p_7 <= 0UL) ^ (((*g_433) <= (((g_1178 = 0L) >= ((*g_859)++)) >= ((safe_mod_func_uint32_t_u_u(((*l_2300) |= (0L ^ l_2298)), (*g_815))) ^ l_2203))) , 0xC2B6DE28L)), 8UL)) != p_7)), l_2301[4]);
+                    for (g_160 = 0; (g_160 <= 2); g_160 += 1)
+                    { /* block id: 1099 */
+                        return l_2293;
+                    }
+                }
+            }
+        }
+        for (l_2298 = (-24); (l_2298 == (-28)); --l_2298)
+        { /* block id: 1107 */
+            int8_t l_2311[8][9] = {{0L,0L,0L,0L,0L,0L,0L,0L,0L},{0x34L,0x00L,0x34L,0x00L,0x34L,0x00L,0x34L,0x00L,0x34L},{0L,0L,0L,0L,0L,0L,0L,0L,0L},{0x34L,0x00L,0x34L,0x00L,0x34L,0x00L,0x34L,0x00L,0x34L},{0L,0L,0L,0L,0L,0L,0L,0L,0L},{0x34L,0x00L,0x34L,0x00L,0x34L,0x00L,0x34L,0x00L,0x34L},{0L,0L,0L,0L,0L,0L,0L,0L,0L},{0x34L,0x00L,0x34L,0x00L,0x34L,0x00L,0x34L,0x00L,0x34L}};
+            uint64_t ** const l_2313[5] = {&g_859,&g_859,&g_859,&g_859,&g_859};
+            int32_t l_2316 = 0x51DE08EFL;
+            int32_t l_2317 = 0L;
+            int32_t l_2325[5][10][5] = {{{0x50DFDFF9L,(-4L),0xEF731F71L,(-1L),0x20E4BD68L},{0xC6906F44L,0L,(-1L),0x9F5DD3F5L,0xC9968102L},{0x3702682AL,0xC6906F44L,9L,0L,(-1L)},{0xE4937C55L,0x39BF0741L,0xC9968102L,0xC9968102L,0x39BF0741L},{0xB9AC5833L,0xBEE46DF6L,0x17A08BB5L,(-4L),0xC9968102L},{(-1L),(-4L),(-8L),0x8876CA19L,(-7L)},{0x3B573FADL,1L,0L,(-1L),0x317A473EL},{(-1L),(-9L),0x78152941L,(-4L),0x6DB42BE2L},{0xB9AC5833L,0x120D2D4BL,0x6B93622BL,0x3702682AL,0L},{0xE4937C55L,0L,0x50DFDFF9L,(-1L),(-4L)}},{{0x3702682AL,(-9L),0xBB315D79L,0x317A473EL,0xA70A41DFL},{0xC6906F44L,0L,9L,0x20E4BD68L,0x4206E045L},{0x50DFDFF9L,0xA1269050L,0x6DB42BE2L,0xA70A41DFL,(-4L)},{0xA1269050L,0xBEE46DF6L,0x3779D110L,0x39BF0741L,(-1L)},{0x120D2D4BL,0L,0x6B93622BL,0x39BF0741L,0x05AA70A8L},{0x3B573FADL,0x317A473EL,0L,0xA70A41DFL,0x9F5DD3F5L},{0xAD19DAF4L,0L,0xC7E325EDL,0x20E4BD68L,0x6DB42BE2L},{(-1L),(-2L),(-8L),0x317A473EL,0x5C3E68F2L},{0x3779D110L,(-7L),0x3B573FADL,(-1L),0x120D2D4BL},{0x5C3E68F2L,7L,(-1L),0x3702682AL,(-1L)}},{{0x62DF2AD2L,0x62DF2AD2L,0x3702682AL,7L,0x6DB42BE2L},{7L,(-1L),5L,0xACD6EFC4L,0xC9968102L},{0xCB853F4FL,(-8L),0x5C63F286L,0xA70A41DFL,0x0A815AB6L},{0L,(-1L),0x317A473EL,(-1L),0L},{0xF8D76BD6L,0x62DF2AD2L,0x2D988608L,0x1CE4DD9FL,(-1L)},{0L,0x2D988608L,(-1L),0L,0x71139916L},{(-1L),0L,0x317A473EL,0xEF731F71L,0x50DFDFF9L},{0xCCF4BB60L,0L,(-7L),1L,0xBEE46DF6L},{0xE4937C55L,7L,(-1L),0x62DF2AD2L,0x1CE4DD9FL},{(-1L),0xE4937C55L,0x3702682AL,0x78152941L,0xCB853F4FL}},{{0x890DC26BL,0xCB853F4FL,0x0A815AB6L,0x1CE4DD9FL,0xCB853F4FL},{0xA70A41DFL,(-8L),0xCBF24FAAL,0xBB315D79L,0x1CE4DD9FL},{7L,0xBB315D79L,0x8D6ADFE8L,0xC9968102L,0xBEE46DF6L},{0xF8D76BD6L,0x3B573FADL,(-8L),0xACD6EFC4L,0x50DFDFF9L},{0L,(-1L),0x823EF36BL,(-9L),0x71139916L},{(-1L),0L,0xC6906F44L,(-1L),(-1L)},{0x890DC26BL,0x78152941L,0x890DC26BL,1L,0L},{0x3B573FADL,(-1L),1L,0x3779D110L,0x0A815AB6L},{0x3779D110L,(-1L),0x3702682AL,0xBEE46DF6L,0xC9968102L},{0xCCF4BB60L,(-1L),1L,0x0A815AB6L,0x6DB42BE2L}},{{0x6DB42BE2L,(-8L),0x890DC26BL,6L,0xACD6EFC4L},{0x304E23EBL,(-1L),0xC6906F44L,0xCB853F4FL,0x78152941L},{0xF8D76BD6L,0x50DFDFF9L,0x823EF36BL,0x0A815AB6L,0xC7AE3139L},{0xC7E325EDL,7L,(-8L),0L,0x71139916L},{(-1L),7L,0x8D6ADFE8L,0x50DFDFF9L,0xEF731F71L},{7L,0xC7E325EDL,0xCBF24FAAL,1L,0x304E23EBL},{0xEF731F71L,0x2D988608L,0x0A815AB6L,0x3B573FADL,0xACD6EFC4L},{0xEF731F71L,0xC7AE3139L,0x3702682AL,0L,(-1L)},{7L,0xA70A41DFL,(-1L),0xACD6EFC4L,(-1L)},{(-1L),(-8L),(-7L),(-1L),0x0A815AB6L}}};
+            int32_t ****l_2423 = (void*)0;
+            uint8_t *l_2430 = &g_2245;
+            uint8_t **l_2429 = &l_2430;
+            uint8_t ***l_2428 = &l_2429;
+            int32_t *l_2437 = &l_2330[0][3][0];
+            int32_t *l_2438 = (void*)0;
+            int32_t *l_2439 = &l_2327[0];
+            int32_t *l_2440 = &g_681;
+            int32_t *l_2441[4] = {&l_2317,&l_2317,&l_2317,&l_2317};
+            uint32_t l_2443 = 8UL;
+            int i, j, k;
+            for (g_116 = 15; (g_116 != 23); g_116 = safe_add_func_uint32_t_u_u(g_116, 8))
+            { /* block id: 1110 */
+                uint64_t l_2336 = 0xEF82AFFBDAD73880LL;
+                uint64_t *****l_2374 = &g_2023[1];
+                int32_t l_2376 = (-5L);
+                int8_t l_2409 = 1L;
+                for (l_2226 = 23; (l_2226 < (-12)); l_2226--)
+                { /* block id: 1113 */
+                    uint32_t l_2312 = 5UL;
+                    int32_t l_2324 = 0x96A69693L;
+                    int32_t l_2328 = 0xAB7E1749L;
+                    int32_t l_2331 = 0xB2332137L;
+                    int32_t l_2335 = (-5L);
+                    if ((safe_sub_func_int16_t_s_s(l_2311[0][5], l_2312)))
+                    { /* block id: 1114 */
+                        (****g_1960) = (**g_106);
+                        (*g_2314) = l_2313[3];
+                        if (g_116)
+                            goto lbl_2315;
+                        return g_202;
+                    }
+                    else
+                    { /* block id: 1119 */
+                        int32_t *l_2318 = (void*)0;
+                        int32_t *l_2319 = &g_66;
+                        int32_t *l_2320[8] = {&g_1330,&g_1330,&g_1330,&g_1330,&g_1330,&g_1330,&g_1330,&g_1330};
+                        int16_t l_2323 = 0L;
+                        int i;
+                        l_2332[0][3][0]--;
+                        --l_2336;
+                        if (p_7)
+                            continue;
+                        if (g_2126)
+                            goto lbl_2315;
+                    }
+                    (***g_1960) = (****g_340);
+                    for (g_1560 = 0; (g_1560 < 44); g_1560 = safe_add_func_uint32_t_u_u(g_1560, 6))
+                    { /* block id: 1128 */
+                        (*g_40) |= (0xAAL | p_7);
+                        if (p_7)
+                            break;
+                        if (g_66)
+                            goto lbl_2315;
+                        (*g_2302) = p_7;
+                    }
+                }
+                for (g_149 = 0; (g_149 > 14); ++g_149)
+                { /* block id: 1137 */
+                    int64_t l_2363 = (-4L);
+                    for (g_281 = 0; (g_281 < (-20)); --g_281)
+                    { /* block id: 1140 */
+                        int8_t l_2362 = 0xD3L;
+                        uint64_t ***l_2370 = &g_858[2][7][2];
+                        uint64_t *****l_2373[2];
+                        uint16_t *l_2400[5][7][7] = {{{&l_2332[0][3][0],(void*)0,&l_2332[0][3][0],(void*)0,&g_160,&g_160,(void*)0},{&g_164[6][6][1],&g_1560,(void*)0,&g_164[6][6][1],&g_164[6][6][1],(void*)0,&l_2332[0][0][0]},{(void*)0,(void*)0,&g_164[1][1][0],&l_2332[0][3][0],&l_2332[0][3][0],&g_160,&l_2332[0][1][1]},{&l_2332[0][1][2],&l_2332[0][3][0],&g_164[6][6][1],&g_164[6][6][1],&g_164[6][6][1],&l_2332[0][3][0],&l_2332[0][3][0]},{(void*)0,&l_2332[0][3][0],&l_2332[0][3][0],(void*)0,&g_160,(void*)0,&l_2332[0][3][0]},{(void*)0,(void*)0,&l_2332[0][0][1],&l_2332[0][3][0],&g_160,&l_2332[0][2][0],(void*)0},{&g_164[4][1][3],&g_1560,(void*)0,&g_164[6][6][1],&l_2332[0][2][2],&l_2332[0][0][2],(void*)0}},{{(void*)0,&l_2332[0][2][1],&g_160,&l_2332[0][4][0],&g_160,&l_2332[0][3][0],&g_164[4][0][2]},{&l_2332[0][3][0],&l_2332[0][3][2],&g_1560,&g_1560,&g_160,&g_164[3][2][4],&g_164[6][6][1]},{&g_160,&l_2332[0][3][0],&g_164[1][5][4],&g_164[6][6][1],&g_164[6][6][2],&l_2332[0][0][1],&g_160},{&l_2332[0][3][0],(void*)0,(void*)0,&g_1560,&g_164[6][6][1],&g_164[6][5][3],&l_2332[0][3][0]},{&g_160,&g_164[1][4][1],&l_2332[0][1][1],&g_1560,(void*)0,&g_160,(void*)0},{&g_160,&g_160,&g_1560,(void*)0,&g_1560,&g_164[6][6][4],&g_164[1][1][0]},{&l_2332[0][3][0],&g_160,&g_164[0][5][4],&l_2332[0][3][0],&g_164[1][4][1],(void*)0,&g_164[5][3][2]}},{{&g_164[1][5][4],&g_160,(void*)0,&g_160,&g_1560,(void*)0,&g_160},{&g_164[6][6][1],&g_164[6][6][1],&g_160,(void*)0,&g_1560,(void*)0,(void*)0},{(void*)0,&g_164[6][6][1],&g_164[6][6][1],(void*)0,&g_164[1][1][0],(void*)0,&g_164[4][1][3]},{&l_2332[0][0][2],(void*)0,&l_2332[0][3][0],&l_2332[0][2][1],&l_2332[0][2][2],&g_164[6][6][4],&l_2332[0][4][0]},{&g_164[3][2][4],(void*)0,&g_160,&g_1560,&g_164[3][2][2],&g_160,&g_160},{&g_1560,&l_2332[0][3][2],&l_2332[0][3][0],(void*)0,&l_2332[0][3][0],&g_164[6][5][3],&g_164[6][6][1]},{&g_164[6][6][1],&l_2332[0][3][0],&g_160,&l_2332[0][2][0],(void*)0,&l_2332[0][0][1],&g_160}},{{&l_2332[0][2][1],&g_164[6][6][1],&l_2332[0][0][2],&g_164[4][0][2],(void*)0,&g_164[3][2][4],(void*)0},{(void*)0,&l_2332[0][1][1],&l_2332[0][1][1],(void*)0,(void*)0,&l_2332[0][3][0],(void*)0},{&l_2332[0][3][0],&l_2332[0][2][2],(void*)0,(void*)0,&l_2332[0][3][0],&l_2332[0][0][2],&g_164[1][1][0]},{&l_2332[0][3][0],(void*)0,&g_164[6][6][2],&l_2332[0][2][1],(void*)0,&l_2332[0][2][0],(void*)0},{&g_160,&g_160,(void*)0,&g_160,&g_164[6][5][3],(void*)0,(void*)0},{&g_160,&g_164[1][1][0],&g_160,&g_1560,&l_2332[0][0][0],(void*)0,&g_160},{(void*)0,&g_160,&g_1560,&l_2332[0][3][0],&l_2332[0][2][2],&g_164[6][6][1],&g_164[6][6][1]}},{{(void*)0,&l_2332[0][3][0],&l_2332[0][2][1],&l_2332[0][0][1],&l_2332[0][2][2],&g_1560,&g_160},{&g_1560,&g_164[6][6][1],&l_2332[0][3][0],&g_160,&l_2332[0][3][0],&g_164[6][6][1],&l_2332[0][4][0]},{&l_2332[0][2][0],&l_2332[0][3][2],&l_2332[0][3][0],&g_164[6][6][1],&g_164[6][0][3],(void*)0,&g_164[4][1][3]},{&g_160,(void*)0,&g_1560,&l_2332[0][3][0],&g_164[6][6][1],&g_160,(void*)0},{&l_2332[0][1][1],&g_164[6][6][1],(void*)0,&l_2332[0][3][0],&g_164[6][6][1],&g_164[6][6][4],(void*)0},{&l_2332[0][1][1],(void*)0,&g_164[6][6][1],&g_164[6][6][1],&l_2332[0][3][0],&g_164[3][2][4],&l_2332[0][3][0]},{&l_2332[0][3][2],&g_160,(void*)0,(void*)0,&l_2332[0][2][2],&l_2332[0][2][0],&g_164[6][0][3]}}};
+                        int32_t l_2410 = (-2L);
+                        int i, j, k;
+                        for (i = 0; i < 2; i++)
+                            l_2373[i] = &g_2023[1];
+                        (*g_2302) = (safe_sub_func_int64_t_s_s(l_14, (safe_rshift_func_int16_t_s_s(((18446744073709551606UL > (!0x7CL)) <= (((((safe_div_func_int8_t_s_s((l_2336 || l_2332[0][4][1]), ((*g_1711) = (safe_div_func_uint8_t_u_u((safe_rshift_func_int16_t_s_s(((safe_mod_func_uint16_t_u_u(0UL, 0x13ACL)) ^ (safe_sub_func_uint8_t_u_u((((p_7 ^= l_2269) >= (safe_sub_func_uint8_t_u_u((((0x03L || 0xFCL) , 0xFBL) && l_2362), l_2362))) & l_2325[4][9][2]), l_2363))), 1)), l_2316))))) && (*g_1711)) , (void*)0) != (void*)0) <= 0xC8A8L)), (***g_993)))));
+                        (**g_106) = (safe_lshift_func_int16_t_s_u(((safe_add_func_uint16_t_u_u((p_7 & (((safe_add_func_int64_t_s_s(((((*l_2370) = (void*)0) != (void*)0) && 1UL), ((g_10 ^ ((safe_rshift_func_int16_t_s_s(((l_2374 = l_2373[1]) == (g_2375 = (void*)0)), (((*g_859)++) == (g_681 , p_7)))) , l_2336)) , p_7))) > 5L) <= l_2316)), p_7)) || (*g_107)), l_2327[1]));
+                        (**g_106) = (safe_add_func_int8_t_s_s(((-5L) <= (safe_add_func_int64_t_s_s(((safe_mul_func_uint8_t_u_u(0UL, (safe_add_func_int8_t_s_s((**g_1710), ((!(safe_div_func_int16_t_s_s(((+(safe_sub_func_int8_t_s_s((safe_mul_func_uint16_t_u_u(65529UL, p_7)), ((*g_1711) = p_7)))) & ((safe_sub_func_int32_t_s_s((safe_add_func_int64_t_s_s(((+p_7) > ((--g_1560) , (safe_rshift_func_int8_t_s_s((safe_rshift_func_uint8_t_u_u(((safe_sub_func_int8_t_s_s((g_200 , (&g_341 == &g_1960)), (**g_1710))) || 0xC7L), 3)), 7)))), p_7)), p_7)) | 0xBE7F5280L)), (*g_812)))) <= l_2409))))) || p_7), l_2410))), l_2376));
+                    }
+                }
+                for (l_2326 = 25; (l_2326 >= 29); l_2326++)
+                { /* block id: 1156 */
+                    int64_t *l_2415 = &g_149;
+                    int32_t *****l_2419[2];
+                    int i;
+                    for (i = 0; i < 2; i++)
+                        l_2419[i] = (void*)0;
+                    (*g_2302) &= (safe_sub_func_int32_t_s_s(((((*g_859) = (p_7 || ((((((*l_2415) = l_2327[2]) , (*g_340)) != (((((safe_mod_func_int64_t_s_s(((l_2418 = l_2418) == l_2420), (l_2325[4][9][2] ^= 0L))) , (****l_2418)) & 4294967287UL) && (safe_sub_func_int64_t_s_s(0L, p_7))) , l_2423)) > p_7) ^ p_7))) > l_2376) <= g_118[2][6][3]), 0x75D5C810L));
+                }
+                if ((*g_2302))
+                    break;
+            }
+            (****l_2420) = ((*g_815) ^= ((*g_855) | ((((safe_add_func_int16_t_s_s((safe_div_func_uint32_t_u_u((l_2428 != (void*)0), ((safe_rshift_func_uint16_t_u_u(0x01B7L, (((safe_add_func_int32_t_s_s((((((safe_sub_func_int16_t_s_s((p_7 , ((*g_433) = (p_7 == p_7))), (****l_2420))) != ((p_7 != p_7) ^ 65526UL)) & (****l_2418)) < p_7) || g_2245), 0L)) & 0x532AL) > 6L))) | (****l_2420)))), 9UL)) , 0x1AL) > 0xE6L) > p_7)));
+            l_2443++;
+        }
+    }
+    else
+    { /* block id: 1170 */
+        int8_t ***l_2447[4][2] = {{&g_1710,&g_1710},{&g_1710,&g_1710},{&g_1710,&g_1710},{&g_1710,&g_1710}};
+        int8_t ****l_2446 = &l_2447[1][1];
+        int8_t *****l_2448 = &l_2446;
+        int i, j;
+        (***g_1960) = (*g_814);
+        (*l_2448) = l_2446;
+    }
+    (***l_2420) = (void*)0;
+    (*g_815) = (18446744073709551615UL | 8L);
+    l_2449 = (void*)0;
+    return g_1528[0][2][4];
+}
+
+
+/* ------------------------------------------ */
+/* 
+ * reads : g_10 g_16 g_48 g_61 g_59 g_77 g_66 g_461 g_672 g_681 g_281 g_164 g_580 g_237 g_106 g_107 g_308 g_235 g_1438 g_100 g_960 g_1411 g_433 g_202 g_1706 g_913 g_855 g_856 g_171 g_1736 g_1711 g_232 g_57 g_815 g_1062 g_859 g_1591 g_1592 g_1593 g_1594 g_1595 g_341 g_340 g_1178 g_812 g_372 g_40 g_118 g_811 g_1710 g_1560 g_1757 g_116 g_814 g_1495 g_160 g_993 g_994 g_1330
+ * writes: g_16 g_38 g_40 g_48 g_61 g_59 g_10 g_77 g_149 g_66 g_100 g_461 g_672 g_169 g_685 g_171 g_164 g_160 g_232 g_1411 g_681 g_960 g_202 g_1178 g_1706 g_1710 g_913 g_1757 g_200 g_308 g_131 g_107 g_1560 g_341 g_1960 g_1330 g_57
+ */
+static int32_t  func_11(int16_t  p_12, uint32_t  p_13)
+{ /* block id: 4 */
+    int32_t *l_15 = &g_16;
+    int32_t l_22[6];
+    int32_t **l_35 = (void*)0;
+    int32_t *l_37 = &g_16;
+    int32_t **l_36[7] = {&l_37,&l_37,&l_37,&l_37,&l_37,&l_37,&l_37};
+    int32_t *l_39 = &g_16;
+    int16_t *l_47 = &g_48[5][2];
+    uint32_t *l_1644[5][3] = {{(void*)0,&g_913,(void*)0},{&g_913,&g_913,&g_913},{(void*)0,&g_913,(void*)0},{&g_913,&g_913,&g_913},{(void*)0,&g_913,(void*)0}};
+    uint32_t l_1983 = 18446744073709551615UL;
+    uint64_t *l_2034 = &g_960[2][2][1];
+    const uint16_t ***l_2116 = (void*)0;
+    int i, j;
+    for (i = 0; i < 6; i++)
+        l_22[i] = 0x9E843631L;
+    (*l_15) = g_10;
+    l_1983 |= ((g_171[0] = (safe_lshift_func_int16_t_s_u((func_19((p_12 |= l_22[4]), func_23(l_15, func_26((func_30((((safe_div_func_int64_t_s_s((((g_38 = (void*)0) == (g_40 = l_39)) | (((*l_37) = (func_41(&g_16, (*l_37), p_13, ((*l_47) ^= p_13), func_49((safe_div_func_int64_t_s_s(((~p_13) < p_13), (-1L))), g_10)) < p_13)) , (*g_1438))), 18446744073709551615UL)) , (void*)0) != &g_913), g_960[0][4][3]) , (*l_39)), p_13, l_1644[3][1]))) , p_13), 4))) | p_13);
+    for (g_1330 = 7; (g_1330 == 5); --g_1330)
+    { /* block id: 952 */
+        uint8_t *l_1986 = &g_461;
+        int32_t l_1997[10] = {2L,2L,2L,0xCD20DF6BL,2L,2L,2L,2L,0xCD20DF6BL,2L};
+        int32_t l_2012 = 0x14EFFF28L;
+        int32_t **l_2084 = &g_525;
+        int16_t l_2103[2][7][8] = {{{0x02D3L,6L,6L,0x02D3L,0x02D3L,6L,6L,0x02D3L},{0x02D3L,6L,6L,0x02D3L,0x02D3L,6L,6L,0x02D3L},{0x02D3L,6L,6L,0x02D3L,0x02D3L,6L,6L,0x02D3L},{0x02D3L,6L,6L,0x02D3L,0x02D3L,6L,6L,0x02D3L},{0x02D3L,6L,6L,0x02D3L,0x02D3L,6L,6L,0x02D3L},{0x02D3L,6L,6L,0x02D3L,0x02D3L,6L,6L,0x02D3L},{0x02D3L,6L,6L,0x02D3L,0x02D3L,6L,6L,0x02D3L}},{{0x02D3L,6L,6L,0x02D3L,0x02D3L,6L,6L,0x02D3L},{0x02D3L,6L,6L,0x02D3L,0x02D3L,6L,6L,0x02D3L},{0x02D3L,6L,6L,0x02D3L,0x02D3L,6L,6L,0x02D3L},{0x02D3L,6L,6L,0x02D3L,0x02D3L,6L,6L,0x02D3L},{0x02D3L,6L,6L,0x02D3L,0x02D3L,6L,6L,0x02D3L},{0x02D3L,6L,6L,0x02D3L,0x02D3L,6L,6L,0x02D3L},{0x02D3L,6L,6L,0x02D3L,0x02D3L,6L,6L,0x02D3L}}};
+        uint16_t l_2156[2][7][5] = {{{65534UL,65534UL,65534UL,65534UL,65534UL},{0x738DL,0x738DL,0x738DL,0x738DL,0x738DL},{65534UL,65534UL,65534UL,65534UL,65534UL},{0x738DL,0x738DL,0x738DL,0x738DL,0x738DL},{65534UL,65534UL,65534UL,65534UL,65534UL},{0x738DL,0x738DL,0x738DL,0x738DL,0x738DL},{65534UL,65534UL,65534UL,65534UL,65534UL}},{{0x738DL,0x738DL,0x738DL,0x738DL,0x738DL},{65534UL,65534UL,65534UL,65534UL,65534UL},{0x738DL,0x738DL,0x738DL,0x738DL,0x738DL},{65534UL,65534UL,65534UL,65534UL,65534UL},{0x738DL,0x738DL,0x738DL,0x738DL,0x738DL},{65534UL,65534UL,65534UL,65534UL,65534UL},{0x738DL,0x738DL,0x738DL,0x738DL,0x738DL}}};
+        const uint16_t *l_2180[3][5] = {{&g_1560,(void*)0,&g_1560,&g_1560,(void*)0},{&g_164[6][6][1],(void*)0,(void*)0,&g_164[6][6][1],(void*)0},{(void*)0,(void*)0,(void*)0,(void*)0,(void*)0}};
+        const uint16_t **l_2179 = &l_2180[1][4];
+        const uint16_t ***l_2178 = &l_2179;
+        int i, j, k;
+        (*l_15) = ((**g_106) = (((*l_1986) = (0xC676138A5C2FF3FELL && p_12)) > (safe_mod_func_uint16_t_u_u(((p_12 | ((l_1997[2] = ((((((*g_993) == (void*)0) , (safe_lshift_func_uint16_t_u_s((safe_add_func_int8_t_s_s(p_13, (*l_39))), 2))) && p_13) ^ ((safe_rshift_func_uint16_t_u_u(0x12BCL, 9)) , 0UL)) != p_12)) == p_13)) <= (*l_39)), 0x1773L))));
+        for (g_1411 = 27; (g_1411 == (-28)); --g_1411)
+        { /* block id: 959 */
+            uint32_t l_2000 = 0x62A31828L;
+            uint32_t l_2031 = 4294967294UL;
+            int32_t l_2047 = 0x997E58ABL;
+            const uint64_t *l_2048 = &g_210;
+            int32_t l_2054 = 0x9BC64527L;
+            int32_t l_2055 = (-2L);
+            int32_t l_2058[10] = {0x1ADAC35CL,0x1ADAC35CL,0x1ADAC35CL,0x1ADAC35CL,0x1ADAC35CL,0x1ADAC35CL,0x1ADAC35CL,0x1ADAC35CL,0x1ADAC35CL,0x1ADAC35CL};
+            int i;
+            (**g_106) &= (l_2000 & (((*g_859) = ((((((safe_mul_func_uint16_t_u_u((((l_1997[2] = ((safe_mod_func_uint16_t_u_u(l_1997[2], (safe_lshift_func_uint8_t_u_s((safe_div_func_uint64_t_u_u((***g_1592), (~(safe_sub_func_int8_t_s_s(l_2012, 255UL))))), 0)))) | 1L)) == l_2012) <= l_2012), p_13)) ^ 0xAAL) & (*l_15)) > p_12) <= 0UL) , l_1997[2])) ^ p_13));
+            for (g_57 = 25; (g_57 == 16); g_57--)
+            { /* block id: 965 */
+                uint64_t *****l_2024 = &g_2023[1];
+                int32_t l_2025[4];
+                int32_t l_2026[10] = {6L,6L,1L,6L,6L,1L,6L,6L,1L,6L};
+                int32_t * const ***l_2078 = (void*)0;
+                int i;
+                for (i = 0; i < 4; i++)
+                    l_2025[i] = 0xD831B410L;
+            }
+        }
+        for (g_1560 = 0; g_1560 < 2; g_1560 += 1)
+        {
+            for (g_131 = 0; g_131 < 7; g_131 += 1)
+            {
+                for (g_66 = 0; g_66 < 5; g_66 += 1)
+                {
+                    l_2156[g_1560][g_131][g_66] = 0x8331L;
+                }
+            }
+        }
+        for (g_913 = (-9); (g_913 <= 53); g_913 = safe_add_func_int8_t_s_s(g_913, 3))
+        { /* block id: 1052 */
+            uint8_t l_2200 = 0x7CL;
+            l_2200++;
+        }
+    }
+    return p_13;
+}
+
+
+/* ------------------------------------------ */
+/* 
+ * reads : g_106 g_107 g_1710 g_1438 g_859 g_77 g_993 g_994 g_433 g_202 g_40 g_16
+ * writes: g_59 g_77 g_16
+ */
+static int64_t  func_19(int16_t  p_20, int32_t * const  p_21)
+{ /* block id: 943 */
+    uint64_t l_1973 = 1UL;
+    uint16_t **l_1982[5];
+    int i;
+    for (i = 0; i < 5; i++)
+        l_1982[i] = (void*)0;
+    (*g_40) |= ((p_20 , (safe_lshift_func_int8_t_s_u((safe_sub_func_uint16_t_u_u(l_1973, (((void*)0 == &g_1413) <= (~((**g_106) = l_1973))))), (((+((*g_1710) == (((safe_mod_func_int8_t_s_s((safe_mul_func_int8_t_s_s((5UL ^ ((*g_859)++)), (p_20 & l_1973))), l_1973)) & (***g_993)) , (void*)0))) , (void*)0) != l_1982[1])))) & 0x6E03L);
+    return l_1973;
+}
+
+
+/* ------------------------------------------ */
+/* 
+ * reads : g_1438 g_433 g_202 g_16 g_1706 g_106 g_107 g_59 g_913 g_855 g_856 g_171 g_1736 g_1711 g_232 g_48 g_57 g_815 g_681 g_1062 g_859 g_77 g_1591 g_1592 g_1593 g_1594 g_1595 g_341 g_237 g_340 g_10 g_1178 g_812 g_372 g_40 g_308 g_100 g_118 g_811 g_1710 g_235 g_1560 g_61 g_1757 g_116 g_814 g_1495 g_160 g_461
+ * writes: g_100 g_202 g_1178 g_1411 g_1706 g_1710 g_59 g_171 g_16 g_681 g_77 g_913 g_232 g_10 g_1757 g_164 g_200 g_461 g_308 g_66 g_131 g_107 g_1560 g_341 g_1960
+ */
+static int32_t * func_23(int32_t * p_24, uint32_t * p_25)
+{ /* block id: 808 */
+    int32_t l_1697 = 0L;
+    uint8_t *l_1699 = &g_461;
+    uint8_t **l_1698 = &l_1699;
+    uint8_t *l_1700 = &g_461;
+    int32_t l_1701 = (-7L);
+    int64_t *l_1703 = (void*)0;
+    int64_t *l_1704 = &g_1178;
+    int64_t *l_1705 = &g_1411;
+    const int8_t ***l_1707 = &g_1706;
+    int8_t **l_1708 = &g_1438;
+    int8_t ***l_1709[9][7][1] = {{{(void*)0},{&l_1708},{&l_1708},{&l_1708},{(void*)0},{&l_1708},{&l_1708}},{{&l_1708},{(void*)0},{&l_1708},{&l_1708},{&l_1708},{(void*)0},{&l_1708}},{{&l_1708},{&l_1708},{(void*)0},{&l_1708},{&l_1708},{&l_1708},{(void*)0}},{{&l_1708},{&l_1708},{&l_1708},{(void*)0},{&l_1708},{&l_1708},{&l_1708}},{{(void*)0},{&l_1708},{&l_1708},{&l_1708},{(void*)0},{&l_1708},{&l_1708}},{{&l_1708},{(void*)0},{&l_1708},{&l_1708},{&l_1708},{(void*)0},{&l_1708}},{{&l_1708},{&l_1708},{(void*)0},{&l_1708},{&l_1708},{&l_1708},{(void*)0}},{{&l_1708},{&l_1708},{&l_1708},{(void*)0},{&l_1708},{&l_1708},{&l_1708}},{{(void*)0},{&l_1708},{&l_1708},{&l_1708},{(void*)0},{&l_1708},{&l_1708}}};
+    uint32_t *l_1730 = &g_171[0];
+    uint64_t * const *l_1735 = &g_859;
+    uint64_t * const **l_1734 = &l_1735;
+    uint64_t * const ***l_1733 = &l_1734;
+    int32_t l_1739 = (-1L);
+    const int32_t *l_1809 = &l_1697;
+    const int32_t **l_1808 = &l_1809;
+    const int32_t ***l_1807 = &l_1808;
+    const int32_t ****l_1806 = &l_1807;
+    const int32_t *****l_1805 = &l_1806;
+    int32_t ****l_1830 = &g_235[0];
+    const uint16_t *l_1868[2][4][6] = {{{&g_164[1][4][3],&g_164[2][6][4],(void*)0,&g_164[2][6][4],&g_164[1][4][3],&g_164[5][3][1]},{(void*)0,&g_164[6][6][1],&g_164[6][6][1],&g_164[2][4][1],&g_164[2][6][4],(void*)0},{(void*)0,&g_164[3][3][3],&g_164[6][6][1],&g_164[6][6][1],&g_164[3][3][3],(void*)0},{&g_164[2][4][1],&g_164[5][0][3],&g_164[6][6][1],&g_164[1][4][3],(void*)0,&g_164[5][3][1]}},{{&g_164[3][3][3],(void*)0,(void*)0,(void*)0,(void*)0,(void*)0},{&g_164[3][3][3],&g_164[5][3][1],(void*)0,&g_164[1][4][3],&g_164[6][6][1],&g_164[5][0][3]},{&g_164[5][0][3],&g_164[2][6][4],(void*)0,&g_164[3][3][3],&g_164[3][3][3],(void*)0},{&g_164[2][6][4],&g_164[2][6][4],(void*)0,&g_164[5][0][3],(void*)0,&g_164[3][3][3]}}};
+    const uint16_t **l_1867 = &l_1868[0][2][4];
+    int32_t l_1906 = 0x079F98E9L;
+    int32_t l_1907 = (-1L);
+    int32_t l_1909 = (-10L);
+    int32_t l_1911[6];
+    int64_t l_1968 = (-4L);
+    int i, j, k;
+    for (i = 0; i < 6; i++)
+        l_1911[i] = 0xF58D2397L;
+lbl_1840:
+    (**g_106) &= (((((*g_1438) = (safe_rshift_func_int16_t_s_u(l_1697, 10))) ^ (((l_1701 = (((*l_1698) = &g_461) != l_1700)) , ((*l_1705) = (!((((*l_1704) = (((*g_433) ^= l_1697) == l_1701)) , (*p_24)) & 0UL)))) , (((*l_1707) = g_1706) == (g_1710 = l_1708)))) && (-7L)) == l_1697);
+    if ((l_1739 = (((*p_25) | (~(((*g_815) ^= (l_1697 , ((~(*g_855)) < ((-1L) & (((((((safe_div_func_uint8_t_u_u((safe_add_func_int8_t_s_s((safe_lshift_func_uint8_t_u_u((safe_mul_func_uint8_t_u_u(((0x76F1EFD2L || l_1701) || (l_1697 < (safe_lshift_func_uint16_t_u_u(((safe_sub_func_int8_t_s_s((safe_add_func_int64_t_s_s(((((*p_24) |= ((((safe_mod_func_uint32_t_u_u((l_1701 = ((*l_1730)++)), l_1697)) , l_1733) == g_1736) == l_1697)) && 4294967295UL) <= l_1697), l_1697)), l_1697)) | 4294967295UL), 1)))), l_1697)), 0)), (*g_1711))), g_48[5][2])) == l_1697) || l_1701) != l_1697) == l_1697) > g_57) > l_1697))))) == l_1739))) < l_1739)))
+    { /* block id: 823 */
+        uint64_t l_1759 = 0xEB85B0980294F62FLL;
+        int32_t l_1799 = 0x36C0B8ECL;
+        int32_t *****l_1810 = &g_685;
+        int32_t ****l_1825 = &g_235[1];
+        (****g_341) ^= (safe_rshift_func_int8_t_s_u((g_1062 && (l_1697 >= (((****l_1733)++) ^ (****g_1591)))), (safe_mul_func_int8_t_s_s((((0x01L ^ (-2L)) , (void*)0) == &g_1031), 0x90L))));
+        for (g_913 = 0; (g_913 > 33); ++g_913)
+        { /* block id: 828 */
+            int32_t *l_1748 = (void*)0;
+            return l_1748;
+        }
+        for (l_1701 = (-21); (l_1701 == 22); ++l_1701)
+        { /* block id: 833 */
+            uint32_t l_1774 = 0xC2A3244CL;
+            int8_t l_1813 = 9L;
+            int32_t * const **l_1832 = (void*)0;
+            int32_t * const ***l_1831[1][5] = {{(void*)0,(void*)0,(void*)0,(void*)0,(void*)0}};
+            int32_t l_1834[1][3][1];
+            uint64_t l_1837 = 0xD049135EB3D45E8DLL;
+            uint16_t *l_1864 = &g_1560;
+            int i, j, k;
+            for (i = 0; i < 1; i++)
+            {
+                for (j = 0; j < 3; j++)
+                {
+                    for (k = 0; k < 1; k++)
+                        l_1834[i][j][k] = 0xEBC8B5A3L;
+                }
+            }
+            for (g_232 = 14; (g_232 == 20); g_232 = safe_add_func_uint32_t_u_u(g_232, 5))
+            { /* block id: 836 */
+                int32_t l_1776 = 0x874DCDB9L;
+                uint16_t ***l_1777 = &g_1031;
+                int8_t ** const *l_1820 = &g_1710;
+                int32_t l_1836 = 0x63A8A1ECL;
+                (*****g_340) |= (-1L);
+                for (g_10 = (-25); (g_10 > 43); g_10 = safe_add_func_int64_t_s_s(g_10, 4))
+                { /* block id: 840 */
+                    uint16_t l_1791[8][1][5] = {{{0x63B3L,1UL,1UL,0x63B3L,8UL}},{{0x63B3L,1UL,1UL,0x63B3L,8UL}},{{0x63B3L,1UL,1UL,0x63B3L,8UL}},{{0x63B3L,1UL,1UL,0x63B3L,8UL}},{{0x63B3L,1UL,1UL,0x63B3L,8UL}},{{0x63B3L,1UL,1UL,0x63B3L,8UL}},{{0x63B3L,1UL,1UL,0x63B3L,8UL}},{{0x63B3L,1UL,1UL,0x63B3L,8UL}}};
+                    uint8_t l_1795[9][6] = {{0x6AL,0xC7L,0xC7L,0x6AL,0x03L,0x6AL},{0x6AL,0x03L,0x6AL,0xC7L,0xC7L,0x6AL},{0UL,0UL,0xC7L,0x2CL,0xC7L,0UL},{0xC7L,0x03L,0x2CL,0x2CL,0x03L,0xC7L},{0UL,0xC7L,0x2CL,0xC7L,0UL,0UL},{0x6AL,0xC7L,0xC7L,0x6AL,0x03L,0x6AL},{0x6AL,0x03L,0x6AL,0xC7L,0xC7L,0x6AL},{0UL,0UL,0xC7L,0x2CL,0xC7L,0UL},{0xC7L,0x03L,0x2CL,0x2CL,0x03L,0xC7L}};
+                    int32_t l_1796 = 0x893D87BDL;
+                    const int8_t ***l_1819 = &g_1706;
+                    int32_t * const ****l_1833 = &l_1831[0][3];
+                    int32_t *l_1835[1][1];
+                    int i, j, k;
+                    for (i = 0; i < 1; i++)
+                    {
+                        for (j = 0; j < 1; j++)
+                            l_1835[i][j] = (void*)0;
+                    }
+                    if (((*g_815) = 1L))
+                    { /* block id: 842 */
+                        uint16_t *l_1758 = &g_164[6][0][0];
+                        int32_t l_1771 = 0xAC7D8DA9L;
+                        uint32_t *l_1775 = &g_200;
+                        int16_t *l_1794 = &g_308;
+                        int32_t *l_1797 = &g_66;
+                        int16_t *l_1798 = &g_131;
+                        (*g_107) &= (safe_add_func_uint8_t_u_u((((*l_1758) = ((g_1757 = (void*)0) != (void*)0)) == 0x1E87L), (l_1759 , (safe_mod_func_int16_t_s_s((safe_lshift_func_int16_t_s_s((safe_rshift_func_uint8_t_u_u(251UL, 6)), (safe_mul_func_uint16_t_u_u((safe_sub_func_uint64_t_u_u((****g_1591), ((((+l_1771) , ((*l_1775) = (2UL != (((((safe_add_func_uint64_t_u_u(l_1774, 18446744073709551611UL)) == 4294967295UL) || g_202) == (*g_433)) , g_1178)))) , 0x1D42711EL) > (-5L)))), l_1774)))), l_1776)))));
+                        l_1777 = &g_1031;
+                        l_1799 = (safe_div_func_uint16_t_u_u((*g_812), (safe_div_func_int16_t_s_s(((*l_1798) = ((*g_40) <= (!((*l_1797) = ((*g_815) = (((safe_mul_func_uint16_t_u_u((l_1697 , (safe_rshift_func_int8_t_s_u(((*g_1438) &= (safe_lshift_func_uint8_t_u_s(((*l_1699) = (l_1759 == l_1791[0][0][3])), (safe_add_func_int64_t_s_s((((****g_341) |= (0x41B2L < (l_1771 = ((*l_1794) |= ((*g_433) ^= l_1701))))) & l_1795[1][2]), ((l_1796 || l_1697) && l_1776)))))), g_118[2][1][3]))), 1UL)) | 18446744073709551608UL) , (*p_24))))))), l_1774))));
+                    }
+                    else
+                    { /* block id: 858 */
+                        uint8_t l_1804 = 246UL;
+                        (*g_107) = (*p_24);
+                        l_1776 = ((safe_mod_func_uint32_t_u_u((safe_sub_func_uint8_t_u_u(((*l_1700) = (l_1804 ^ ((((l_1777 != ((*p_25) , l_1777)) , l_1805) == (l_1810 = &g_685)) , (safe_sub_func_int64_t_s_s(((l_1813 >= (0x5DA903A64CE23554LL | (safe_mul_func_uint16_t_u_u(((((*g_433) = (safe_lshift_func_uint8_t_u_u((safe_unary_minus_func_uint32_t_u((l_1819 == l_1820))), l_1791[6][0][2]))) || (**g_811)) && (**g_1593)), l_1776)))) , l_1776), 0xDB0E51AD64DD20A8LL))))), (**g_1710))), (*p_24))) == l_1791[0][0][3]);
+                    }
+                    if (((safe_add_func_int8_t_s_s((((safe_sub_func_int8_t_s_s((l_1825 == ((safe_rshift_func_uint8_t_u_s(((safe_rshift_func_uint8_t_u_u(l_1796, ((l_1830 == ((*l_1833) = l_1831[0][3])) , ((****l_1825) != ((l_1834[0][0][0] == ((((****g_341) == g_10) != (0xE204L < l_1795[6][2])) , 0x44387FF75D540B37LL)) , (**g_1710)))))) > 0x57656BA6L), 1)) , l_1830)), (****l_1830))) && 0x9174D3CCL) >= 0x99L), (****l_1825))) != 0x9101472016991A46LL))
+                    { /* block id: 866 */
+                        l_1835[0][0] = ((***l_1825) = (**g_237));
+                        return (***l_1830);
+                    }
+                    else
+                    { /* block id: 870 */
+                        --l_1837;
+                        return (***l_1830);
+                    }
+                }
+                if (g_100)
+                    goto lbl_1840;
+            }
+            l_1799 ^= ((safe_mul_func_uint8_t_u_u(((*l_1700) = (((safe_div_func_int64_t_s_s((safe_sub_func_uint8_t_u_u((0xBA1549BE232911D1LL || (safe_rshift_func_uint16_t_u_u((((-1L) >= (safe_mod_func_int8_t_s_s((((((safe_sub_func_int32_t_s_s((!(safe_lshift_func_uint8_t_u_u(((safe_div_func_uint32_t_u_u((++(*l_1730)), (safe_sub_func_int32_t_s_s((((((g_59 & (-8L)) <= (****l_1830)) && ((safe_lshift_func_uint16_t_u_s(((*l_1864) ^= ((****l_1830) ^ 0L)), ((****l_1825) | 1UL))) != 0xA3ACL)) <= (*p_24)) | (-5L)), (-1L))))) > (****l_1825)), 2))), (****l_1825))) < (****l_1830)) == (*p_24)) != g_61) , (****l_1830)), (****l_1830)))) , (****l_1830)), g_59))), 0x76L)), (****l_1825))) < (**g_1710)) > (****l_1830))), (*g_1438))) , (*g_815));
+            (*g_815) = (****l_1830);
+            if ((****l_1830))
+                break;
+        }
+        (*****g_1757) = 0x23146E55L;
+    }
+    else
+    { /* block id: 885 */
+        uint32_t l_1869 = 0xE9B675F4L;
+        uint64_t **l_1874[6][4] = {{&g_859,&g_859,&g_859,&g_859},{&g_859,&g_859,&g_859,&g_859},{&g_859,&g_859,&g_859,&g_859},{&g_859,&g_859,&g_859,&g_859},{&g_859,&g_859,&g_859,&g_859},{&g_859,&g_859,&g_859,&g_859}};
+        int32_t l_1900 = 0xB324488CL;
+        int32_t l_1904 = 0x6DD3EE9EL;
+        int32_t l_1905 = 0x66880A66L;
+        int32_t l_1910[5] = {(-1L),(-1L),(-1L),(-1L),(-1L)};
+        const int8_t ***l_1954[4][6] = {{&g_1706,&g_1706,&g_1706,&g_1706,&g_1706,&g_1706},{&g_1706,&g_1706,&g_1706,&g_1706,&g_1706,&g_1706},{&g_1706,&g_1706,&g_1706,&g_1706,&g_1706,&g_1706},{&g_1706,&g_1706,&g_1706,&g_1706,&g_1706,&g_1706}};
+        int i, j;
+lbl_1898:
+        (***l_1830) = (****g_340);
+        (*g_815) &= ((*****g_1757) = (((safe_sub_func_uint16_t_u_u(((&g_812 != l_1867) == ((**g_811) , (((((l_1869 || ((safe_add_func_int16_t_s_s((safe_add_func_uint64_t_u_u(((((****l_1830) , ((void*)0 != l_1874[5][0])) == (safe_sub_func_int16_t_s_s(1L, (((safe_mul_func_int16_t_s_s((****l_1830), 0x3746L)) < (****l_1830)) == (*p_25))))) || 0x2D5E55B40BCBFFACLL), 0UL)), (****l_1830))) < (*g_433))) , (void*)0) != (void*)0) == l_1869) , 0xD834L))), (****l_1830))) , 1UL) != (*p_24)));
+        for (g_59 = (-19); (g_59 >= (-16)); g_59++)
+        { /* block id: 891 */
+            uint32_t l_1889 = 4294967289UL;
+            uint64_t l_1890 = 0xDAC477A775ED2ADALL;
+            int32_t l_1895[1];
+            int i;
+            for (i = 0; i < 1; i++)
+                l_1895[i] = 5L;
+            (*p_24) = (safe_sub_func_uint64_t_u_u((safe_sub_func_uint32_t_u_u(0xB7FCD394L, (((safe_lshift_func_uint16_t_u_s(((*****g_340) > g_57), 12)) , l_1889) != (1UL <= ((l_1890 = l_1869) , (((*g_433) ^= (safe_rshift_func_int8_t_s_s(((*g_1438) = ((safe_div_func_uint32_t_u_u(((l_1889 && (l_1895[0] &= (l_1890 || (((*l_1699) = l_1869) != g_116)))) < (-7L)), (*p_25))) , l_1890)), l_1869))) | l_1890)))))), l_1869));
+        }
+        for (g_100 = (-21); (g_100 <= 2); g_100 = safe_add_func_int64_t_s_s(g_100, 1))
+        { /* block id: 901 */
+            int32_t l_1901 = 0x2AC9815AL;
+            int32_t l_1902 = 0xF7876AD3L;
+            int32_t l_1903 = 2L;
+            int32_t l_1908 = (-1L);
+            int32_t l_1912 = 0x92DCC5B9L;
+            int32_t l_1914 = 0x785EFAFDL;
+            int32_t l_1915 = 0x14F32135L;
+            int32_t l_1916 = 0x14CC49CBL;
+            uint32_t l_1917 = 0xD3B3954AL;
+            if (((**g_814) = ((***g_237) = 0xAA427C9DL)))
+            { /* block id: 904 */
+                int32_t *l_1899[2];
+                int8_t l_1913 = (-1L);
+                int i;
+                for (i = 0; i < 2; i++)
+                    l_1899[i] = &g_66;
+                if (l_1701)
+                    goto lbl_1898;
+                --l_1917;
+                return (**g_237);
+            }
+            else
+            { /* block id: 908 */
+                uint32_t l_1922[8];
+                int32_t *l_1930 = &l_1914;
+                int8_t l_1942 = 0x61L;
+                int64_t **l_1946 = (void*)0;
+                int i;
+                for (i = 0; i < 8; i++)
+                    l_1922[i] = 0xCD19DE78L;
+                (*g_815) = ((*g_107) = (safe_lshift_func_uint16_t_u_u(((((*p_25) != (((l_1914 , (l_1922[0] | ((*g_1495) < (safe_lshift_func_int8_t_s_s(((((((((safe_lshift_func_uint8_t_u_s((!(-4L)), 3)) && ((*g_433) |= 0L)) == ((****l_1733) &= 8UL)) & (safe_lshift_func_uint16_t_u_s((l_1917 , 65534UL), 7))) ^ 5UL) , 0x06C5L) == (****l_1830)) , (*g_1438)), 7))))) , 6L) <= g_100)) != l_1914) & g_100), 4)));
+                if (l_1905)
+                { /* block id: 913 */
+                    return p_24;
+                }
+                else
+                { /* block id: 915 */
+                    uint8_t *l_1933 = &g_461;
+                    int64_t **l_1945 = &g_1107;
+                    int32_t l_1965[6];
+                    int i;
+                    for (i = 0; i < 6; i++)
+                        l_1965[i] = 0L;
+                    for (l_1917 = 0; (l_1917 <= 4); l_1917 = safe_add_func_uint64_t_u_u(l_1917, 1))
+                    { /* block id: 918 */
+                        const int8_t ***l_1939 = (void*)0;
+                        (*g_815) = (l_1933 != ((safe_mod_func_int32_t_s_s(0L, (safe_lshift_func_int8_t_s_u(((*l_1930) , ((*p_25) , (+((void*)0 == l_1939)))), (((((((*g_812) || (safe_sub_func_int8_t_s_s(0xB0L, ((*g_1711) = 0x74L)))) ^ l_1916) <= 1UL) ^ g_160) , l_1942) >= (****l_1830)))))) , (void*)0));
+                    }
+                    if ((*****g_1757))
+                        break;
+                    for (l_1901 = 0; (l_1901 == (-15)); --l_1901)
+                    { /* block id: 925 */
+                        int64_t ***l_1947 = &l_1946;
+                        int64_t **l_1949 = &g_1107;
+                        int64_t ***l_1948 = &l_1949;
+                        int32_t *****l_1958 = (void*)0;
+                        int32_t *****l_1959[10] = {&l_1830,&l_1830,&l_1830,&l_1830,&l_1830,&l_1830,&l_1830,&l_1830,&l_1830,&l_1830};
+                        int i;
+                        (*l_1930) |= (l_1910[2] <= ((l_1945 == ((*l_1948) = ((*l_1947) = l_1946))) , ((safe_sub_func_int8_t_s_s((safe_lshift_func_uint16_t_u_u((l_1954[0][1] == ((1UL == (9UL || 0x8FB555A459B68144LL)) , &g_1706)), 11)), (safe_unary_minus_func_int32_t_s(((((((-4L) <= (****l_1830)) , (*g_1495)) , (****l_1830)) || 1L) | l_1915))))) , (**g_811))));
+                        (**g_106) = ((((safe_div_func_int64_t_s_s((((((*g_1757) = (*g_340)) != (g_1960 = l_1830)) != 0x3B98179FL) != (safe_lshift_func_int16_t_s_u((*l_1930), ((safe_mul_func_uint8_t_u_u((((*l_1699) &= ((l_1965[3] > ((****l_1830) == g_57)) <= 0x39A475AE8A7E5376LL)) , ((safe_lshift_func_int16_t_s_u((****l_1830), l_1901)) , 1UL)), 9L)) ^ (-1L))))), (-6L))) , l_1901) , l_1910[3]) && (*p_24));
+                        return (****g_340);
+                    }
+                    return p_24;
+                }
+            }
+        }
+    }
+    l_1968 ^= ((****g_341) |= ((*g_812) , (*g_40)));
+    return (***l_1830);
+}
+
+
+/* ------------------------------------------ */
+/* 
+ * reads : g_1411
+ * writes: g_1411 g_681 g_16 g_960
+ */
+static uint32_t * func_26(int32_t  p_27, int64_t  p_28, uint32_t * p_29)
+{ /* block id: 783 */
+    uint32_t l_1649 = 4294967286UL;
+    uint32_t *l_1694 = &l_1649;
+    for (g_1411 = (-13); (g_1411 == 19); g_1411 = safe_add_func_int16_t_s_s(g_1411, 9))
+    { /* block id: 786 */
+        uint16_t *l_1654 = &g_1560;
+        int32_t l_1655 = 9L;
+        int16_t **l_1668 = (void*)0;
+        const int16_t *l_1670 = (void*)0;
+        const int16_t **l_1669[9] = {&l_1670,&l_1670,&l_1670,&l_1670,&l_1670,&l_1670,&l_1670,&l_1670,&l_1670};
+        int16_t * const *l_1688[2];
+        int i;
+        for (i = 0; i < 2; i++)
+            l_1688[i] = (void*)0;
+    }
+    for (g_681 = 0; g_681 < 3; g_681 += 1)
+    {
+        for (g_16 = 0; g_16 < 8; g_16 += 1)
+        {
+            for (g_1411 = 0; g_1411 < 4; g_1411 += 1)
+            {
+                g_960[g_681][g_16][g_1411] = 0xD0EC4CFF1E454F70LL;
+            }
+        }
+    }
+    return &g_913;
+}
+
+
+/* ------------------------------------------ */
+/* 
+ * reads :
+ * writes:
+ */
+static uint32_t  func_30(uint16_t  p_31, uint32_t  p_32)
+{ /* block id: 781 */
+    return p_31;
+}
+
+
+/* ------------------------------------------ */
+/* 
+ * reads : g_77
+ * writes: g_77
+ */
+static uint16_t  func_41(int32_t * p_42, int64_t  p_43, int8_t  p_44, int16_t  p_45, int32_t * p_46)
+{ /* block id: 306 */
+    int64_t l_738 = 0x77DE089FE115A900LL;
+    int32_t l_745[7][1][1] = {{{0xB9FCCD86L}},{{4L}},{{0xB9FCCD86L}},{{4L}},{{0xB9FCCD86L}},{{4L}},{{0xB9FCCD86L}}};
+    uint64_t **l_749 = (void*)0;
+    uint8_t *l_755 = (void*)0;
+    int32_t * const *l_770 = &g_107;
+    int32_t * const **l_769[8][4] = {{&l_770,&l_770,&l_770,&l_770},{&l_770,&l_770,&l_770,&l_770},{&l_770,&l_770,&l_770,&l_770},{&l_770,&l_770,&l_770,&l_770},{&l_770,&l_770,&l_770,&l_770},{&l_770,&l_770,&l_770,&l_770},{&l_770,&l_770,&l_770,&l_770},{&l_770,&l_770,&l_770,&l_770}};
+    int32_t * const ***l_768 = &l_769[7][3];
+    int32_t * const ****l_767 = &l_768;
+    uint64_t l_834 = 4UL;
+    int16_t **l_854 = &g_433;
+    int16_t ***l_853 = &l_854;
+    uint16_t *l_880 = (void*)0;
+    uint16_t l_881 = 0xCDCDL;
+    uint8_t *l_942 = &g_461;
+    int32_t l_971 = 0x0B2C091EL;
+    uint32_t l_1036 = 0x9C8BD626L;
+    int32_t ***l_1136 = &g_524;
+    int8_t l_1207 = 1L;
+    uint64_t l_1208 = 0x968193FDD1D9CB81LL;
+    int32_t l_1209[10];
+    int32_t l_1235 = 0xFD17EF6CL;
+    uint32_t l_1236 = 0xFB4E64EEL;
+    int16_t l_1255 = (-3L);
+    uint32_t l_1262 = 0x80A59BC9L;
+    int32_t l_1272 = (-8L);
+    int32_t ***l_1298 = &g_524;
+    int32_t *l_1328 = &g_16;
+    int32_t l_1332 = 1L;
+    int16_t l_1398 = 0xC719L;
+    uint32_t l_1429 = 0x9E85E56AL;
+    uint64_t l_1512 = 1UL;
+    int8_t l_1569 = 0x16L;
+    int32_t l_1576 = (-1L);
+    int64_t **l_1586 = (void*)0;
+    int8_t l_1588[6] = {0x44L,0x44L,0x44L,0x44L,0x44L,0x44L};
+    uint16_t l_1613 = 7UL;
+    int32_t l_1639 = 0xC3757E74L;
+    uint32_t l_1643 = 18446744073709551615UL;
+    int i, j, k;
+    for (i = 0; i < 10; i++)
+        l_1209[i] = 0x9B2F9034L;
+    for (g_77 = 0; (g_77 <= 3); g_77 += 1)
+    { /* block id: 309 */
+        uint16_t *l_725 = &g_160;
+        int32_t l_730 = 0x281CEB19L;
+        uint8_t *l_737[2];
+        int32_t l_746 = 0L;
+        int32_t *****l_766 = &g_341;
+        int64_t l_788[8][10] = {{(-5L),0xAECBEE4980424F40LL,0x6BE0F20FDC6A5123LL,(-1L),8L,0x6BE0F20FDC6A5123LL,(-9L),0x6BE0F20FDC6A5123LL,8L,(-1L)},{0x6BE0F20FDC6A5123LL,(-9L),0x6BE0F20FDC6A5123LL,8L,(-1L),0x6BE0F20FDC6A5123LL,0xAECBEE4980424F40LL,(-5L),8L,8L},{(-5L),(-9L),5L,(-1L),(-1L),5L,(-9L),(-5L),(-1L),(-1L)},{(-5L),0xAECBEE4980424F40LL,0x6BE0F20FDC6A5123LL,(-1L),8L,0x6BE0F20FDC6A5123LL,(-9L),0x6BE0F20FDC6A5123LL,8L,(-1L)},{0x6BE0F20FDC6A5123LL,(-9L),0x6BE0F20FDC6A5123LL,8L,(-1L),0x6BE0F20FDC6A5123LL,0xAECBEE4980424F40LL,(-5L),8L,8L},{(-5L),(-9L),5L,(-1L),(-1L),5L,(-9L),(-5L),(-1L),(-1L)},{(-5L),0xAECBEE4980424F40LL,0x6BE0F20FDC6A5123LL,(-1L),8L,0x6BE0F20FDC6A5123LL,(-9L),0x6BE0F20FDC6A5123LL,8L,(-1L)},{0x6BE0F20FDC6A5123LL,(-9L),0x6BE0F20FDC6A5123LL,8L,(-1L),0x6BE0F20FDC6A5123LL,0xAECBEE4980424F40LL,(-5L),8L,8L}};
+        uint16_t l_797 = 0UL;
+        uint64_t *l_803[6][7] = {{(void*)0,&g_77,&g_77,&g_210,&g_77,&g_210,&g_210},{&g_210,&g_77,&g_210,&g_77,&g_210,&g_77,(void*)0},{&g_77,&g_77,&g_210,(void*)0,&g_210,(void*)0,&g_210},{&g_210,&g_77,&g_77,&g_210,&g_77,(void*)0,&g_77},{&g_77,(void*)0,&g_77,&g_210,&g_77,&g_77,&g_210},{&g_210,(void*)0,&g_210,(void*)0,&g_210,&g_77,&g_77}};
+        int64_t l_871 = 0L;
+        uint32_t l_908 = 4294967286UL;
+        int32_t l_946[6][10][4] = {{{0xCC1D01A4L,(-7L),0x7323C3BFL,0x09800E81L},{0x874ADAA5L,0x979F8C99L,0x70638F9AL,0x4A3A3472L},{(-10L),0xECC050B5L,0xDCED8349L,0xDEA6BF0DL},{0L,0x9CD5254FL,0x874ADAA5L,(-6L)},{2L,0x15ECDD9DL,1L,9L},{0L,0x2D476BFAL,(-10L),(-1L)},{0L,0L,0xA14D4CB7L,1L},{(-6L),0x1C00DEAFL,(-1L),0xCC1D01A4L},{0xCC1D01A4L,(-10L),0L,7L},{1L,(-10L),0L,0x874ADAA5L}},{{0xD61FEE91L,0x3C4DB3D3L,0x0CBAC5FAL,1L},{0x1C4701C9L,0x4473D36CL,0x8FCFB8C4L,(-9L)},{0x0DEEDDA6L,0xDD69F7A8L,(-9L),0xD61FEE91L},{0x09800E81L,0L,0xDD69F7A8L,0xA355008AL},{0x9CD5254FL,0L,0x9CD5254FL,0x1C4701C9L},{0L,(-6L),0xDCED8349L,0x979F8C99L},{0x00BA2B43L,1L,0xE63FC6ECL,(-6L)},{0L,7L,0xE63FC6ECL,0x7323C3BFL},{0x00BA2B43L,(-7L),0xDCED8349L,(-6L)},{0L,0x8FCFB8C4L,0x9CD5254FL,0xE63FC6ECL}},{{0x9CD5254FL,0xE63FC6ECL,0xDD69F7A8L,0x0CBAC5FAL},{0x09800E81L,0x4F674455L,(-9L),0x15ECDD9DL},{0x0DEEDDA6L,0x4A3A3472L,0x8FCFB8C4L,1L},{0x1C4701C9L,0x7323C3BFL,0x0CBAC5FAL,(-5L)},{0xD61FEE91L,0x0CBAC5FAL,0L,0x4A3A3472L},{1L,0x0DEEDDA6L,0L,0x00BA2B43L},{0xCC1D01A4L,0L,1L,0L},{0x2D476BFAL,(-9L),0L,0xC86FAFFFL},{0L,0x874ADAA5L,1L,(-1L)},{0xECC050B5L,0x1C4701C9L,(-10L),0x09800E81L}},{{(-1L),0xDEA6BF0DL,(-1L),0L},{(-1L),0x15ECDD9DL,0L,0L},{0xEDFFB88FL,0xEDFFB88FL,0L,0xBF1F069DL},{(-1L),(-1L),(-9L),(-1L)},{0xDCED8349L,0xA355008AL,0x0DEEDDA6L,(-9L)},{0xC86FAFFFL,0xA355008AL,0x4473D36CL,(-1L)},{0xA355008AL,(-1L),7L,0xBF1F069DL},{0x0CBAC5FAL,0xEDFFB88FL,0x979F8C99L,0L},{0xDD69F7A8L,0x15ECDD9DL,0xE856541CL,0L},{0xBE4EC743L,0xDEA6BF0DL,0xEDFFB88FL,0x09800E81L}},{{2L,0x1C4701C9L,0xBE4EC743L,(-1L)},{(-1L),0x874ADAA5L,0x70638F9AL,0xC86FAFFFL},{0x1C00DEAFL,(-9L),(-1L),0L},{0x26866F96L,0L,0xBF1F069DL,0x00BA2B43L},{0L,0x0DEEDDA6L,0xD61FEE91L,0x4A3A3472L},{0xE63FC6ECL,0x0CBAC5FAL,(-6L),(-5L)},{0x5C54C0A0L,0x7323C3BFL,0xBA025394L,1L},{0x874ADAA5L,0x4A3A3472L,0xCC1D01A4L,0x15ECDD9DL},{0x3C4DB3D3L,0x4F674455L,0x00BA2B43L,0x0CBAC5FAL},{0L,0xE63FC6ECL,(-7L),0xE63FC6ECL}},{{0xB023796CL,0x8FCFB8C4L,0x5C54C0A0L,(-6L)},{0x4A3A3472L,(-7L),0x1C00DEAFL,0x7323C3BFL},{0x15ECDD9DL,7L,(-1L),(-6L)},{0x15ECDD9DL,1L,0x1C00DEAFL,0x979F8C99L},{0x4A3A3472L,(-6L),0x5C54C0A0L,0x1C4701C9L},{0xB023796CL,0L,0x5C54C0A0L,0x00BA2B43L},{0x0DEEDDA6L,0x26866F96L,0x7323C3BFL,9L},{0x8FCFB8C4L,0xCC1D01A4L,0xDCED8349L,0x15ECDD9DL},{(-1L),(-1L),0x09800E81L,(-7L)},{0L,0x8FCFB8C4L,0x2D476BFAL,(-1L)}}};
+        int32_t l_969 = (-10L);
+        int8_t l_990 = 0xF6L;
+        int64_t *l_1004 = &g_169;
+        uint16_t **l_1030 = &l_880;
+        uint32_t l_1077 = 18446744073709551611UL;
+        uint32_t l_1086 = 1UL;
+        int64_t * const *l_1168 = &g_1107;
+        int64_t * const **l_1167 = &l_1168;
+        uint32_t *l_1193 = &l_1086;
+        int16_t l_1204[10] = {0x0560L,0x0560L,0x0560L,0x0560L,0x0560L,0x0560L,0x0560L,0x0560L,0x0560L,0x0560L};
+        int8_t *l_1205[7] = {(void*)0,&l_990,&l_990,(void*)0,&l_990,&l_990,(void*)0};
+        int64_t l_1206 = (-1L);
+        int8_t l_1242 = 0x31L;
+        uint8_t l_1323 = 0xCCL;
+        uint16_t l_1414 = 0xEC40L;
+        uint64_t ***l_1488[9][4] = {{&g_858[1][9][1],&g_858[1][1][1],&l_749,(void*)0},{&g_858[1][1][1],&l_749,&g_858[1][1][1],&l_749},{&l_749,&l_749,&g_858[1][9][1],&l_749},{&g_858[1][9][1],&l_749,(void*)0,(void*)0},{&g_858[1][1][1],&g_858[1][1][1],&g_858[1][1][1],&g_858[1][1][1]},{&g_858[1][1][1],&l_749,(void*)0,&g_858[1][1][1]},{&g_858[1][9][1],&g_858[1][1][1],&g_858[1][9][1],(void*)0},{&l_749,&g_858[1][1][1],&g_858[1][1][1],&g_858[1][1][1]},{&g_858[1][1][1],&l_749,&l_749,&g_858[1][1][1]}};
+        uint8_t l_1567 = 0x8AL;
+        int16_t l_1590 = 0L;
+        int i, j, k;
+        for (i = 0; i < 2; i++)
+            l_737[i] = &g_461;
+    }
+    return l_1643;
+}
+
+
+/* ------------------------------------------ */
+/* 
+ * reads : g_61 g_59 g_77 g_66 g_461 g_672 g_681 g_281 g_164 g_580 g_237 g_106 g_107 g_308 g_235
+ * writes: g_61 g_59 g_10 g_77 g_149 g_66 g_100 g_461 g_672 g_169 g_685 g_171 g_164 g_160 g_232 g_681
+ */
+static int32_t * func_49(uint64_t  p_50, uint64_t  p_51)
+{ /* block id: 10 */
+    int64_t l_64[5][3][9] = {{{(-10L),(-2L),(-3L),0x7E410F71350D55FALL,0x47E5F8F0B53CF54CLL,0xF7C1AE2EFAADAD2DLL,0x9D0615A0349B8AE0LL,(-4L),0x5036FFE617092FF8LL},{0L,0xE6A83B1D319D7FCCLL,0xEDC29BFBD42F9032LL,(-10L),(-10L),9L,0x988A21DEC7435724LL,0x988A21DEC7435724LL,9L},{0L,9L,0xF7C1AE2EFAADAD2DLL,9L,0L,1L,(-5L),9L,0x988A21DEC7435724LL}},{{(-10L),(-4L),9L,0x9E5FAF1BECDE8719LL,0x5036FFE617092FF8LL,0x318431BB57CF3D00LL,4L,0x63965B818E961CAELL,0L},{9L,4L,1L,0L,0x81468F30040642FCLL,1L,0xEDE6A6B93DCEDB1ALL,0x318431BB57CF3D00LL,(-5L)},{1L,(-9L),(-1L),0x47E5F8F0B53CF54CLL,0x95EF2B5D06DE21E5LL,9L,0x9E5FAF1BECDE8719LL,0xEDE6A6B93DCEDB1ALL,0x9E5FAF1BECDE8719LL}},{{0xF7C1AE2EFAADAD2DLL,(-9L),0L,0L,(-9L),0xF7C1AE2EFAADAD2DLL,0x95EF2B5D06DE21E5LL,(-10L),0x318431BB57CF3D00LL},{0x9E5FAF1BECDE8719LL,4L,0x5036FFE617092FF8LL,0xEDC29BFBD42F9032LL,0x12ED4033E270BB1DLL,0x95EF2B5D06DE21E5LL,0x63965B818E961CAELL,9L,1L},{4L,(-4L),(-9L),(-10L),0xEDE6A6B93DCEDB1ALL,0xEDC29BFBD42F9032LL,0x95EF2B5D06DE21E5LL,1L,0x81468F30040642FCLL}},{{1L,9L,0x9D0615A0349B8AE0LL,(-5L),(-3L),0L,0x9E5FAF1BECDE8719LL,(-9L),(-9L)},{0xEDE6A6B93DCEDB1ALL,0xE6A83B1D319D7FCCLL,0x9D0615A0349B8AE0LL,9L,0x9D0615A0349B8AE0LL,0xE6A83B1D319D7FCCLL,0xEDE6A6B93DCEDB1ALL,0L,0x47E5F8F0B53CF54CLL},{0x81468F30040642FCLL,(-2L),(-9L),0L,(-10L),0x9D0615A0349B8AE0LL,4L,0xEDC29BFBD42F9032LL,0xF7C1AE2EFAADAD2DLL}},{{0xEDC29BFBD42F9032LL,1L,0x5036FFE617092FF8LL,(-2L),1L,0x12ED4033E270BB1DLL,(-5L),0L,0L},{(-1L),0x136B80555F25AD92LL,0L,0x9E5FAF1BECDE8719LL,0x9D0615A0349B8AE0LL,0xEDC29BFBD42F9032LL,(-10L),(-10L),0x5036FFE617092FF8LL},{0x5036FFE617092FF8LL,0L,0xF7C1AE2EFAADAD2DLL,0x9E5FAF1BECDE8719LL,0x9E5FAF1BECDE8719LL,0xF7C1AE2EFAADAD2DLL,0L,0x5036FFE617092FF8LL,0xF8A3D35555D5DF5BLL}}};
+    int32_t *l_103[4] = {&g_16,&g_16,&g_16,&g_16};
+    int32_t **l_102 = &l_103[3];
+    int64_t *l_336 = &g_281;
+    int32_t ****l_339 = &g_235[1];
+    const uint64_t l_515[8] = {0x029405B47BA39F06LL,0x029405B47BA39F06LL,0xE26D948252309E62LL,0x029405B47BA39F06LL,0x029405B47BA39F06LL,0xE26D948252309E62LL,0x029405B47BA39F06LL,0x029405B47BA39F06LL};
+    uint16_t l_516 = 1UL;
+    int64_t l_517 = (-1L);
+    int16_t *l_680 = &g_308;
+    uint16_t *l_692[4] = {&g_164[6][3][2],&g_164[6][3][2],&g_164[6][3][2],&g_164[6][3][2]};
+    int32_t l_703 = 0x3D5300F6L;
+    int8_t *l_714 = &g_232;
+    int8_t l_717 = 0x9FL;
+    uint32_t l_718 = 1UL;
+    uint32_t *l_719 = &g_171[0];
+    uint8_t l_720 = 1UL;
+    uint8_t *l_721 = &g_461;
+    int8_t l_722 = 0xC9L;
+    int i, j, k;
+    for (p_50 = 15; (p_50 < 7); p_50 = safe_sub_func_uint32_t_u_u(p_50, 7))
+    { /* block id: 13 */
+        int32_t *l_58 = &g_59;
+        int32_t *l_60[9];
+        int i;
+        for (i = 0; i < 9; i++)
+            l_60[i] = &g_59;
+        ++g_61;
+    }
+    for (g_59 = 2; (g_59 >= 0); g_59 -= 1)
+    { /* block id: 18 */
+        int32_t * const l_84 = &g_59;
+        int32_t *l_303 = &g_66;
+        int32_t l_314[6];
+        int32_t *****l_359 = (void*)0;
+        uint64_t *l_385 = &g_210;
+        int16_t *l_393 = &g_131;
+        const int32_t **l_558 = (void*)0;
+        const int32_t ***l_557 = &l_558;
+        int64_t l_609 = 0x5E8488AAEEE257C0LL;
+        uint32_t l_664 = 4294967295UL;
+        uint32_t l_665 = 0x3E6563E2L;
+        int8_t *l_666 = &g_100;
+        uint8_t *l_667 = (void*)0;
+        uint8_t *l_668 = (void*)0;
+        uint8_t *l_669[3][9][9] = {{{&g_461,&g_461,(void*)0,&g_461,&g_461,&g_461,&g_461,&g_461,(void*)0},{&g_461,(void*)0,(void*)0,&g_461,&g_461,&g_461,(void*)0,&g_461,&g_461},{(void*)0,&g_461,(void*)0,(void*)0,&g_461,&g_461,(void*)0,&g_461,&g_461},{&g_461,&g_461,(void*)0,&g_461,&g_461,&g_461,&g_461,&g_461,(void*)0},{(void*)0,&g_461,(void*)0,&g_461,&g_461,&g_461,&g_461,&g_461,&g_461},{&g_461,(void*)0,(void*)0,&g_461,(void*)0,&g_461,&g_461,&g_461,&g_461},{(void*)0,(void*)0,(void*)0,&g_461,&g_461,&g_461,&g_461,&g_461,(void*)0},{&g_461,&g_461,(void*)0,&g_461,(void*)0,&g_461,&g_461,(void*)0,&g_461},{&g_461,&g_461,(void*)0,&g_461,&g_461,&g_461,&g_461,&g_461,&g_461}},{{&g_461,&g_461,(void*)0,&g_461,&g_461,&g_461,&g_461,&g_461,(void*)0},{&g_461,(void*)0,(void*)0,&g_461,&g_461,&g_461,(void*)0,&g_461,&g_461},{(void*)0,&g_461,(void*)0,(void*)0,&g_461,&g_461,(void*)0,&g_461,&g_461},{&g_461,&g_461,(void*)0,&g_461,&g_461,&g_461,&g_461,&g_461,(void*)0},{(void*)0,&g_461,(void*)0,&g_461,&g_461,&g_461,&g_461,&g_461,&g_461},{&g_461,(void*)0,(void*)0,&g_461,(void*)0,&g_461,&g_461,&g_461,&g_461},{(void*)0,(void*)0,(void*)0,&g_461,&g_461,&g_461,&g_461,&g_461,(void*)0},{&g_461,&g_461,(void*)0,&g_461,(void*)0,&g_461,&g_461,(void*)0,&g_461},{&g_461,&g_461,(void*)0,&g_461,&g_461,&g_461,&g_461,&g_461,&g_461}},{{(void*)0,&g_461,(void*)0,&g_461,&g_461,(void*)0,(void*)0,&g_461,(void*)0},{(void*)0,&g_461,(void*)0,&g_461,&g_461,&g_461,&g_461,(void*)0,&g_461},{(void*)0,(void*)0,(void*)0,&g_461,&g_461,&g_461,(void*)0,&g_461,&g_461},{&g_461,&g_461,(void*)0,&g_461,(void*)0,(void*)0,&g_461,&g_461,(void*)0},{&g_461,(void*)0,(void*)0,&g_461,(void*)0,&g_461,&g_461,(void*)0,&g_461},{&g_461,&g_461,(void*)0,(void*)0,&g_461,&g_461,(void*)0,&g_461,&g_461},{&g_461,(void*)0,(void*)0,&g_461,&g_461,(void*)0,&g_461,&g_461,(void*)0},{&g_461,&g_461,(void*)0,&g_461,(void*)0,&g_461,&g_461,&g_461,&g_461},{&g_461,&g_461,(void*)0,(void*)0,&g_461,&g_461,&g_461,&g_461,&g_461}}};
+        int32_t *** const **l_674 = (void*)0;
+        int32_t *** const **l_675 = &g_672;
+        int32_t ***l_683 = &g_524;
+        int32_t ****l_682[3][10] = {{&l_683,&l_683,&l_683,&l_683,&l_683,&l_683,&l_683,&l_683,&l_683,&l_683},{&l_683,&l_683,&l_683,&l_683,&l_683,&l_683,&l_683,&l_683,&l_683,&l_683},{&l_683,&l_683,&l_683,&l_683,&l_683,&l_683,&l_683,&l_683,&l_683,&l_683}};
+        int32_t *****l_684[7];
+        int i, j, k;
+        for (i = 0; i < 6; i++)
+            l_314[i] = 0x5CB6F0BDL;
+        for (i = 0; i < 7; i++)
+            l_684[i] = &l_682[2][4];
+        for (g_10 = 0; (g_10 <= 2); g_10 += 1)
+        { /* block id: 21 */
+            int32_t *l_65 = &g_66;
+            int32_t *l_67 = (void*)0;
+            int32_t *l_68 = &g_66;
+            int32_t *l_69 = &g_66;
+            int32_t *l_70 = &g_66;
+            int32_t *l_71 = (void*)0;
+            int32_t *l_72 = &g_66;
+            int32_t *l_73 = &g_66;
+            int32_t *l_74 = (void*)0;
+            int32_t *l_75 = (void*)0;
+            int32_t *l_76[8] = {&g_59,&g_66,&g_59,&g_66,&g_59,&g_66,&g_59,&g_66};
+            int8_t *l_99 = &g_100;
+            int8_t l_101 = (-5L);
+            uint16_t *l_287 = &g_164[3][3][0];
+            uint64_t *l_290 = &g_77;
+            int i;
+            --g_77;
+        }
+        for (g_149 = 0; (g_149 <= 2); g_149 += 1)
+        { /* block id: 151 */
+            int32_t **l_335 = &g_107;
+            int32_t ***l_334 = &l_335;
+            int8_t *l_337 = &g_100;
+            int32_t l_338[8][3][3] = {{{1L,0x8106C009L,0x8106C009L},{0L,0x19E04E5DL,7L},{0L,1L,(-9L)}},{{0L,0L,1L},{1L,0L,0x09E31F1BL},{0x19E04E5DL,0L,0x19E04E5DL}},{{0x8106C009L,1L,0x89B28858L},{0x5FE4B673L,0x19E04E5DL,0x19E04E5DL},{0x89B28858L,0x8106C009L,0x09E31F1BL}},{{0xC2B7E83EL,0x5FE4B673L,1L},{0x89B28858L,0x89B28858L,(-9L)},{0x5FE4B673L,0xC2B7E83EL,7L}},{{0x8106C009L,0x89B28858L,0x8106C009L},{0x19E04E5DL,0x5FE4B673L,0L},{1L,0x8106C009L,0x8106C009L}},{{0L,0x19E04E5DL,7L},{0L,1L,(-9L)},{0L,0L,1L}},{{1L,0L,0x09E31F1BL},{0x19E04E5DL,0L,0x19E04E5DL},{0x8106C009L,1L,0x89B28858L}},{{0x5FE4B673L,0x19E04E5DL,0x19E04E5DL},{0x89B28858L,0x8106C009L,0x09E31F1BL},{7L,0x19E04E5DL,0L}}};
+            uint32_t l_360 = 1UL;
+            int32_t *****l_383 = &g_341;
+            int16_t l_615 = 1L;
+            int32_t l_662 = (-4L);
+            int i, j, k;
+        }
+        (*l_303) ^= 0x52AE21EDL;
+        l_314[2] = (((*l_675) = ((((*l_666) = p_51) | (++g_461)) , g_672)) != ((((*l_303) = p_51) , 6UL) , (g_685 = (((((g_169 = (g_61 , (safe_mul_func_uint16_t_u_u((l_680 != l_393), g_681)))) | (0x26B15079872058FCLL > g_281)) && p_51) , p_51) , l_682[0][9]))));
+    }
+    (**g_106) = (safe_sub_func_int16_t_s_s((((g_171[0] = (~p_51)) , g_164[4][2][3]) , (((*l_721) = ((safe_lshift_func_uint16_t_u_u((g_164[6][6][1]--), (g_160 = 0xAB33L))) != (safe_div_func_uint32_t_u_u(((*l_719) = ((-1L) == ((safe_mod_func_uint16_t_u_u(((safe_mod_func_int8_t_s_s((safe_div_func_int8_t_s_s((l_703 <= ((((((((safe_add_func_int8_t_s_s(p_50, ((safe_rshift_func_int16_t_s_s((safe_add_func_uint32_t_u_u(((safe_rshift_func_int8_t_s_s((safe_add_func_int64_t_s_s((((*l_714) = (-7L)) != (safe_div_func_int8_t_s_s((l_714 != &g_100), p_50))), 18446744073709551615UL)), g_580)) || 0x3A1FBF18L), (***g_237))), 10)) && p_50))) , g_580) || l_717) , &l_516) == (void*)0) < 0x519C4231L) && 0xC77DL) , l_718)), p_51)), 0x58L)) , g_308), 6L)) & 0xC95788CC3C39FCC9LL))), l_720)))) || 0xEEL)), l_722));
+    return (***l_339);
+}
+
+
+/* ------------------------------------------ */
+/* 
+ * reads : g_100 g_106 g_66 g_57 g_59 g_116 g_118 g_107 g_16 g_131 g_61 g_10 g_149 g_160 g_164 g_171 g_200 g_202 g_169 g_237 g_77
+ * writes: g_100 g_106 g_66 g_116 g_118 g_131 g_107 g_149 g_160 g_164 g_169 g_171 g_200 g_202 g_210 g_232 g_235 g_237 g_281
+ */
+static int8_t  func_85(uint16_t  p_86, int32_t  p_87, int32_t ** p_88, int32_t  p_89)
+{ /* block id: 24 */
+    int32_t *l_113 = &g_16;
+    int32_t l_172 = 0x71645DA5L;
+    int32_t ***l_236 = &g_106;
+    int32_t ***l_238 = &g_106;
+    int64_t *l_260 = (void*)0;
+    int64_t *l_261 = &g_169;
+    int64_t *l_262[3];
+    uint64_t *l_266 = &g_210;
+    uint64_t **l_265 = &l_266;
+    int32_t *l_280[8][8][4] = {{{(void*)0,(void*)0,&g_66,(void*)0},{&g_16,&l_172,&l_172,&l_172},{(void*)0,&g_16,&l_172,&g_66},{&l_172,&g_16,(void*)0,(void*)0},{&l_172,&l_172,&l_172,(void*)0},{(void*)0,(void*)0,&l_172,&g_16},{&g_16,&g_66,&g_66,&l_172},{(void*)0,&g_66,(void*)0,&g_16}},{{&g_66,(void*)0,&g_16,(void*)0},{&g_66,&l_172,&g_16,(void*)0},{&g_16,&g_16,&g_16,&g_66},{&g_66,&g_16,&g_16,&l_172},{&g_66,&l_172,(void*)0,(void*)0},{(void*)0,(void*)0,&g_66,(void*)0},{&g_16,&l_172,&l_172,&l_172},{(void*)0,&g_16,&l_172,&g_66}},{{&l_172,&g_16,(void*)0,(void*)0},{&l_172,&l_172,&l_172,(void*)0},{(void*)0,(void*)0,&l_172,&g_16},{&g_16,&g_66,&g_66,&l_172},{(void*)0,&g_66,(void*)0,&g_16},{&g_66,(void*)0,&g_16,(void*)0},{&g_66,&l_172,&g_16,(void*)0},{&g_16,&g_16,&g_16,&g_66}},{{&g_66,&g_16,&g_16,&l_172},{&g_66,&l_172,(void*)0,(void*)0},{(void*)0,(void*)0,&g_66,(void*)0},{&g_16,&l_172,&l_172,&l_172},{(void*)0,&g_16,&l_172,&g_66},{&l_172,&g_16,(void*)0,(void*)0},{&l_172,&l_172,&l_172,(void*)0},{(void*)0,(void*)0,&l_172,&g_16}},{{&g_16,&g_66,&g_66,&l_172},{(void*)0,&g_66,(void*)0,&g_16},{&g_66,(void*)0,&g_16,(void*)0},{&g_66,&l_172,&g_16,(void*)0},{&g_16,&g_16,&g_16,&g_66},{&g_66,&g_16,&g_16,&l_172},{&g_66,&l_172,(void*)0,(void*)0},{(void*)0,(void*)0,&g_66,(void*)0}},{{&g_16,&l_172,&l_172,&l_172},{(void*)0,&g_16,&l_172,&g_66},{&l_172,&g_16,(void*)0,(void*)0},{&l_172,&l_172,&l_172,(void*)0},{(void*)0,(void*)0,&l_172,&g_16},{&g_16,&g_66,&g_66,&l_172},{(void*)0,&g_66,(void*)0,&l_172},{&g_66,&g_16,&g_66,&g_16}},{{(void*)0,(void*)0,&g_16,&g_16},{&l_172,&g_66,&g_16,&l_172},{(void*)0,&l_172,&g_66,(void*)0},{&g_66,(void*)0,(void*)0,&g_66},{(void*)0,&g_66,(void*)0,&g_66},{&g_16,(void*)0,&l_172,(void*)0},{(void*)0,&l_172,&g_66,&l_172},{&l_172,&g_66,&g_16,&g_16}},{{&l_172,(void*)0,&g_66,&g_16},{(void*)0,&g_16,&l_172,&l_172},{&g_16,(void*)0,(void*)0,(void*)0},{(void*)0,(void*)0,(void*)0,&l_172},{&g_66,&g_16,&g_66,&g_16},{(void*)0,(void*)0,&g_16,&g_16},{&l_172,&g_66,&g_16,&l_172},{(void*)0,&l_172,&g_66,(void*)0}}};
+    int64_t l_282 = 0x2CE3211752853B98LL;
+    int i, j, k;
+    for (i = 0; i < 3; i++)
+        l_262[i] = &g_149;
+    (*p_88) = (*p_88);
+    for (g_100 = 0; (g_100 < (-10)); g_100 = safe_sub_func_uint32_t_u_u(g_100, 1))
+    { /* block id: 28 */
+        int32_t ***l_108[2][2][10] = {{{(void*)0,&g_106,(void*)0,&g_106,&g_106,(void*)0,&g_106,(void*)0,&g_106,&g_106},{(void*)0,&g_106,(void*)0,&g_106,&g_106,(void*)0,&g_106,(void*)0,&g_106,&g_106}},{{(void*)0,&g_106,(void*)0,&g_106,&g_106,(void*)0,&g_106,(void*)0,&g_106,&g_106},{(void*)0,&g_106,(void*)0,&g_106,&g_106,(void*)0,&g_106,(void*)0,&g_106,&g_106}}};
+        int32_t * const l_139 = &g_16;
+        uint32_t l_180 = 0xB3928AADL;
+        int8_t *l_253 = &g_100;
+        int i, j, k;
+        g_66 ^= (p_88 != (g_106 = g_106));
+        g_66 = (p_87 != (p_89 , (safe_sub_func_int32_t_s_s(0L, 0x33C0C381L))));
+        for (g_66 = (-22); (g_66 == 17); ++g_66)
+        { /* block id: 34 */
+            int32_t *l_114 = (void*)0;
+            int32_t *l_115 = &g_116;
+            int32_t *l_117 = &g_118[2][6][3];
+            int32_t l_119 = 0xCBBBBCA1L;
+            uint32_t l_170[1];
+            uint64_t * const l_178 = &g_77;
+            int32_t l_241 = 0x14B218C2L;
+            int i;
+            for (i = 0; i < 1; i++)
+                l_170[i] = 0UL;
+            if (((((((1L || 0x5D8EL) < (((l_113 == ((*p_88) = (*p_88))) || g_57) ^ (g_59 > ((((((*l_117) |= ((*l_115) |= g_66)) , l_113) == (void*)0) , 0xBCL) , g_66)))) || (**g_106)) , 248UL) >= l_119) == 0xCE46079F8D1BEB70LL))
+            { /* block id: 38 */
+                int32_t l_143 = 1L;
+                int32_t *l_147 = &g_59;
+                int64_t *l_148 = &g_149;
+                uint16_t *l_159 = &g_160;
+                uint16_t *l_163 = &g_164[6][6][1];
+                int64_t *l_168 = &g_169;
+                int32_t l_173 = (-1L);
+                for (g_116 = 0; (g_116 == (-3)); g_116--)
+                { /* block id: 41 */
+                    uint64_t l_124[6] = {3UL,3UL,3UL,3UL,3UL,3UL};
+                    int16_t *l_130[5];
+                    uint64_t *l_134[6][3][4] = {{{(void*)0,&l_124[0],&l_124[2],&l_124[4]},{&l_124[0],(void*)0,&l_124[4],(void*)0},{&g_77,&l_124[2],(void*)0,&g_77}},{{&l_124[4],(void*)0,&l_124[0],&l_124[4]},{&l_124[2],&l_124[5],(void*)0,(void*)0},{(void*)0,(void*)0,(void*)0,&g_77}},{{&l_124[4],(void*)0,&l_124[0],&l_124[5]},{&l_124[4],(void*)0,&l_124[1],&l_124[0]},{&g_77,(void*)0,&g_77,&l_124[5]}},{{(void*)0,(void*)0,&l_124[2],&g_77},{(void*)0,(void*)0,&l_124[1],(void*)0},{(void*)0,&l_124[5],&l_124[4],&l_124[4]}},{{(void*)0,(void*)0,&l_124[4],&g_77},{&l_124[1],&l_124[2],&l_124[1],(void*)0},{&l_124[4],(void*)0,&l_124[4],&l_124[4]}},{{&l_124[4],&l_124[0],(void*)0,(void*)0},{&l_124[1],(void*)0,(void*)0,&l_124[1]},{&l_124[4],(void*)0,&l_124[4],&l_124[5]}}};
+                    int32_t *l_144 = &l_119;
+                    int i, j, k;
+                    for (i = 0; i < 5; i++)
+                        l_130[i] = &g_131;
+                    for (p_87 = (-14); (p_87 == (-26)); p_87 = safe_sub_func_int16_t_s_s(p_87, 3))
+                    { /* block id: 44 */
+                        return l_124[4];
+                    }
+                    if ((((+(((g_118[0][1][2] == (safe_mod_func_int8_t_s_s(((safe_lshift_func_uint8_t_u_s((&p_89 == ((g_131 &= 0L) , &g_118[2][6][3])), (safe_unary_minus_func_uint8_t_u((((+0x401CL) <= g_61) & ((l_119 = p_86) == (safe_mod_func_int64_t_s_s(((((safe_add_func_int64_t_s_s(g_10, (0x5C710B0AC7073B47LL != 0x84173BB164CB8E99LL))) ^ (-3L)) ^ l_124[0]) , g_59), g_10)))))))) <= 0UL), g_57))) != p_89) >= p_89)) || g_57) & p_87))
+                    { /* block id: 49 */
+                        int32_t **l_140[4];
+                        int32_t **l_141 = (void*)0;
+                        int32_t **l_142 = &g_107;
+                        int i;
+                        for (i = 0; i < 4; i++)
+                            l_140[i] = &g_107;
+                        (*p_88) = (*p_88);
+                        (*l_142) = l_139;
+                        return l_143;
+                    }
+                    else
+                    { /* block id: 53 */
+                        l_144 = (*g_106);
+                        (*p_88) = (*p_88);
+                    }
+                }
+                l_173 ^= ((*l_113) , (l_172 = (g_171[0] &= ((~(g_131 > ((*l_148) ^= (~((*g_106) != l_147))))) == (!(safe_add_func_uint32_t_u_u(((safe_add_func_uint64_t_u_u(((safe_mul_func_uint16_t_u_u((l_139 == l_139), ((safe_mul_func_uint16_t_u_u((*l_113), ((*l_163) |= ((*l_159)++)))) < ((*l_168) = (((((safe_rshift_func_uint16_t_u_u((p_86 = 0UL), 11)) <= (+0xDDDF8381L)) && 4UL) <= p_89) && p_86))))) != 0xD721L), p_87)) == p_87), l_170[0])))))));
+            }
+            else
+            { /* block id: 66 */
+                uint64_t l_201 = 8UL;
+                int32_t l_239 = 0xA18C07E2L;
+                int32_t l_240 = 0x03F6EA20L;
+                for (p_89 = 0; (p_89 > 26); p_89 = safe_add_func_uint8_t_u_u(p_89, 6))
+                { /* block id: 69 */
+                    int8_t *l_179 = &g_100;
+                    int32_t l_196[4][2] = {{0xD9994814L,0xD9994814L},{0xD9994814L,0xD9994814L},{0xD9994814L,0xD9994814L},{0xD9994814L,0xD9994814L}};
+                    uint32_t l_242 = 0xA3B3628FL;
+                    int i, j;
+                    l_180 |= (1UL > ((((safe_sub_func_int32_t_s_s((**g_106), ((void*)0 != l_178))) < (p_89 , (l_179 == (p_89 , &g_100)))) , p_86) ^ 0xD964FF402FEEB18FLL));
+                    if ((l_108[1][0][9] == (void*)0))
+                    { /* block id: 71 */
+                        int16_t *l_199 = &g_131;
+                        uint32_t *l_208 = (void*)0;
+                        uint32_t *l_209[2][7][4];
+                        uint64_t *l_216 = &l_201;
+                        int64_t *l_217 = &g_169;
+                        int i, j, k;
+                        for (i = 0; i < 2; i++)
+                        {
+                            for (j = 0; j < 7; j++)
+                            {
+                                for (k = 0; k < 4; k++)
+                                    l_209[i][j][k] = &l_180;
+                            }
+                        }
+                        g_202 ^= ((*l_113) | ((safe_add_func_int8_t_s_s((safe_rshift_func_uint16_t_u_s((safe_mod_func_uint32_t_u_u((safe_mod_func_int8_t_s_s((g_200 |= ((~(((*l_199) &= (((safe_rshift_func_uint8_t_u_u(247UL, p_86)) | (safe_lshift_func_uint16_t_u_s(((*g_107) | ((safe_add_func_int64_t_s_s((0L ^ 7L), ((l_196[0][1] < (safe_sub_func_int8_t_s_s(g_171[0], p_86))) , p_86))) & p_89)), p_89))) , g_149)) != 0UL)) , p_89)), 1L)), (*l_113))), l_201)), 0x55L)) | 2L));
+                        p_87 = (safe_mod_func_uint32_t_u_u((g_210 = (l_196[0][1] = (+(((18446744073709551615UL && (0x876EL <= (p_86 ^ (g_57 , ((void*)0 == &p_89))))) == (g_171[0]++)) != p_87)))), (((*l_217) = ((+(safe_add_func_uint16_t_u_u((((safe_mod_func_uint64_t_u_u(((*l_216) |= (p_86 != g_100)), p_86)) ^ (*g_107)) , p_87), (-1L)))) & (*g_107))) ^ g_164[6][6][1])));
+                    }
+                    else
+                    { /* block id: 81 */
+                        int16_t *l_229[6] = {&g_131,&g_131,&g_131,&g_131,&g_131,&g_131};
+                        uint16_t *l_230 = &g_164[6][6][1];
+                        int32_t l_231 = 0x443E69B7L;
+                        int32_t ****l_233 = (void*)0;
+                        int32_t ****l_234[3][7][2] = {{{(void*)0,(void*)0},{(void*)0,&l_108[1][0][9]},{&l_108[0][0][6],&l_108[1][0][9]},{&l_108[1][0][9],(void*)0},{(void*)0,(void*)0},{&l_108[1][0][9],&l_108[1][0][9]},{&l_108[0][0][6],&l_108[1][0][9]}},{{(void*)0,(void*)0},{(void*)0,&l_108[1][0][9]},{&l_108[0][0][6],&l_108[0][0][6]},{&l_108[1][0][9],(void*)0},{(void*)0,(void*)0},{&l_108[1][0][9],&l_108[0][0][6]},{&l_108[1][0][9],&l_108[1][0][9]}},{{(void*)0,(void*)0},{(void*)0,&l_108[1][0][9]},{&l_108[1][0][9],&l_108[0][0][6]},{&l_108[1][0][9],(void*)0},{(void*)0,(void*)0},{&l_108[1][0][9],&l_108[0][0][6]},{&l_108[0][0][6],&l_108[1][0][9]}}};
+                        int i, j, k;
+                        if ((*g_107))
+                            break;
+                        g_232 = (safe_lshift_func_int8_t_s_u(((safe_rshift_func_int16_t_s_u((safe_div_func_uint16_t_u_u(((*l_230) = ((safe_mul_func_int8_t_s_s(0xF6L, ((void*)0 == (*g_106)))) < (p_87 ^ ((g_202 = (!(((safe_rshift_func_int16_t_s_s(p_89, l_170[0])) & ((void*)0 != (*g_106))) <= 0x256FD15697580FF7LL))) || 0x410DL)))), g_57)), 7)) , l_231), 6));
+                        l_238 = (g_237 = (l_236 = (g_235[1] = &g_106)));
+                        (*g_106) = (*p_88);
+                    }
+                    ++l_242;
+                    l_239 = (g_149 && (((g_149 >= g_169) >= l_242) != (safe_mul_func_uint16_t_u_u(0UL, ((-10L) < 1UL)))));
+                }
+            }
+        }
+        if ((***g_237))
+        { /* block id: 97 */
+            (**l_238) = (*p_88);
+        }
+        else
+        { /* block id: 99 */
+            for (g_131 = (-22); (g_131 <= 8); g_131 = safe_add_func_uint32_t_u_u(g_131, 6))
+            { /* block id: 102 */
+                return p_89;
+            }
+            p_87 = (((p_89 != (safe_rshift_func_int8_t_s_s(p_86, (0xA2A86C6973A35D59LL <= ((-3L) && (l_253 == (void*)0)))))) >= (((*l_139) == (~(safe_rshift_func_uint16_t_u_u((safe_lshift_func_uint8_t_u_s(g_118[1][4][0], (*l_113))), 6)))) < p_87)) != g_57);
+        }
+    }
+    l_282 &= (safe_unary_minus_func_uint8_t_u(((g_149 |= (((*l_261) = p_89) | p_87)) == (~(+(((*l_113) >= (((*l_265) = l_262[2]) != ((g_281 = ((safe_mod_func_int8_t_s_s((safe_div_func_uint16_t_u_u(((0x27L && ((safe_add_func_uint32_t_u_u((safe_rshift_func_int8_t_s_u(((((safe_mul_func_int16_t_s_s((+g_118[0][6][1]), g_100)) == ((0UL >= (safe_mul_func_uint16_t_u_u(g_164[1][5][1], g_164[5][0][3]))) == 0x03L)) > p_89) | 0L), p_89)), 0x98F2DC3FL)) & p_89)) < p_89), g_10)), p_87)) , (***l_236))) , &g_210))) || g_66))))));
+    for (g_100 = (-10); (g_100 != (-19)); g_100--)
+    { /* block id: 115 */
+        return g_149;
+    }
+    return g_77;
+}
+
+
+
+
+/* ---------------------------------------- */
+int main (int argc, char* argv[])
+{
+    int i, j, k;
+    int print_hash_value = 0;
+    if (argc == 2 && strcmp(argv[1], "1") == 0) print_hash_value = 1;
+    platform_main_begin();
+    crc32_gentab();
+    func_1();
+    transparent_crc(g_10, "g_10", print_hash_value);
+    transparent_crc(g_16, "g_16", print_hash_value);
+    for (i = 0; i < 6; i++)
+    {
+        for (j = 0; j < 4; j++)
+        {
+            transparent_crc(g_48[i][j], "g_48[i][j]", print_hash_value);
+            if (print_hash_value) printf("index = [%d][%d]\n", i, j);
+
+        }
+    }
+    transparent_crc(g_57, "g_57", print_hash_value);
+    transparent_crc(g_59, "g_59", print_hash_value);
+    transparent_crc(g_61, "g_61", print_hash_value);
+    transparent_crc(g_66, "g_66", print_hash_value);
+    transparent_crc(g_77, "g_77", print_hash_value);
+    transparent_crc(g_100, "g_100", print_hash_value);
+    transparent_crc(g_116, "g_116", print_hash_value);
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 7; j++)
+        {
+            for (k = 0; k < 4; k++)
+            {
+                transparent_crc(g_118[i][j][k], "g_118[i][j][k]", print_hash_value);
+                if (print_hash_value) printf("index = [%d][%d][%d]\n", i, j, k);
+
+            }
+        }
+    }
+    transparent_crc(g_131, "g_131", print_hash_value);
+    transparent_crc(g_149, "g_149", print_hash_value);
+    transparent_crc(g_160, "g_160", print_hash_value);
+    for (i = 0; i < 7; i++)
+    {
+        for (j = 0; j < 7; j++)
+        {
+            for (k = 0; k < 5; k++)
+            {
+                transparent_crc(g_164[i][j][k], "g_164[i][j][k]", print_hash_value);
+                if (print_hash_value) printf("index = [%d][%d][%d]\n", i, j, k);
+
+            }
+        }
+    }
+    transparent_crc(g_169, "g_169", print_hash_value);
+    for (i = 0; i < 1; i++)
+    {
+        transparent_crc(g_171[i], "g_171[i]", print_hash_value);
+        if (print_hash_value) printf("index = [%d]\n", i);
+
+    }
+    transparent_crc(g_200, "g_200", print_hash_value);
+    transparent_crc(g_202, "g_202", print_hash_value);
+    transparent_crc(g_210, "g_210", print_hash_value);
+    transparent_crc(g_232, "g_232", print_hash_value);
+    transparent_crc(g_281, "g_281", print_hash_value);
+    transparent_crc(g_308, "g_308", print_hash_value);
+    transparent_crc(g_372, "g_372", print_hash_value);
+    transparent_crc(g_461, "g_461", print_hash_value);
+    transparent_crc(g_580, "g_580", print_hash_value);
+    transparent_crc(g_681, "g_681", print_hash_value);
+    for (i = 0; i < 10; i++)
+    {
+        for (j = 0; j < 5; j++)
+        {
+            for (k = 0; k < 5; k++)
+            {
+                transparent_crc(g_856[i][j][k], "g_856[i][j][k]", print_hash_value);
+                if (print_hash_value) printf("index = [%d][%d][%d]\n", i, j, k);
+
+            }
+        }
+    }
+    transparent_crc(g_913, "g_913", print_hash_value);
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 8; j++)
+        {
+            for (k = 0; k < 4; k++)
+            {
+                transparent_crc(g_960[i][j][k], "g_960[i][j][k]", print_hash_value);
+                if (print_hash_value) printf("index = [%d][%d][%d]\n", i, j, k);
+
+            }
+        }
+    }
+    transparent_crc(g_1062, "g_1062", print_hash_value);
+    transparent_crc(g_1178, "g_1178", print_hash_value);
+    transparent_crc(g_1330, "g_1330", print_hash_value);
+    transparent_crc(g_1331, "g_1331", print_hash_value);
+    transparent_crc(g_1411, "g_1411", print_hash_value);
+    transparent_crc(g_1413, "g_1413", print_hash_value);
+    for (i = 0; i < 4; i++)
+    {
+        for (j = 0; j < 8; j++)
+        {
+            for (k = 0; k < 5; k++)
+            {
+                transparent_crc(g_1528[i][j][k], "g_1528[i][j][k]", print_hash_value);
+                if (print_hash_value) printf("index = [%d][%d][%d]\n", i, j, k);
+
+            }
+        }
+    }
+    transparent_crc(g_1560, "g_1560", print_hash_value);
+    transparent_crc(g_1595, "g_1595", print_hash_value);
+    transparent_crc(g_2059, "g_2059", print_hash_value);
+    transparent_crc(g_2126, "g_2126", print_hash_value);
+    transparent_crc(g_2245, "g_2245", print_hash_value);
+    transparent_crc(g_2268, "g_2268", print_hash_value);
+    transparent_crc(g_2455, "g_2455", print_hash_value);
+    transparent_crc(g_2468, "g_2468", print_hash_value);
+    for (i = 0; i < 1; i++)
+    {
+        transparent_crc(g_2470[i], "g_2470[i]", print_hash_value);
+        if (print_hash_value) printf("index = [%d]\n", i);
+
+    }
+    transparent_crc(g_2473, "g_2473", print_hash_value);
+    transparent_crc(g_2600, "g_2600", print_hash_value);
+    transparent_crc(g_2643, "g_2643", print_hash_value);
+    transparent_crc(g_2653, "g_2653", print_hash_value);
+    transparent_crc(g_2858, "g_2858", print_hash_value);
+    transparent_crc(g_2955, "g_2955", print_hash_value);
+    transparent_crc(g_2965, "g_2965", print_hash_value);
+    transparent_crc(g_2972, "g_2972", print_hash_value);
+    for (i = 0; i < 2; i++)
+    {
+        for (j = 0; j < 4; j++)
+        {
+            for (k = 0; k < 3; k++)
+            {
+                transparent_crc(g_3024[i][j][k], "g_3024[i][j][k]", print_hash_value);
+                if (print_hash_value) printf("index = [%d][%d][%d]\n", i, j, k);
+
+            }
+        }
+    }
+    transparent_crc(g_3079, "g_3079", print_hash_value);
+    for (i = 0; i < 5; i++)
+    {
+        for (j = 0; j < 8; j++)
+        {
+            for (k = 0; k < 2; k++)
+            {
+                transparent_crc(g_3180[i][j][k], "g_3180[i][j][k]", print_hash_value);
+                if (print_hash_value) printf("index = [%d][%d][%d]\n", i, j, k);
+
+            }
+        }
+    }
+    transparent_crc(g_3181, "g_3181", print_hash_value);
+    for (i = 0; i < 6; i++)
+    {
+        transparent_crc(g_3185[i], "g_3185[i]", print_hash_value);
+        if (print_hash_value) printf("index = [%d]\n", i);
+
+    }
+    transparent_crc(g_3203, "g_3203", print_hash_value);
+    transparent_crc(g_3217, "g_3217", print_hash_value);
+    transparent_crc(g_3348, "g_3348", print_hash_value);
+    for (i = 0; i < 10; i++)
+    {
+        transparent_crc(g_3375[i], "g_3375[i]", print_hash_value);
+        if (print_hash_value) printf("index = [%d]\n", i);
+
+    }
+    for (i = 0; i < 8; i++)
+    {
+        for (j = 0; j < 6; j++)
+        {
+            transparent_crc(g_3399[i][j], "g_3399[i][j]", print_hash_value);
+            if (print_hash_value) printf("index = [%d][%d]\n", i, j);
+
+        }
+    }
+    transparent_crc(g_3430, "g_3430", print_hash_value);
+    transparent_crc(g_3614, "g_3614", print_hash_value);
+    for (i = 0; i < 5; i++)
+    {
+        for (j = 0; j < 5; j++)
+        {
+            transparent_crc(g_3645[i][j], "g_3645[i][j]", print_hash_value);
+            if (print_hash_value) printf("index = [%d][%d]\n", i, j);
+
+        }
+    }
+    for (i = 0; i < 7; i++)
+    {
+        transparent_crc(g_3790[i], "g_3790[i]", print_hash_value);
+        if (print_hash_value) printf("index = [%d]\n", i);
+
+    }
+    transparent_crc(g_3871, "g_3871", print_hash_value);
+    transparent_crc(g_3888, "g_3888", print_hash_value);
+    transparent_crc(g_3984, "g_3984", print_hash_value);
+    for (i = 0; i < 6; i++)
+    {
+        for (j = 0; j < 7; j++)
+        {
+            for (k = 0; k < 6; k++)
+            {
+                transparent_crc(g_4095[i][j][k], "g_4095[i][j][k]", print_hash_value);
+                if (print_hash_value) printf("index = [%d][%d][%d]\n", i, j, k);
+
+            }
+        }
+    }
+    platform_main_end(crc32_context ^ 0xFFFFFFFFUL, print_hash_value);
+    return 0;
+}
+
+/************************ statistics *************************
+XXX max struct depth: 0
+breakdown:
+   depth: 0, occurrence: 1037
+XXX total union variables: 0
+
+XXX non-zero bitfields defined in structs: 0
+XXX zero bitfields defined in structs: 0
+XXX const bitfields defined in structs: 0
+XXX volatile bitfields defined in structs: 0
+XXX structs with bitfields in the program: 0
+breakdown:
+XXX full-bitfields structs in the program: 0
+breakdown:
+XXX times a bitfields struct's address is taken: 0
+XXX times a bitfields struct on LHS: 0
+XXX times a bitfields struct on RHS: 0
+XXX times a single bitfield on LHS: 0
+XXX times a single bitfield on RHS: 0
+
+XXX max expression depth: 40
+breakdown:
+   depth: 1, occurrence: 151
+   depth: 2, occurrence: 43
+   depth: 3, occurrence: 4
+   depth: 4, occurrence: 2
+   depth: 7, occurrence: 1
+   depth: 10, occurrence: 2
+   depth: 12, occurrence: 1
+   depth: 16, occurrence: 2
+   depth: 18, occurrence: 4
+   depth: 19, occurrence: 1
+   depth: 20, occurrence: 4
+   depth: 21, occurrence: 4
+   depth: 22, occurrence: 5
+   depth: 23, occurrence: 1
+   depth: 24, occurrence: 4
+   depth: 25, occurrence: 4
+   depth: 26, occurrence: 1
+   depth: 33, occurrence: 1
+   depth: 35, occurrence: 1
+   depth: 36, occurrence: 1
+   depth: 38, occurrence: 1
+   depth: 40, occurrence: 1
+
+XXX total number of pointers: 706
+
+XXX times a variable address is taken: 1991
+XXX times a pointer is dereferenced on RHS: 718
+breakdown:
+   depth: 1, occurrence: 492
+   depth: 2, occurrence: 112
+   depth: 3, occurrence: 41
+   depth: 4, occurrence: 51
+   depth: 5, occurrence: 22
+XXX times a pointer is dereferenced on LHS: 613
+breakdown:
+   depth: 1, occurrence: 491
+   depth: 2, occurrence: 58
+   depth: 3, occurrence: 36
+   depth: 4, occurrence: 20
+   depth: 5, occurrence: 8
+XXX times a pointer is compared with null: 84
+XXX times a pointer is compared with address of another variable: 24
+XXX times a pointer is compared with another pointer: 17
+XXX times a pointer is qualified to be dereferenced: 14048
+
+XXX max dereference level: 5
+breakdown:
+   level: 0, occurrence: 0
+   level: 1, occurrence: 2365
+   level: 2, occurrence: 580
+   level: 3, occurrence: 379
+   level: 4, occurrence: 374
+   level: 5, occurrence: 179
+XXX number of pointers point to pointers: 393
+XXX number of pointers point to scalars: 313
+XXX number of pointers point to structs: 0
+XXX percent of pointers has null in alias set: 30.7
+XXX average alias set size: 1.46
+
+XXX times a non-volatile is read: 3828
+XXX times a non-volatile is write: 1923
+XXX times a volatile is read: 245
+XXX    times read thru a pointer: 111
+XXX times a volatile is write: 17
+XXX    times written thru a pointer: 0
+XXX times a volatile is available for access: 2.26e+03
+XXX percentage of non-volatile access: 95.6
+
+XXX forward jumps: 0
+XXX backward jumps: 18
+
+XXX stmts: 164
+XXX max block depth: 5
+breakdown:
+   depth: 0, occurrence: 31
+   depth: 1, occurrence: 26
+   depth: 2, occurrence: 20
+   depth: 3, occurrence: 18
+   depth: 4, occurrence: 22
+   depth: 5, occurrence: 47
+
+XXX percentage a fresh-made variable is used: 15.8
+XXX percentage an existing variable is used: 84.2
+********************* end of statistics **********************/
+
