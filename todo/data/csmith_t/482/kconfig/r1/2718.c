@@ -1,0 +1,100 @@
+/*
+ * This is a RANDOMLY GENERATED PROGRAM.
+ *
+ * Generator: csmith 2.3.0
+ * Git version: 30dccd7
+ * Options:   --no-argc --arrays --no-bitfields --comma-operators --no-compound-assignment --consts --no-divs --no-embedded-assigns --no-pre-incr-operator --no-pre-decr-operator --no-post-incr-operator --no-post-decr-operator --no-unary-plus-operator --no-jumps --no-longlong --no-int8 --no-uint8 --no-float --no-math64 --no-inline-function --no-muls --no-safe-math --no-packed-struct --no-paranoid --no-pointers --no-structs --no-unions --no-volatiles --no-volatile-pointers --no-const-pointers --global-variabless --no-builtins
+ * Seed:      1573259756
+ */
+
+
+#define NO_LONGLONG
+
+#include "csmith.h"
+
+
+static long __undefined;
+
+/* --- Struct/Union Declarations --- */
+/* --- GLOBAL VARIABLES --- */
+static uint32_t g_4[7][8] = {{0U,4294967292U,0x2A2B3B7B,0U,0x10FECAFE,0x2A2B3B7B,0x2A2B3B7B,0x10FECAFE},{0x10FECAFE,0x2A2B3B7B,0x2A2B3B7B,0x10FECAFE,0U,0x2A2B3B7B,4294967292U,0U},{0x10FECAFE,4294967292U,4294967295U,0x10FECAFE,0x10FECAFE,4294967295U,4294967292U,0x10FECAFE},{0U,4294967292U,0x2A2B3B7B,0U,0x10FECAFE,0x2A2B3B7B,0x2A2B3B7B,0x10FECAFE},{0x10FECAFE,0x2A2B3B7B,0x2A2B3B7B,0x10FECAFE,0U,0x2A2B3B7B,4294967292U,0U},{0x10FECAFE,4294967292U,4294967295U,0x10FECAFE,0x10FECAFE,4294967295U,0x2A2B3B7B,0U},{4294967293U,0x2A2B3B7B,4294967295U,4294967293U,0U,4294967295U,4294967295U,0U}};
+static uint32_t g_7 = 0xF9B6917A;
+
+
+/* --- FORWARD DECLARATIONS --- */
+static uint32_t  func_1(void);
+
+
+/* --- FUNCTIONS --- */
+/* ------------------------------------------ */
+/* 
+ * reads : g_4
+ * writes: g_4 g_7
+ */
+static uint32_t  func_1(void)
+{ /* block id: 0 */
+    int32_t l_6 = 0x15466BC6;
+    g_4[1][1] = ((uint16_t)0xB0F7 << (uint16_t)8);
+    g_7 = (-(uint16_t)l_6);
+    return g_4[0][5];
+}
+
+
+
+
+/* ---------------------------------------- */
+int main (void)
+{
+    int i, j;
+    int print_hash_value = 0;
+    platform_main_begin();
+    crc32_gentab();
+    func_1();
+    for (i = 0; i < 7; i = i + 1)
+    {
+        for (j = 0; j < 8; j = j + 1)
+        {
+            transparent_crc(g_4[i][j], "g_4[i][j]", print_hash_value);
+            if (print_hash_value) printf("index = [%d][%d]\n", i, j);
+
+        }
+    }
+    transparent_crc(g_7, "g_7", print_hash_value);
+    platform_main_end(crc32_context ^ 0xFFFFFFFFUL, print_hash_value);
+    return 0;
+}
+
+/************************ statistics *************************
+XXX max struct depth: 0
+breakdown:
+   depth: 0, occurrence: 3
+XXX total union variables: 0
+
+XXX max expression depth: 2
+breakdown:
+   depth: 1, occurrence: 4
+   depth: 2, occurrence: 1
+
+XXX total number of pointers: 0
+
+XXX times a non-volatile is read: 2
+XXX times a non-volatile is write: 2
+XXX times a volatile is read: 0
+XXX    times read thru a pointer: 0
+XXX times a volatile is write: 0
+XXX    times written thru a pointer: 0
+XXX times a volatile is available for access: 0
+XXX percentage of non-volatile access: 100
+
+XXX forward jumps: 0
+XXX backward jumps: 0
+
+XXX stmts: 3
+XXX max block depth: 0
+breakdown:
+   depth: 0, occurrence: 3
+
+XXX percentage a fresh-made variable is used: 75
+XXX percentage an existing variable is used: 25
+********************* end of statistics **********************/
+

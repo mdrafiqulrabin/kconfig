@@ -1,0 +1,139 @@
+/*
+ * This is a RANDOMLY GENERATED PROGRAM.
+ *
+ * Generator: csmith 2.3.0
+ * Git version: 30dccd7
+ * Options:   (none)
+ * Seed:      1918748960
+ */
+
+#include "csmith.h"
+
+
+static long __undefined;
+
+/* --- Struct/Union Declarations --- */
+#pragma pack(push)
+#pragma pack(1)
+struct S0 {
+   unsigned f0 : 30;
+   const uint32_t  f1;
+   int64_t  f2;
+};
+#pragma pack(pop)
+
+/* --- GLOBAL VARIABLES --- */
+static int32_t g_3 = (-10L);
+static uint16_t g_4[7][3] = {{65529UL,5UL,5UL},{2UL,0x32D7L,2UL},{65529UL,65529UL,5UL},{65533UL,0x32D7L,65533UL},{65529UL,5UL,5UL},{2UL,0x32D7L,2UL},{65529UL,65529UL,5UL}};
+
+
+/* --- FORWARD DECLARATIONS --- */
+static struct S0  func_1(void);
+
+
+/* --- FUNCTIONS --- */
+/* ------------------------------------------ */
+/* 
+ * reads : g_4
+ * writes: g_4
+ */
+static struct S0  func_1(void)
+{ /* block id: 0 */
+    int32_t *l_2[10][10][2] = {{{&g_3,&g_3},{&g_3,(void*)0},{&g_3,(void*)0},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3}},{{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{(void*)0,&g_3},{&g_3,&g_3},{&g_3,(void*)0},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3}},{{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,(void*)0},{&g_3,&g_3},{&g_3,&g_3},{(void*)0,&g_3}},{{&g_3,&g_3},{&g_3,&g_3},{(void*)0,&g_3},{&g_3,&g_3},{&g_3,(void*)0},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3}},{{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,(void*)0},{&g_3,&g_3},{&g_3,&g_3},{(void*)0,&g_3},{&g_3,&g_3}},{{&g_3,&g_3},{(void*)0,&g_3},{&g_3,&g_3},{&g_3,(void*)0},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3}},{{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,(void*)0},{&g_3,&g_3},{&g_3,&g_3},{(void*)0,&g_3},{&g_3,&g_3},{&g_3,&g_3}},{{(void*)0,&g_3},{&g_3,&g_3},{&g_3,(void*)0},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3}},{{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,(void*)0},{&g_3,&g_3},{&g_3,&g_3},{(void*)0,&g_3},{&g_3,&g_3},{&g_3,&g_3},{(void*)0,&g_3}},{{&g_3,&g_3},{&g_3,(void*)0},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3},{&g_3,&g_3}}};
+    struct S0 l_7[9][9][3] = {{{{19865,4294967295UL,-1L},{20354,1UL,-9L},{20061,0xE0D24876L,-1L}},{{19162,4294967295UL,5L},{28862,4294967288UL,0xBAE3B8AEA20016C6LL},{22703,3UL,0xFA814B11F3813BF5LL}},{{32341,1UL,0x349FFB2EF76CAF44LL},{20541,0xDD215CD4L,7L},{67,0xD9CC1323L,0L}},{{19162,4294967295UL,5L},{12501,4294967287UL,-1L},{3887,4294967295UL,0L}},{{19865,4294967295UL,-1L},{19103,1UL,0xC2835E52A12E2198LL},{17224,7UL,6L}},{{25525,4294967293UL,-8L},{1321,0x852D78A3L,0xA4F77C9A86FCAFA2LL},{25712,0x2811FFBEL,-4L}},{{30586,4294967291UL,0x1225765C99C2354CLL},{4550,0x7E80A7C6L,0xD3ED23C5AD058BBELL},{28487,0x4FBAEB33L,0x7469BA6CE2C69141LL}},{{31615,1UL,-9L},{12282,0xB7DC4B54L,0L},{19162,4294967295UL,5L}},{{32341,1UL,0x349FFB2EF76CAF44LL},{3594,0xA841158AL,0x5CCC4EFF443A54D8LL},{5102,1UL,-6L}}},{{{29991,4294967295UL,-1L},{14263,1UL,0x5C55787DF3DEF630LL},{18848,0xA3EDB7DEL,0L}},{{9674,0UL,0x32F520A048C84060LL},{28013,0xCA138DBEL,0x8B24CEC8E4446CA3LL},{25810,5UL,0L}},{{25712,0x2811FFBEL,-4L},{27611,4294967295UL,-1L},{23656,0x58B047C1L,-1L}},{{30921,0xFF93F8DEL,3L},{32341,1UL,0x349FFB2EF76CAF44LL},{14802,1UL,0L}},{{26139,0x265D6326L,0x039C1D55E0ECF58ALL},{13201,4294967295UL,0x9E3B93F16A1EA569LL},{29735,0x20EAADAFL,1L}},{{31823,2UL,5L},{31823,2UL,5L},{19865,4294967295UL,-1L}},{{3887,4294967295UL,0L},{11042,0x66C3C348L,-1L},{2256,4294967295UL,-3L}},{{31334,0x4AB19F88L,-6L},{22769,0xF16C3B14L,3L},{3594,0xA841158AL,0x5CCC4EFF443A54D8LL}},{{19162,4294967295UL,5L},{28604,1UL,0L},{30255,0xD3F58F29L,0xDBE56F6324B7C80BLL}}},{{{10538,0x6B13122EL,0xBD65BDF5444FE378LL},{31334,0x4AB19F88L,-6L},{3594,0xA841158AL,0x5CCC4EFF443A54D8LL}},{{23743,4294967295UL,-5L},{6996,0UL,0x641A018BFD1E4559LL},{2256,4294967295UL,-3L}},{{4550,0x7E80A7C6L,0xD3ED23C5AD058BBELL},{18388,8UL,0x7DFE98D7E942FAFELL},{19865,4294967295UL,-1L}},{{27611,4294967295UL,-1L},{12003,0xB2FD4BBAL,9L},{29735,0x20EAADAFL,1L}},{{3635,4294967289UL,0xB36C93846F263393LL},{1535,0x47EB5F43L,1L},{14802,1UL,0L}},{{17580,4294967288UL,0xFB11589A458230B5LL},{9782,0x6224F168L,0x5B495AE89E6D542DLL},{23656,0x58B047C1L,-1L}},{{22947,0xDB7CFF1CL,2L},{28540,4294967286UL,0x2139E6D594933308LL},{25810,5UL,0L}},{{18421,0x5B60A5FBL,2L},{2256,4294967295UL,-3L},{18848,0xA3EDB7DEL,0L}},{{10463,0x6E035D6DL,0L},{24159,4294967293UL,0xB9B769E501E45A2DLL},{5102,1UL,-6L}}},{{{12501,4294967287UL,-1L},{23743,4294967295UL,-5L},{19162,4294967295UL,5L}},{{5102,1UL,-6L},{14019,4294967290UL,0x827221BDB030F3E7LL},{28487,0x4FBAEB33L,0x7469BA6CE2C69141LL}},{{9782,0x6224F168L,0x5B495AE89E6D542DLL},{25712,0x2811FFBEL,-4L},{25712,0x2811FFBEL,-4L}},{{3594,0xA841158AL,0x5CCC4EFF443A54D8LL},{20061,0xE0D24876L,-1L},{10463,0x6E035D6DL,0L}},{{13201,4294967295UL,0x9E3B93F16A1EA569LL},{8820,0xD66A4358L,0L},{28604,1UL,0L}},{{7265,4294967295UL,0xD8F345D263D1F077LL},{14520,0x6833686AL,9L},{10538,0x6B13122EL,0xBD65BDF5444FE378LL}},{{12003,0xB2FD4BBAL,9L},{17580,4294967288UL,0xFB11589A458230B5LL},{11455,0xA1D2DAFFL,0x898CBDB62B2FAA96LL}},{{22772,4294967293UL,0xD7D231D5762CC684LL},{14520,0x6833686AL,9L},{9295,0x7A8BFC02L,0x5587BB5B285EFCBALL}},{{30485,1UL,0xE063A29C5D079270LL},{8820,0xD66A4358L,0L},{6996,0UL,0x641A018BFD1E4559LL}}},{{{20541,0xDD215CD4L,7L},{20061,0xE0D24876L,-1L},{30586,4294967291UL,0x1225765C99C2354CLL}},{{1321,0x852D78A3L,0xA4F77C9A86FCAFA2LL},{25712,0x2811FFBEL,-4L},{30485,1UL,0xE063A29C5D079270LL}},{{20061,0xE0D24876L,-1L},{14019,4294967290UL,0x827221BDB030F3E7LL},{19103,1UL,0xC2835E52A12E2198LL}},{{18723,0x0EC44CB1L,0L},{23743,4294967295UL,-5L},{25525,4294967293UL,-8L}},{{12211,4294967295UL,-8L},{24159,4294967293UL,0xB9B769E501E45A2DLL},{14019,4294967290UL,0x827221BDB030F3E7LL}},{{20016,0x33A12938L,-7L},{2256,4294967295UL,-3L},{23843,1UL,0xBF5BF81606DC0689LL}},{{19103,1UL,0xC2835E52A12E2198LL},{28540,4294967286UL,0x2139E6D594933308LL},{1535,0x47EB5F43L,1L}},{{12282,0xB7DC4B54L,0L},{9782,0x6224F168L,0x5B495AE89E6D542DLL},{29991,4294967295UL,-1L}},{{22769,0xF16C3B14L,3L},{1535,0x47EB5F43L,1L},{31334,0x4AB19F88L,-6L}}},{{{19932,0x1D4C3F12L,-4L},{12003,0xB2FD4BBAL,9L},{19932,0x1D4C3F12L,-4L}},{{14802,1UL,0L},{18388,8UL,0x7DFE98D7E942FAFELL},{11034,6UL,0xF9491450187E5269LL}},{{25823,0xC3C1A33FL,5L},{6996,0UL,0x641A018BFD1E4559LL},{25086,0x4BFCE934L,0xA64A0F0C0ED6D230LL}},{{17224,7UL,6L},{31334,0x4AB19F88L,-6L},{28540,4294967286UL,0x2139E6D594933308LL}},{{29735,0x20EAADAFL,1L},{28604,1UL,0L},{12003,0xB2FD4BBAL,9L}},{{17224,7UL,6L},{22769,0xF16C3B14L,3L},{22380,0xAA0BDEC7L,0x1EFC39FA237FF9BDLL}},{{25823,0xC3C1A33FL,5L},{11042,0x66C3C348L,-1L},{18421,0x5B60A5FBL,2L}},{{14802,1UL,0L},{31823,2UL,5L},{12211,4294967295UL,-8L}},{{19932,0x1D4C3F12L,-4L},{13201,4294967295UL,0x9E3B93F16A1EA569LL},{14654,0xAB77C19CL,0L}}},{{{22769,0xF16C3B14L,3L},{32341,1UL,0x349FFB2EF76CAF44LL},{22772,4294967293UL,0xD7D231D5762CC684LL}},{{12282,0xB7DC4B54L,0L},{27611,4294967295UL,-1L},{17580,4294967288UL,0xFB11589A458230B5LL}},{{19103,1UL,0xC2835E52A12E2198LL},{28013,0xCA138DBEL,0x8B24CEC8E4446CA3LL},{17224,7UL,6L}},{{20016,0x33A12938L,-7L},{14263,1UL,0x5C55787DF3DEF630LL},{8618,0x6B4E1338L,0L}},{{12211,4294967295UL,-8L},{3594,0xA841158AL,0x5CCC4EFF443A54D8LL},{24159,4294967293UL,0xB9B769E501E45A2DLL}},{{18723,0x0EC44CB1L,0L},{12282,0xB7DC4B54L,0L},{17708,0x67B11082L,1L}},{{20061,0xE0D24876L,-1L},{4550,0x7E80A7C6L,0xD3ED23C5AD058BBELL},{22983,4294967295UL,0x5621C9A8392DDE99LL}},{{1321,0x852D78A3L,0xA4F77C9A86FCAFA2LL},{1321,0x852D78A3L,0xA4F77C9A86FCAFA2LL},{27520,1UL,0xBD1BD9F019D5C01CLL}},{{20541,0xDD215CD4L,7L},{29268,4294967289UL,-1L},{29648,0x9515ED76L,5L}}},{{{30485,1UL,0xE063A29C5D079270LL},{31615,1UL,-9L},{27611,4294967295UL,-1L}},{{22772,4294967293UL,0xD7D231D5762CC684LL},{22380,0xAA0BDEC7L,0x1EFC39FA237FF9BDLL},{23784,0x1CFEE841L,3L}},{{12003,0xB2FD4BBAL,9L},{30485,1UL,0xE063A29C5D079270LL},{27611,4294967295UL,-1L}},{{7265,4294967295UL,0xD8F345D263D1F077LL},{11034,6UL,0xF9491450187E5269LL},{29648,0x9515ED76L,5L}},{{13201,4294967295UL,0x9E3B93F16A1EA569LL},{15485,0xE2C54351L,0x282808108B99CB9CLL},{27520,1UL,0xBD1BD9F019D5C01CLL}},{{3594,0xA841158AL,0x5CCC4EFF443A54D8LL},{10538,0x6B13122EL,0xBD65BDF5444FE378LL},{28487,0x4FBAEB33L,0x7469BA6CE2C69141LL}},{{2256,4294967295UL,-3L},{17708,0x67B11082L,1L},{23656,0x58B047C1L,-1L}},{{13932,4294967292UL,6L},{29648,0x9515ED76L,5L},{23784,0x1CFEE841L,3L}},{{31615,1UL,-9L},{19932,0x1D4C3F12L,-4L},{28862,4294967288UL,0xBAE3B8AEA20016C6LL}}},{{{5873,0x0EF155D2L,-10L},{18388,8UL,0x7DFE98D7E942FAFELL},{10463,0x6E035D6DL,0L}},{{12427,5UL,0xB8CFF26AF9031EA0LL},{30255,0xD3F58F29L,0xDBE56F6324B7C80BLL},{31297,0x79538E5EL,-1L}},{{22769,0xF16C3B14L,3L},{5102,1UL,-6L},{17224,7UL,6L}},{{31297,0x79538E5EL,-1L},{23743,4294967295UL,-5L},{8820,0xD66A4358L,0L}},{{29648,0x9515ED76L,5L},{1535,0x47EB5F43L,1L},{1535,0x47EB5F43L,1L}},{{23843,1UL,0xBF5BF81606DC0689LL},{25086,0x4BFCE934L,0xA64A0F0C0ED6D230LL},{12427,5UL,0xB8CFF26AF9031EA0LL}},{{30921,0xFF93F8DEL,3L},{25810,5UL,0L},{31823,2UL,5L}},{{17580,4294967288UL,0xFB11589A458230B5LL},{14263,1UL,0x5C55787DF3DEF630LL},{27611,4294967295UL,-1L}},{{3594,0xA841158AL,0x5CCC4EFF443A54D8LL},{13932,4294967292UL,6L},{30586,4294967291UL,0x1225765C99C2354CLL}}}};
+    int i, j, k;
+    --g_4[0][2];
+    return l_7[4][3][2];
+}
+
+
+
+
+/* ---------------------------------------- */
+int main (int argc, char* argv[])
+{
+    int i, j;
+    int print_hash_value = 0;
+    if (argc == 2 && strcmp(argv[1], "1") == 0) print_hash_value = 1;
+    platform_main_begin();
+    crc32_gentab();
+    func_1();
+    transparent_crc(g_3, "g_3", print_hash_value);
+    for (i = 0; i < 7; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            transparent_crc(g_4[i][j], "g_4[i][j]", print_hash_value);
+            if (print_hash_value) printf("index = [%d][%d]\n", i, j);
+
+        }
+    }
+    platform_main_end(crc32_context ^ 0xFFFFFFFFUL, print_hash_value);
+    return 0;
+}
+
+/************************ statistics *************************
+XXX max struct depth: 1
+breakdown:
+   depth: 0, occurrence: 1
+   depth: 1, occurrence: 1
+XXX total union variables: 0
+
+XXX non-zero bitfields defined in structs: 1
+XXX zero bitfields defined in structs: 0
+XXX const bitfields defined in structs: 0
+XXX volatile bitfields defined in structs: 0
+XXX structs with bitfields in the program: 1
+breakdown:
+   indirect level: 0, occurrence: 1
+XXX full-bitfields structs in the program: 0
+breakdown:
+XXX times a bitfields struct's address is taken: 0
+XXX times a bitfields struct on LHS: 0
+XXX times a bitfields struct on RHS: 1
+XXX times a single bitfield on LHS: 0
+XXX times a single bitfield on RHS: 0
+
+XXX max expression depth: 1
+breakdown:
+   depth: 1, occurrence: 3
+
+XXX total number of pointers: 1
+
+XXX times a variable address is taken: 18
+XXX times a pointer is dereferenced on RHS: 0
+breakdown:
+XXX times a pointer is dereferenced on LHS: 0
+breakdown:
+XXX times a pointer is compared with null: 0
+XXX times a pointer is compared with address of another variable: 0
+XXX times a pointer is compared with another pointer: 0
+XXX times a pointer is qualified to be dereferenced: 0
+XXX number of pointers point to pointers: 0
+XXX number of pointers point to scalars: 1
+XXX number of pointers point to structs: 0
+XXX percent of pointers has null in alias set: 100
+XXX average alias set size: 2
+
+XXX times a non-volatile is read: 1
+XXX times a non-volatile is write: 1
+XXX times a volatile is read: 0
+XXX    times read thru a pointer: 0
+XXX times a volatile is write: 0
+XXX    times written thru a pointer: 0
+XXX times a volatile is available for access: 0
+XXX percentage of non-volatile access: 100
+
+XXX forward jumps: 0
+XXX backward jumps: 0
+
+XXX stmts: 2
+XXX max block depth: 0
+breakdown:
+   depth: 0, occurrence: 2
+
+XXX percentage a fresh-made variable is used: 40
+XXX percentage an existing variable is used: 60
+FYI: the random generator makes assumptions about the integer size. See platform.info for more details.
+********************* end of statistics **********************/
+
