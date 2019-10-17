@@ -1,0 +1,157 @@
+/*
+ * This is a RANDOMLY GENERATED PROGRAM.
+ *
+ * Generator: csmith 2.3.0
+ * Git version: 30dccd7
+ * Options:   (none)
+ * Seed:      496767548
+ */
+
+#include "csmith.h"
+
+
+static long __undefined;
+
+/* --- Struct/Union Declarations --- */
+/* --- GLOBAL VARIABLES --- */
+static int32_t g_11 = 0L;
+static int8_t g_13 = 0x53L;
+static int32_t * const  volatile g_27 = (void*)0;/* VOLATILE GLOBAL g_27 */
+static int32_t g_29 = 0L;
+static int32_t * volatile g_28[4][10][6] = {{{&g_29,&g_29,&g_29,(void*)0,&g_29,&g_29},{&g_29,(void*)0,(void*)0,(void*)0,&g_29,&g_29},{&g_29,(void*)0,&g_29,&g_29,&g_29,&g_29},{(void*)0,(void*)0,&g_29,&g_29,&g_29,&g_29},{&g_29,(void*)0,(void*)0,&g_29,&g_29,&g_29},{(void*)0,&g_29,(void*)0,&g_29,(void*)0,&g_29},{&g_29,(void*)0,&g_29,&g_29,&g_29,&g_29},{&g_29,&g_29,&g_29,&g_29,&g_29,&g_29},{&g_29,&g_29,&g_29,&g_29,&g_29,&g_29},{&g_29,&g_29,&g_29,&g_29,&g_29,&g_29}},{{&g_29,&g_29,&g_29,(void*)0,&g_29,&g_29},{&g_29,&g_29,&g_29,&g_29,&g_29,&g_29},{(void*)0,(void*)0,&g_29,&g_29,&g_29,&g_29},{(void*)0,&g_29,&g_29,&g_29,&g_29,&g_29},{(void*)0,&g_29,&g_29,&g_29,&g_29,&g_29},{(void*)0,&g_29,(void*)0,&g_29,&g_29,(void*)0},{&g_29,&g_29,&g_29,(void*)0,&g_29,&g_29},{&g_29,&g_29,&g_29,&g_29,&g_29,&g_29},{&g_29,&g_29,&g_29,&g_29,&g_29,&g_29},{&g_29,(void*)0,&g_29,&g_29,&g_29,(void*)0}},{{&g_29,&g_29,(void*)0,&g_29,&g_29,&g_29},{&g_29,&g_29,&g_29,&g_29,&g_29,&g_29},{&g_29,&g_29,&g_29,&g_29,&g_29,&g_29},{&g_29,&g_29,&g_29,(void*)0,&g_29,&g_29},{&g_29,&g_29,&g_29,&g_29,&g_29,&g_29},{(void*)0,(void*)0,&g_29,&g_29,&g_29,&g_29},{(void*)0,&g_29,&g_29,&g_29,&g_29,&g_29},{(void*)0,&g_29,&g_29,&g_29,&g_29,&g_29},{(void*)0,&g_29,(void*)0,&g_29,&g_29,(void*)0},{&g_29,&g_29,&g_29,(void*)0,&g_29,&g_29}},{{&g_29,&g_29,&g_29,&g_29,&g_29,&g_29},{&g_29,&g_29,&g_29,&g_29,&g_29,&g_29},{&g_29,(void*)0,&g_29,&g_29,&g_29,(void*)0},{&g_29,&g_29,(void*)0,&g_29,&g_29,&g_29},{&g_29,&g_29,&g_29,&g_29,&g_29,&g_29},{&g_29,&g_29,&g_29,&g_29,&g_29,&g_29},{&g_29,&g_29,&g_29,(void*)0,&g_29,&g_29},{&g_29,&g_29,&g_29,&g_29,&g_29,&g_29},{(void*)0,(void*)0,&g_29,&g_29,&g_29,&g_29},{(void*)0,&g_29,&g_29,&g_29,&g_29,(void*)0}}};
+
+
+/* --- FORWARD DECLARATIONS --- */
+static uint16_t  func_1(void);
+static int32_t  func_2(uint8_t  p_3, const int32_t  p_4, int16_t  p_5);
+
+
+/* --- FUNCTIONS --- */
+/* ------------------------------------------ */
+/* 
+ * reads : g_11 g_13
+ * writes: g_13 g_11
+ */
+static uint16_t  func_1(void)
+{ /* block id: 0 */
+    uint32_t l_6 = 4UL;
+    int8_t *l_12 = &g_13;
+    int32_t l_14 = 0x55CC25BFL;
+    uint64_t l_15 = 5UL;
+    uint64_t l_20[10][9][2] = {{{0x96A450C197911697LL,0xFF4CAA5D732ADAA2LL},{18446744073709551615UL,0x3847D228D5FEAF86LL},{1UL,18446744073709551615UL},{0x44BD1A6F32215F8FLL,0x4384F3AC16B405B7LL},{0x44BD1A6F32215F8FLL,18446744073709551615UL},{1UL,0x3847D228D5FEAF86LL},{18446744073709551615UL,0xFF4CAA5D732ADAA2LL},{0x96A450C197911697LL,0xE63B6910C33490CELL},{0x3847D228D5FEAF86LL,0xC0DCEE05243B9C30LL}},{{0xC0DCEE05243B9C30LL,0xC0DCEE05243B9C30LL},{0x3847D228D5FEAF86LL,0xE63B6910C33490CELL},{0x96A450C197911697LL,0xFF4CAA5D732ADAA2LL},{18446744073709551615UL,0x3847D228D5FEAF86LL},{1UL,18446744073709551615UL},{0x44BD1A6F32215F8FLL,0x4384F3AC16B405B7LL},{0x44BD1A6F32215F8FLL,18446744073709551615UL},{1UL,0x3847D228D5FEAF86LL},{18446744073709551615UL,0xFF4CAA5D732ADAA2LL}},{{0x96A450C197911697LL,0xE63B6910C33490CELL},{0x3847D228D5FEAF86LL,0xC0DCEE05243B9C30LL},{0xC0DCEE05243B9C30LL,0xC0DCEE05243B9C30LL},{0x3847D228D5FEAF86LL,0xE63B6910C33490CELL},{0x96A450C197911697LL,0xFF4CAA5D732ADAA2LL},{18446744073709551615UL,0x3847D228D5FEAF86LL},{1UL,18446744073709551615UL},{0x44BD1A6F32215F8FLL,0x4384F3AC16B405B7LL},{0x44BD1A6F32215F8FLL,18446744073709551615UL}},{{1UL,0x3847D228D5FEAF86LL},{18446744073709551615UL,0xFF4CAA5D732ADAA2LL},{0x96A450C197911697LL,0xE63B6910C33490CELL},{0x3847D228D5FEAF86LL,0xC0DCEE05243B9C30LL},{0xC0DCEE05243B9C30LL,0xC0DCEE05243B9C30LL},{0x3847D228D5FEAF86LL,0xE63B6910C33490CELL},{0x96A450C197911697LL,0xFF4CAA5D732ADAA2LL},{18446744073709551615UL,0x3847D228D5FEAF86LL},{1UL,18446744073709551615UL}},{{0x44BD1A6F32215F8FLL,0x4384F3AC16B405B7LL},{0x44BD1A6F32215F8FLL,18446744073709551615UL},{1UL,0x3847D228D5FEAF86LL},{18446744073709551615UL,0xFF4CAA5D732ADAA2LL},{0x96A450C197911697LL,0xE63B6910C33490CELL},{0x3847D228D5FEAF86LL,0xC0DCEE05243B9C30LL},{0xC0DCEE05243B9C30LL,0xC0DCEE05243B9C30LL},{0x3847D228D5FEAF86LL,0xE63B6910C33490CELL},{0x96A450C197911697LL,0xFF4CAA5D732ADAA2LL}},{{18446744073709551615UL,0x3847D228D5FEAF86LL},{1UL,18446744073709551615UL},{0x44BD1A6F32215F8FLL,0x4384F3AC16B405B7LL},{0x44BD1A6F32215F8FLL,18446744073709551615UL},{1UL,0x3847D228D5FEAF86LL},{18446744073709551615UL,0xFF4CAA5D732ADAA2LL},{0x96A450C197911697LL,0xE63B6910C33490CELL},{0x3847D228D5FEAF86LL,0xC0DCEE05243B9C30LL},{0xC0DCEE05243B9C30LL,0xC0DCEE05243B9C30LL}},{{0x3847D228D5FEAF86LL,0xE63B6910C33490CELL},{0x96A450C197911697LL,0xFF4CAA5D732ADAA2LL},{18446744073709551615UL,0x3847D228D5FEAF86LL},{1UL,18446744073709551615UL},{0x44BD1A6F32215F8FLL,0x4384F3AC16B405B7LL},{0x44BD1A6F32215F8FLL,18446744073709551615UL},{1UL,0x3847D228D5FEAF86LL},{18446744073709551615UL,0xFF4CAA5D732ADAA2LL},{0x96A450C197911697LL,0xE63B6910C33490CELL}},{{0x3847D228D5FEAF86LL,0xC0DCEE05243B9C30LL},{0xC0DCEE05243B9C30LL,0xC0DCEE05243B9C30LL},{0x3847D228D5FEAF86LL,0xE63B6910C33490CELL},{0x96A450C197911697LL,0xFF4CAA5D732ADAA2LL},{18446744073709551615UL,0x3847D228D5FEAF86LL},{1UL,18446744073709551615UL},{0x44BD1A6F32215F8FLL,0x4384F3AC16B405B7LL},{0x44BD1A6F32215F8FLL,18446744073709551615UL},{1UL,0x3847D228D5FEAF86LL}},{{18446744073709551615UL,0xFF4CAA5D732ADAA2LL},{0x96A450C197911697LL,0xE63B6910C33490CELL},{0x3847D228D5FEAF86LL,0xC0DCEE05243B9C30LL},{0xC0DCEE05243B9C30LL,0xC0DCEE05243B9C30LL},{0x3847D228D5FEAF86LL,0xE63B6910C33490CELL},{0x96A450C197911697LL,0xFF4CAA5D732ADAA2LL},{18446744073709551615UL,0x3847D228D5FEAF86LL},{1UL,18446744073709551615UL},{0x44BD1A6F32215F8FLL,0x4384F3AC16B405B7LL}},{{0x44BD1A6F32215F8FLL,18446744073709551615UL},{1UL,0x3847D228D5FEAF86LL},{18446744073709551615UL,0xFF4CAA5D732ADAA2LL},{0x96A450C197911697LL,0xE63B6910C33490CELL},{0x3847D228D5FEAF86LL,0xC0DCEE05243B9C30LL},{0xC0DCEE05243B9C30LL,0xC0DCEE05243B9C30LL},{0x3847D228D5FEAF86LL,0xE63B6910C33490CELL},{0x96A450C197911697LL,0xFF4CAA5D732ADAA2LL},{18446744073709551615UL,0x3847D228D5FEAF86LL}}};
+    int32_t l_30 = 0x124F91E2L;
+    int i, j, k;
+    l_30 ^= func_2(l_6, (safe_rshift_func_int8_t_s_u((safe_rshift_func_int8_t_s_s(((l_6 & ((((*l_12) = g_11) || l_14) <= (g_11 == (-10L)))) , (l_15 & (((safe_rshift_func_uint8_t_u_u((safe_sub_func_int16_t_s_s(g_11, l_6)), g_13)) <= l_20[4][2][1]) && l_15))), 3)), 7)), g_11);
+    return l_6;
+}
+
+
+/* ------------------------------------------ */
+/* 
+ * reads : g_13
+ * writes: g_13 g_11
+ */
+static int32_t  func_2(uint8_t  p_3, const int32_t  p_4, int16_t  p_5)
+{ /* block id: 2 */
+    int32_t *l_23 = &g_11;
+    uint32_t l_24[8][5][6] = {{{0x6C342871L,0x3E8932A2L,1UL,0xC61BBCB5L,0x91C6C8ECL,0x6B3E962DL},{0x160806AFL,7UL,0xB2A25C95L,0xC1821526L,1UL,0x3E8932A2L},{1UL,0xCA2A4289L,0x971708C9L,0x4837A000L,0x6C342871L,0x93C254F4L},{1UL,0x2610AA4AL,1UL,0x09E95372L,0x9FC65F31L,0xCA2A4289L},{0UL,0x21FD0095L,0x08385637L,1UL,0x6D6A6C34L,1UL}},{{1UL,4294967295UL,1UL,0xD024CA9AL,4294967290UL,0x2610AA4AL},{0x8FD5F396L,0x4837A000L,0x95BD6605L,0x91C6C8ECL,0UL,0x6B3E962DL},{0x0F83943CL,0x160806AFL,4294967295UL,0x91C6C8ECL,0x08385637L,0xD024CA9AL},{0x8FD5F396L,0UL,4294967286UL,0xD024CA9AL,0xEC0DB1B7L,1UL},{1UL,0x12EA0FEFL,0x3E8932A2L,1UL,0UL,5UL}},{{0UL,0UL,0xE77332E7L,0x09E95372L,0xCA2A4289L,0xDBC40293L},{1UL,0x8FBA323AL,0x72DF2008L,0x4837A000L,0xC61BBCB5L,0x9FC65F31L},{1UL,0UL,0xC61BBCB5L,0xC1821526L,0xC1821526L,0xC61BBCB5L},{0UL,0UL,0x91C6C8ECL,1UL,4294967293UL,0x6C342871L},{0xB2A25C95L,0UL,0UL,0x9FC65F31L,1UL,0x91C6C8ECL}},{{4294967295UL,0xB2A25C95L,0UL,5UL,0UL,0x6C342871L},{0x12EA0FEFL,5UL,0x91C6C8ECL,0x21FD0095L,0x971708C9L,0xC61BBCB5L},{0x21FD0095L,0x971708C9L,0xC61BBCB5L,0xDBC40293L,0xD024CA9AL,0x9FC65F31L},{0x6B3E962DL,0x93C254F4L,0x72DF2008L,0x8FD5F396L,4294967286UL,0xDBC40293L},{4294967286UL,1UL,0xE77332E7L,1UL,0x1D2CF1A5L,5UL}},{{0xE77332E7L,1UL,0x3E8932A2L,1UL,0x3E8932A2L,1UL},{0UL,0xEC0DB1B7L,4294967286UL,7UL,5UL,0xD024CA9AL},{0xCA2A4289L,0xC1821526L,4294967295UL,0UL,0x12EA0FEFL,0x6B3E962DL},{4294967293UL,0xC1821526L,0x95BD6605L,0x0F83943CL,5UL,0x2610AA4AL},{0x7DFB9DB6L,0xEC0DB1B7L,1UL,0x12EA0FEFL,0x3E8932A2L,1UL}},{{0xEC0DB1B7L,1UL,0x08385637L,0x971708C9L,0x1D2CF1A5L,0xCA2A4289L},{7UL,1UL,1UL,0xC61BBCB5L,4294967286UL,0x93C254F4L},{0x08385637L,0x93C254F4L,0x971708C9L,0x7DFB9DB6L,0xD024CA9AL,0x3E8932A2L},{0UL,0x971708C9L,0xB2A25C95L,0xB2A25C95L,0x971708C9L,0UL},{0xC61BBCB5L,5UL,0x4837A000L,1UL,0UL,0x0F83943CL}},{{0xD024CA9AL,0xB2A25C95L,0x93C254F4L,0x160806AFL,1UL,0x8FBA323AL},{0xD024CA9AL,0UL,0x160806AFL,1UL,4294967293UL,4294967295UL},{0xC61BBCB5L,0UL,7UL,0xB2A25C95L,0xC1821526L,1UL},{0UL,0x0F83943CL,0xD024CA9AL,0x160806AFL,1UL,0x95BD6605L},{0UL,0x09E95372L,4294967286UL,1UL,0xE77332E7L,1UL}},{{0x971708C9L,1UL,0x1D2CF1A5L,0xC61BBCB5L,0x21FD0095L,0x9FC65F31L},{0x95BD6605L,1UL,0x3E8932A2L,1UL,0x95BD6605L,0UL},{0x160806AFL,0x21FD0095L,5UL,0x3E8932A2L,0UL,0x93C254F4L},{0xD024CA9AL,0UL,0x12EA0FEFL,0x21FD0095L,1UL,0x93C254F4L},{0xE77332E7L,4294967293UL,5UL,0x971708C9L,7UL,0UL}}};
+    int i, j, k;
+    for (g_13 = 15; (g_13 == 25); g_13 = safe_add_func_uint16_t_u_u(g_13, 2))
+    { /* block id: 5 */
+        return g_13;
+    }
+    (*l_23) = 0L;
+    l_24[2][1][3]++;
+    return g_13;
+}
+
+
+
+
+/* ---------------------------------------- */
+int main (int argc, char* argv[])
+{
+    int i, j, k;
+    int print_hash_value = 0;
+    if (argc == 2 && strcmp(argv[1], "1") == 0) print_hash_value = 1;
+    platform_main_begin();
+    crc32_gentab();
+    func_1();
+    transparent_crc(g_11, "g_11", print_hash_value);
+    transparent_crc(g_13, "g_13", print_hash_value);
+    transparent_crc(g_29, "g_29", print_hash_value);
+    platform_main_end(crc32_context ^ 0xFFFFFFFFUL, print_hash_value);
+    return 0;
+}
+
+/************************ statistics *************************
+XXX max struct depth: 0
+breakdown:
+   depth: 0, occurrence: 7
+XXX total union variables: 0
+
+XXX non-zero bitfields defined in structs: 0
+XXX zero bitfields defined in structs: 0
+XXX const bitfields defined in structs: 0
+XXX volatile bitfields defined in structs: 0
+XXX structs with bitfields in the program: 0
+breakdown:
+XXX full-bitfields structs in the program: 0
+breakdown:
+XXX times a bitfields struct's address is taken: 0
+XXX times a bitfields struct on LHS: 0
+XXX times a bitfields struct on RHS: 0
+XXX times a single bitfield on LHS: 0
+XXX times a single bitfield on RHS: 0
+
+XXX max expression depth: 17
+breakdown:
+   depth: 1, occurrence: 8
+   depth: 2, occurrence: 1
+   depth: 17, occurrence: 1
+
+XXX total number of pointers: 4
+
+XXX times a variable address is taken: 33
+XXX times a pointer is dereferenced on RHS: 0
+breakdown:
+XXX times a pointer is dereferenced on LHS: 2
+breakdown:
+   depth: 1, occurrence: 2
+XXX times a pointer is compared with null: 0
+XXX times a pointer is compared with address of another variable: 0
+XXX times a pointer is compared with another pointer: 0
+XXX times a pointer is qualified to be dereferenced: 0
+
+XXX max dereference level: 1
+breakdown:
+   level: 0, occurrence: 0
+   level: 1, occurrence: 2
+XXX number of pointers point to pointers: 0
+XXX number of pointers point to scalars: 4
+XXX number of pointers point to structs: 0
+XXX percent of pointers has null in alias set: 50
+XXX average alias set size: 1.25
+
+XXX times a non-volatile is read: 16
+XXX times a non-volatile is write: 7
+XXX times a volatile is read: 0
+XXX    times read thru a pointer: 0
+XXX times a volatile is write: 0
+XXX    times written thru a pointer: 0
+XXX times a volatile is available for access: 0
+XXX percentage of non-volatile access: 100
+
+XXX forward jumps: 0
+XXX backward jumps: 0
+
+XXX stmts: 7
+XXX max block depth: 1
+breakdown:
+   depth: 0, occurrence: 6
+   depth: 1, occurrence: 1
+
+XXX percentage a fresh-made variable is used: 41.2
+XXX percentage an existing variable is used: 58.8
+********************* end of statistics **********************/
+
