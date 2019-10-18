@@ -1,0 +1,70 @@
+[cbug]
+>>> cb=[0,0,0,0,3,3,1,3,0,5,0,2,0,0,0,0,0,2,0,4,0,0,0,0,7,0,0,0,4,0,3,0,1,7,0,5,11,0,5,0,2,0,0,8,4,2,0,6,16,0,0,0,0,0,0,0,12,0,5,12,5,0,4,0,4,3,14,0,0,0,0,0,3,3,0,0,8,0,15,13,3,10,0,9,0,2,4,1,2,3,1,0,6,0,4,3,0,0,0,0,2,0,5,3,0,4,12,4,4,0,2,1,0,0,0,4,0,0,0,0,3,0,1,0,6,0,1,4,6,1,0,1,0,1]
+>>> max(cb)
+16
+>>> mc=[0,0,11,4,0,0,0,0,6,0,0,0,0,0,0,3,0,4,0,5,0,7,0,0,8,10,6,0,0,0,0,0,0,0,7,6,8,11,8,0,0,0,0,12,2,0,0,8,10,0,0,11,0,4,0,0,0,0,1,8,0,0,11,7,5,5,1,0,0,0,0,6,3,0,0,2,9,0,3,8,0,1,0,4,0,0,2,0,0,2,0,0,3,0,0,0,0,0,0,4,2,0,0,0,0,4,10,2,1,0,0,0,0,1,0,0,0,0,5,0,2,1,0,0,3,0,7,4,1,0,0,4,0,4]
+>>> len(mc)
+134
+
+>>> sum (x<1 for x in cb)
+68
+>>> sum (x<1 for x in mc)
+79
+>>> bt=[sum(x) for x in zip(cb,mc)]
+>>> bt
+[0, 0, 11, 4, 3, 3, 1, 3, 6, 5, 0, 2, 0, 0, 0, 3, 0, 6, 0, 9, 0, 7, 0, 0, 15, 10, 6, 0, 4, 0, 3, 0, 1, 7, 7, 11, 19, 11, 13, 0, 2, 0, 0, 20, 6, 2, 0, 14, 26, 0, 0, 11, 0, 4, 0, 0, 12, 0, 6, 20, 5, 0, 15, 7, 9, 8, 15, 0, 0, 0, 0, 6, 6, 3, 0, 2, 17, 0, 18, 21, 3, 11, 0, 13, 0, 2, 6, 1, 2, 5, 1, 0, 9, 0, 4, 3, 0, 0, 0, 4, 4, 0, 5, 3, 0, 8, 22, 6, 5, 0, 2, 1, 0, 1, 0, 4, 0, 0, 5, 0, 5, 1, 1, 0, 9, 0, 8, 8, 7, 1, 0, 5, 0, 5]
+>>> sum (x<1 for x in bt)
+50
+>>>
+
+>>> max(cb)
+16
+>>> cb.index(max(cb))
+48
+>>> max(mc)
+12
+>>> mc.index(max(mc))
+43
+>>> max(bt)
+26
+>>> bt.index(max(bt))
+48
+>>>
+
+>>> print( sorted( [(x,i) for (i,x) in enumerate(cb)], reverse=True )[:5] )
+[(16, 48), (15, 78), (14, 66), (13, 79), (12, 106)]
+>>> print( sorted( [(x,i) for (i,x) in enumerate(mc)], reverse=True )[:5] )
+[(12, 43), (11, 62), (11, 51), (11, 37), (11, 2)]
+>>> print( sorted( [(x,i) for (i,x) in enumerate(bt)], reverse=True )[:5] )
+[(26, 48), (22, 106), (21, 79), (20, 59), (20, 43)]
+>>>
+
+[Args]
+$ python3 kconfig_csmith_args.py 48
+--no-argc --arrays --no-bitfields --comma-operators --compound-assignment --no-consts --no-divs --embedded-assigns --no-pre-incr-operator --pre-decr-operator --post-incr-operator --no-post-decr-operator --unary-plus-operator --no-jumps --longlong --no-int8 --no-uint8 --float --math64 --no-inline-function --muls --no-safe-math --no-packed-struct --no-paranoid --no-pointers --no-structs --no-unions --volatiles --volatile-pointers --no-const-pointers --global-variabless --builtins
+$
+$ python3 kconfig_csmith_args.py 106
+--no-argc --no-arrays --bitfields --no-comma-operators --no-compound-assignment --consts --divs --embedded-assigns --pre-incr-operator --pre-decr-operator --no-post-incr-operator --post-decr-operator --unary-plus-operator --jumps --longlong --int8 --uint8 --float --math64 --no-inline-function --muls --safe-math --packed-struct --paranoid --no-pointers --structs --unions --volatiles --volatile-pointers --const-pointers --global-variabless --builtins
+$
+$ python3 kconfig_csmith_args.py 79
+--argc --arrays --bitfields --no-comma-operators --compound-assignment --consts --divs --embedded-assigns --pre-incr-operator --pre-decr-operator --post-incr-operator --post-decr-operator --unary-plus-operator --jumps --no-longlong --int8 --uint8 --float --no-math64 --inline-function --muls --safe-math --packed-struct --paranoid --no-pointers --structs --unions --volatiles --volatile-pointers --const-pointers --global-variabless --builtins
+$
+$ python3 kconfig_csmith_args.py 59
+--argc --arrays --bitfields --comma-operators --compound-assignment --no-consts --divs --embedded-assigns --no-pre-incr-operator --no-pre-decr-operator --post-incr-operator --post-decr-operator --unary-plus-operator --no-jumps --no-longlong --no-int8 --uint8 --float --math64 --inline-function --muls --no-safe-math --packed-struct --no-paranoid --no-pointers --structs --unions --volatiles --volatile-pointers --no-const-pointers --global-variabless --builtins
+$
+$ python3 kconfig_csmith_args.py 43
+--no-argc --no-arrays --no-bitfields --comma-operators --compound-assignment --no-consts --no-divs --embedded-assigns --no-pre-incr-operator --no-pre-decr-operator --no-post-incr-operator --no-post-decr-operator --no-unary-plus-operator --no-jumps --no-longlong --no-int8 --no-uint8 --no-float --no-math64 --no-inline-function --no-muls --no-safe-math --no-packed-struct --no-paranoid --no-pointers --no-structs --unions --volatiles --no-volatile-pointers --no-const-pointers --global-variabless --builtins
+$
+
+
+[Enable]
+
+arrays,comma-operators,compound-assignment,embedded-assigns,pre-decr-operator,post-incr-operator,unary-plus-operator,longlong,float,math64,muls,volatiles,volatile-pointers,global-variabless,builtins
+
+bitfields,consts,divs,embedded-assigns,pre-incr-operator,pre-decr-operator,post-decr-operator,unary-plus-operator,jumps,longlong,int8,uint8,float,math64,muls,safe-math,packed-struct,paranoid,structs,unions,volatiles,volatile-pointers,const-pointers,global-variabless,builtins
+
+argc,arrays,bitfields,compound-assignment,consts,divs,embedded-assigns,pre-incr-operator,pre-decr-operator,post-incr-operator,post-decr-operator,unary-plus-operator,jumps,int8,uint8,float,inline-function,muls,safe-math,packed-struct,paranoid,structs,unions,volatiles,volatile-pointers,const-pointers,global-variabless,builtins
+
+argc,arrays,bitfields,comma-operators,compound-assignment,divs,embedded-assigns,post-incr-operator,post-decr-operator,unary-plus-operator,uint8,float,math64,inline-function,muls,packed-struct,structs,unions,volatiles,volatile-pointers,global-variabless,builtins
+
+comma-operators,compound-assignment,embedded-assigns,unions,volatiles,global-variabless,builtins
