@@ -1,0 +1,15 @@
+ver=("482" "540" "610" "710" "810" "910" "trunk"); 
+arg=("default" "swarm" "kconfig"); 
+run=("1" "2" "3"); 
+type=("cb0" "cb3" "cb03"); 
+for v in "${ver[@]}"; do 
+	for a in "${arg[@]}"; do 
+		for r in "${run[@]}"; do 
+			for t in "${type[@]}"; do 
+				echo "$v-$a-$r-$t"; 
+				sbatch creduce_n.sh $v $a $r $t; 
+				echo ""; 
+			done; 
+		done; 
+	done; 
+done;
