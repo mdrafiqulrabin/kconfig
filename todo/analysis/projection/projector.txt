@@ -1,0 +1,5 @@
+Link: https://projector.tensorflow.org/
+File: .tsv
+Options:
+    - Sphereize data
+    - PCA
