@@ -1,0 +1,8220 @@
+File '../../gcc/vec.h'
+Lines executed:83.33% of 84
+Creating 'vec.h.gcov'
+
+File 'gt-alias.h'
+Lines executed:0.00% of 38
+Creating 'gt-alias.h.gcov'
+
+File '../../gcc/alias.c'
+Lines executed:89.11% of 1129
+Creating 'alias.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:100.00% of 2
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:100.00% of 16
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/cselib.h'
+Lines executed:100.00% of 7
+Creating 'cselib.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 4
+Creating 'tree.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 11
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/alloc-pool.c'
+Lines executed:76.09% of 92
+Creating 'alloc-pool.c.gcov'
+
+File '../../gcc/hash-table.h'
+Lines executed:2.88% of 104
+Creating 'hash-table.h.gcov'
+
+File 'gt-asan.h'
+Lines executed:100.00% of 1
+Creating 'gt-asan.h.gcov'
+
+File '../../gcc/asan.c'
+Lines executed:0.91% of 772
+Creating 'asan.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 47
+Creating 'vec.h.gcov'
+
+File '../../gcc/hash-table.h'
+Lines executed:1.91% of 157
+Creating 'hash-table.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/sanitizer.def'
+Lines executed:0.00% of 85
+Creating 'sanitizer.def.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:0.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:0.00% of 2
+Creating 'expr.h.gcov'
+
+File '../../gcc/asan.h'
+Lines executed:0.00% of 3
+Creating 'asan.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:0.00% of 2
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 15
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 105
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 18
+Creating 'tree.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 6
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:0.00% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:85.00% of 60
+Creating 'vec.h.gcov'
+
+File '../../gcc/attribs.c'
+Lines executed:81.82% of 231
+Creating 'attribs.c.gcov'
+
+File '../../gcc/plugin.h'
+Lines executed:75.00% of 4
+Creating 'plugin.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 6
+Creating 'tree.h.gcov'
+
+File '../../gcc/auto-inc-dec.c'
+Lines executed:50.00% of 4
+Creating 'auto-inc-dec.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 61
+Creating 'vec.h.gcov'
+
+File '../../gcc/bb-reorder.c'
+Lines executed:61.11% of 959
+Creating 'bb-reorder.c.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:93.10% of 29
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 2
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 5
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 43
+Creating 'vec.h.gcov'
+
+File '../../gcc/bitmap.c'
+Lines executed:75.28% of 906
+Creating 'bitmap.c.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:12.00% of 50
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/bt-load.c'
+Lines executed:0.67% of 594
+Creating 'bt-load.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:0.00% of 4
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:0.00% of 16
+Creating 'df.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 35
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:0.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:0.00% of 10
+Creating 'regs.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:0.00% of 2
+Creating 'hard-reg-set.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 45
+Creating 'vec.h.gcov'
+
+File '../../gcc/builtins.c'
+Lines executed:57.44% of 5834
+Creating 'builtins.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:90.00% of 10
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:89.29% of 28
+Creating 'optabs.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:57.14% of 7
+Creating 'expr.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:87.50% of 48
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:69.23% of 52
+Creating 'tree.h.gcov'
+
+File 'genrtl.h'
+Lines executed:76.19% of 21
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:100.00% of 8
+Creating 'double-int.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:16.67% of 12
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:100.00% of 2
+Creating 'vec.h.gcov'
+
+File '../../gcc/caller-save.c'
+Lines executed:11.00% of 591
+Creating 'caller-save.c.gcov'
+
+File '../../gcc/addresses.h'
+Lines executed:100.00% of 2
+Creating 'addresses.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:100.00% of 4
+Creating 'recog.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:0.00% of 7
+Creating 'regs.h.gcov'
+
+File 'genrtl.h'
+Lines executed:78.26% of 23
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:98.25% of 57
+Creating 'vec.h.gcov'
+
+File '../../gcc/calls.c'
+Lines executed:61.20% of 1678
+Creating 'calls.c.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 9
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/target.h'
+Lines executed:100.00% of 5
+Creating 'target.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:33.33% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:100.00% of 7
+Creating 'expr.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:90.32% of 31
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 20
+Creating 'tree.h.gcov'
+
+File 'genrtl.h'
+Lines executed:68.75% of 16
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 9
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:19.30% of 57
+Creating 'vec.h.gcov'
+
+File '../../gcc/cfganal.c'
+Lines executed:76.08% of 464
+Creating 'cfganal.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:75.00% of 16
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:97.70% of 87
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 23
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/cfgbuild.c'
+Lines executed:89.52% of 248
+Creating 'cfgbuild.c.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:66.67% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 25
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 20
+Creating 'vec.h.gcov'
+
+File '../../gcc/cfgcleanup.c'
+Lines executed:83.76% of 1342
+Creating 'cfgcleanup.c.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:90.00% of 40
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 38
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:0.00% of 2
+Creating 'hard-reg-set.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:16.35% of 104
+Creating 'vec.h.gcov'
+
+File '../../gcc/cfgexpand.c'
+Lines executed:54.84% of 2055
+Creating 'cfgexpand.c.gcov'
+
+File '../../gcc/asan.h'
+Lines executed:0.00% of 2
+Creating 'asan.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:100.00% of 4
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/ssaexpand.h'
+Lines executed:100.00% of 5
+Creating 'ssaexpand.h.gcov'
+
+File '../../gcc/tree-ssa-live.h'
+Lines executed:100.00% of 11
+Creating 'tree-ssa-live.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:23.25% of 228
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:71.73% of 237
+Creating 'gimple.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 4
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:93.48% of 46
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:100.00% of 2
+Creating 'expr.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 27
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/function.h'
+Lines executed:100.00% of 3
+Creating 'function.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 45
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/cfg.c'
+Lines executed:62.70% of 496
+Creating 'cfg.c.gcov'
+
+File '../../gcc/hash-table.h'
+Lines executed:96.55% of 145
+Creating 'hash-table.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:96.23% of 53
+Creating 'vec.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:33.33% of 6
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:100.00% of 8
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 21
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:90.20% of 51
+Creating 'vec.h.gcov'
+
+File '../../gcc/cfghooks.c'
+Lines executed:65.12% of 605
+Creating 'cfghooks.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:100.00% of 8
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:0.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 31
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 59
+Creating 'vec.h.gcov'
+
+File '../../gcc/cfgloopanal.c'
+Lines executed:82.27% of 203
+Creating 'cfgloopanal.c.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:92.86% of 14
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:95.69% of 116
+Creating 'vec.h.gcov'
+
+File '../../gcc/cfgloop.c'
+Lines executed:62.03% of 711
+Creating 'cfgloop.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:100.00% of 4
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:100.00% of 11
+Creating 'gimple.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:70.59% of 68
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 16
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:80.00% of 30
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:11.34% of 97
+Creating 'vec.h.gcov'
+
+File '../../gcc/cfgloopmanip.c'
+Lines executed:85.45% of 715
+Creating 'cfgloopmanip.c.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 33
+Creating 'gimple.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:67.74% of 62
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:100.00% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:84.09% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:94.59% of 37
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:77.42% of 62
+Creating 'vec.h.gcov'
+
+File '../../gcc/cfgrtl.c'
+Lines executed:55.64% of 1934
+Creating 'cfgrtl.c.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 8
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:83.33% of 12
+Creating 'emit-rtl.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 5
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 38
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 14
+Creating 'vec.h.gcov'
+
+File '../../gcc/cgraphbuild.c'
+Lines executed:73.66% of 186
+Creating 'cgraphbuild.c.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:100.00% of 4
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:83.33% of 54
+Creating 'gimple.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:90.48% of 21
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/cgraphclones.c'
+Lines executed:74.12% of 340
+Creating 'cgraphclones.c.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:78.95% of 19
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:92.31% of 39
+Creating 'gimple.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 3
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:98.65% of 74
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/cgraph.c'
+Lines executed:57.24% of 1174
+Creating 'cgraph.c.gcov'
+
+File '../../gcc/ipa-inline.h'
+Lines executed:100.00% of 2
+Creating 'ipa-inline.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 3
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:0.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:70.73% of 82
+Creating 'gimple.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:37.50% of 48
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:50.00% of 4
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:14.55% of 110
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/cgraphunit.c'
+Lines executed:48.25% of 856
+Creating 'cgraphunit.c.gcov'
+
+File '../../gcc/plugin.h'
+Lines executed:75.00% of 4
+Creating 'plugin.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:0.00% of 2
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:41.77% of 79
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:0.00% of 4
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 47
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 2
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/function.h'
+Lines executed:0.00% of 3
+Creating 'function.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:50.00% of 8
+Creating 'tree.h.gcov'
+
+File '../../gcc/collect2.c'
+Lines executed:29.40% of 857
+Creating 'collect2.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:90.00% of 70
+Creating 'vec.h.gcov'
+
+File '../../gcc/combine.c'
+Lines executed:83.53% of 5678
+Creating 'combine.c.gcov'
+
+File '../../gcc/df.h'
+Lines executed:75.00% of 12
+Creating 'df.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 8
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:100.00% of 9
+Creating 'regs.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:86.21% of 29
+Creating 'hard-reg-set.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 35
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 9
+Creating 'rtl.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 15
+Creating 'double-int.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:91.67% of 12
+Creating 'hwint.h.gcov'
+
+File '../../gcc/combine-stack-adj.c'
+Lines executed:52.42% of 248
+Creating 'combine-stack-adj.c.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 5
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 60
+Creating 'vec.h.gcov'
+
+File '../../gcc/compare-elim.c'
+Lines executed:1.28% of 234
+Creating 'compare-elim.c.gcov'
+
+File '../../gcc/df.h'
+Lines executed:0.00% of 16
+Creating 'df.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 25
+Creating 'basic-block.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 6
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/convert.c'
+Lines executed:64.71% of 357
+Creating 'convert.c.gcov'
+
+File 'gt-coverage.h'
+Lines executed:2.63% of 38
+Creating 'gt-coverage.h.gcov'
+
+File '../../gcc/coverage.c'
+Lines executed:5.94% of 488
+Creating 'coverage.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 43
+Creating 'vec.h.gcov'
+
+File '../../gcc/hash-table.h'
+Lines executed:2.17% of 138
+Creating 'hash-table.h.gcov'
+
+File '../../gcc/gcov-io.c'
+Lines executed:0.00% of 273
+Creating 'gcov-io.c.gcov'
+
+File '../../gcc/gcov-io.h'
+Lines executed:0.00% of 5
+Creating 'gcov-io.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 2
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 4
+Creating 'double-int.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:0.00% of 8
+Creating 'hwint.h.gcov'
+
+File '../../gcc/cppbuiltin.c'
+Lines executed:86.84% of 76
+Creating 'cppbuiltin.c.gcov'
+
+File '../../gcc/tree.h'
+No executable lines
+Removing 'tree.h.gcov'
+
+File '../../gcc/cppdefault.c'
+Lines executed:85.71% of 7
+Creating 'cppdefault.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/cprop.c'
+Lines executed:87.92% of 662
+Creating 'cprop.c.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:72.73% of 11
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 23
+Creating 'basic-block.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 6
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/cse.c'
+Lines executed:84.04% of 2726
+Creating 'cse.c.gcov'
+
+File '../../gcc/df.h'
+Lines executed:63.64% of 22
+Creating 'df.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:75.00% of 16
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:96.67% of 30
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:100.00% of 7
+Creating 'regs.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:86.21% of 29
+Creating 'hard-reg-set.h.gcov'
+
+File 'genrtl.h'
+Lines executed:33.33% of 18
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/cselib.c'
+Lines executed:72.93% of 1160
+Creating 'cselib.c.gcov'
+
+File '../../gcc/cselib.h'
+Lines executed:100.00% of 7
+Creating 'cselib.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:100.00% of 2
+Creating 'regs.h.gcov'
+
+File 'genrtl.h'
+Lines executed:69.57% of 23
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/data-streamer.c'
+Lines executed:0.00% of 38
+Creating 'data-streamer.c.gcov'
+
+File '../../gcc/data-streamer.h'
+Lines executed:0.00% of 23
+Creating 'data-streamer.h.gcov'
+
+File '../../gcc/data-streamer-in.c'
+Lines executed:0.00% of 49
+Creating 'data-streamer-in.c.gcov'
+
+File '../../gcc/data-streamer.h'
+Lines executed:0.00% of 4
+Creating 'data-streamer.h.gcov'
+
+File '../../gcc/data-streamer-out.c'
+Lines executed:0.00% of 72
+Creating 'data-streamer-out.c.gcov'
+
+File '../../gcc/data-streamer.h'
+Lines executed:0.00% of 8
+Creating 'data-streamer.h.gcov'
+
+File '../../gcc/dbgcnt.c'
+Lines executed:11.76% of 51
+Creating 'dbgcnt.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:11.76% of 68
+Creating 'vec.h.gcov'
+
+File 'gt-dbxout.h'
+Lines executed:0.00% of 27
+Creating 'gt-dbxout.h.gcov'
+
+File '../../gcc/dbxout.c'
+Lines executed:0.00% of 1362
+Creating 'dbxout.c.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 4
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:0.00% of 2
+Creating 'expr.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/tree.h'
+No executable lines
+Removing 'tree.h.gcov'
+
+File '../../gcc/ggc.h'
+Lines executed:0.00% of 2
+Creating 'ggc.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 53
+Creating 'vec.h.gcov'
+
+File '../../gcc/hash-table.h'
+Lines executed:100.00% of 3
+Creating 'hash-table.h.gcov'
+
+File '../../gcc/dce.c'
+Lines executed:78.28% of 488
+Creating 'dce.c.gcov'
+
+File '../../gcc/valtrack.h'
+Lines executed:100.00% of 1
+Creating 'valtrack.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:78.57% of 14
+Creating 'df.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:95.83% of 24
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:66.67% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 2
+Creating 'bitmap.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 5
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/ddg.c'
+Lines executed:0.00% of 537
+Creating 'ddg.c.gcov'
+
+File '../../gcc/sched-int.h'
+Lines executed:0.00% of 22
+Creating 'sched-int.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:0.00% of 4
+Creating 'df.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 36
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/debug.c'
+Lines executed:69.23% of 26
+Creating 'debug.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:30.00% of 60
+Creating 'vec.h.gcov'
+
+File '../../gcc/df-core.c'
+Lines executed:63.05% of 709
+Creating 'df-core.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:94.00% of 50
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:66.67% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/dfp.c'
+Lines executed:21.48% of 284
+Creating 'dfp.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/df-problems.c'
+Lines executed:69.45% of 1679
+Creating 'df-problems.c.gcov'
+
+File '../../gcc/df.h'
+Lines executed:83.33% of 36
+Creating 'df.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:90.57% of 53
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:95.83% of 24
+Creating 'basic-block.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 5
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:95.45% of 110
+Creating 'vec.h.gcov'
+
+File '../../gcc/df-scan.c'
+Lines executed:74.19% of 1887
+Creating 'df-scan.c.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:87.50% of 8
+Creating 'df.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:97.92% of 48
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:95.83% of 24
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:100.00% of 2
+Creating 'regs.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/diagnostic.c'
+Lines executed:70.25% of 474
+Creating 'diagnostic.c.gcov'
+
+File '../../gcc/pretty-print.h'
+Lines executed:100.00% of 1
+Creating 'pretty-print.h.gcov'
+
+File '../../gcc/dojump.c'
+Lines executed:41.94% of 465
+Creating 'dojump.c.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:0.00% of 2
+Creating 'optabs.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:100.00% of 2
+Creating 'expr.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 2
+Creating 'tree.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 6
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 8
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:17.39% of 69
+Creating 'vec.h.gcov'
+
+File '../../gcc/dominance.c'
+Lines executed:90.69% of 537
+Creating 'dominance.c.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:93.18% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 25
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 60
+Creating 'vec.h.gcov'
+
+File '../../gcc/domwalk.c'
+Lines executed:83.58% of 67
+Creating 'domwalk.c.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:66.67% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/double-int.c'
+Lines executed:85.58% of 548
+Creating 'double-int.c.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:71.43% of 14
+Creating 'double-int.h.gcov'
+
+File '/project/alipour/rabin/bin/gcc-4.8.2/build/gmp/gmp.h'
+Lines executed:100.00% of 5
+Creating 'gmp.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:75.00% of 4
+Creating 'hwint.h.gcov'
+
+File '../../gcc/config/i386/driver-i386.c'
+Lines executed:0.00% of 434
+Creating 'driver-i386.c.gcov'
+
+File '../../gcc/config/i386/cpuid.h'
+Lines executed:0.00% of 5
+Creating 'cpuid.h.gcov'
+
+File '../../gcc/dse.c'
+Lines executed:75.32% of 1467
+Creating 'dse.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:95.00% of 60
+Creating 'vec.h.gcov'
+
+File '../../gcc/hash-table.h'
+Lines executed:86.67% of 135
+Creating 'hash-table.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:100.00% of 8
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/target.h'
+Lines executed:100.00% of 3
+Creating 'target.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:75.00% of 4
+Creating 'df.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 25
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:86.11% of 36
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:93.48% of 46
+Creating 'bitmap.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 6
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 9
+Creating 'rtl.h.gcov'
+
+File '../../gcc/dumpfile.c'
+Lines executed:18.70% of 353
+Creating 'dumpfile.c.gcov'
+
+File '../../gcc/dwarf2asm.c'
+Lines executed:8.70% of 345
+Creating 'dwarf2asm.c.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 13
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:83.43% of 169
+Creating 'vec.h.gcov'
+
+File 'gt-dwarf2cfi.h'
+Lines executed:0.00% of 38
+Creating 'gt-dwarf2cfi.h.gcov'
+
+File '../../gcc/dwarf2cfi.c'
+Lines executed:53.11% of 1288
+Creating 'dwarf2cfi.c.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:0.00% of 2
+Creating 'expr.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 7
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:23.81% of 168
+Creating 'vec.h.gcov'
+
+File 'gt-dwarf2out.h'
+Lines executed:0.00% of 889
+Creating 'gt-dwarf2out.h.gcov'
+
+File '../../gcc/dwarf2out.c'
+Lines executed:1.48% of 9461
+Creating 'dwarf2out.c.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 8
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:0.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:0.00% of 2
+Creating 'expr.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 23
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 12
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:50.00% of 16
+Creating 'double-int.h.gcov'
+
+File '../../gcc/ggc.h'
+Lines executed:0.00% of 4
+Creating 'ggc.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:0.00% of 10
+Creating 'hwint.h.gcov'
+
+File '../../gcc/emit-rtl.c'
+Lines executed:76.25% of 2324
+Creating 'emit-rtl.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:0.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 10
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/tree.h'
+No executable lines
+Removing 'tree.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 56
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 4
+Creating 'double-int.h.gcov'
+
+File '../../gcc/ggc.h'
+Lines executed:100.00% of 2
+Creating 'ggc.h.gcov'
+
+File '../../gcc/et-forest.c'
+Lines executed:97.36% of 265
+Creating 'et-forest.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:38.39% of 112
+Creating 'vec.h.gcov'
+
+File 'gt-except.h'
+Lines executed:0.00% of 15
+Creating 'gt-except.h.gcov'
+
+File '../../gcc/except.c'
+Lines executed:10.82% of 1257
+Creating 'except.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:0.00% of 5
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 4
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 23
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/except.h'
+Lines executed:0.00% of 12
+Creating 'except.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:0.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:100.00% of 2
+Creating 'expr.h.gcov'
+
+File '../../gcc/tree.h'
+No executable lines
+Removing 'tree.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 13
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/explow.c'
+Lines executed:58.40% of 649
+Creating 'explow.c.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:0.00% of 13
+Creating 'optabs.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:100.00% of 2
+Creating 'expr.h.gcov'
+
+File '../../gcc/tree.h'
+No executable lines
+Removing 'tree.h.gcov'
+
+File 'genrtl.h'
+Lines executed:57.14% of 28
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 5
+Creating 'rtl.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 8
+Creating 'double-int.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:75.00% of 4
+Creating 'hwint.h.gcov'
+
+File '../../gcc/expmed.c'
+Lines executed:72.11% of 2331
+Creating 'expmed.c.gcov'
+
+File '../../gcc/expmed.h'
+Lines executed:98.44% of 128
+Creating 'expmed.h.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:96.97% of 33
+Creating 'optabs.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:100.00% of 2
+Creating 'expr.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 6
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:88.89% of 9
+Creating 'rtl.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:36.84% of 19
+Creating 'double-int.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:85.71% of 14
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:6.90% of 58
+Creating 'vec.h.gcov'
+
+File '../../gcc/expr.c'
+Lines executed:66.21% of 4522
+Creating 'expr.c.gcov'
+
+File '../../gcc/ssaexpand.h'
+Lines executed:100.00% of 11
+Creating 'ssaexpand.h.gcov'
+
+File '../../gcc/target.h'
+Lines executed:100.00% of 3
+Creating 'target.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:75.00% of 40
+Creating 'gimple.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:100.00% of 2
+Creating 'recog.h.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:100.00% of 35
+Creating 'optabs.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:100.00% of 7
+Creating 'expr.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:100.00% of 7
+Creating 'regs.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:75.00% of 16
+Creating 'tree.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 28
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 9
+Creating 'rtl.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:31.82% of 22
+Creating 'double-int.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:0.00% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/file-find.c'
+Lines executed:81.16% of 69
+Creating 'file-find.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:3.03% of 66
+Creating 'vec.h.gcov'
+
+File '../../gcc/final.c'
+Lines executed:59.76% of 1404
+Creating 'final.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:0.00% of 4
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 6
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:75.00% of 4
+Creating 'recog.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:28.57% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:83.33% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/fixed-value.c'
+Lines executed:1.20% of 501
+Creating 'fixed-value.c.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:23.53% of 17
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 58
+Creating 'vec.h.gcov'
+
+File '../../gcc/fold-const.c'
+Lines executed:78.63% of 7271
+Creating 'fold-const.c.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:50.00% of 4
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 57
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:28.26% of 46
+Creating 'double-int.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:83.33% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:67.81% of 146
+Creating 'vec.h.gcov'
+
+File 'gt-function.h'
+Lines executed:0.00% of 106
+Creating 'gt-function.h.gcov'
+
+File '../../gcc/function.c'
+Lines executed:70.79% of 2787
+Creating 'function.c.gcov'
+
+File '../../gcc/df.h'
+Lines executed:75.00% of 16
+Creating 'df.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:50.00% of 8
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:66.67% of 6
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/target.h'
+Lines executed:100.00% of 3
+Creating 'target.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 32
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:100.00% of 4
+Creating 'recog.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:76.47% of 17
+Creating 'regs.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:0.00% of 4
+Creating 'expr.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:50.00% of 4
+Creating 'hard-reg-set.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 6
+Creating 'tree.h.gcov'
+
+File 'genrtl.h'
+Lines executed:54.55% of 11
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:85.71% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/ggc.h'
+Lines executed:0.00% of 2
+Creating 'ggc.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:70.13% of 77
+Creating 'vec.h.gcov'
+
+File '../../gcc/fwprop.c'
+Lines executed:92.00% of 600
+Creating 'fwprop.c.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:100.00% of 5
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:81.25% of 16
+Creating 'df.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 6
+Creating 'basic-block.h.gcov'
+
+File 'genrtl.h'
+Lines executed:62.50% of 16
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 9
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:80.43% of 92
+Creating 'vec.h.gcov'
+
+File '../../gcc/gcc.c'
+Lines executed:42.85% of 3090
+Creating 'gcc.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:90.67% of 75
+Creating 'vec.h.gcov'
+
+File '../../gcc/gcse.c'
+Lines executed:88.22% of 1324
+Creating 'gcse.c.gcov'
+
+File '../../gcc/df.h'
+Lines executed:56.25% of 16
+Creating 'df.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:88.37% of 43
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:96.55% of 87
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:82.61% of 23
+Creating 'basic-block.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 6
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 4
+Creating 'rtl.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:86.21% of 29
+Creating 'hard-reg-set.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 50
+Creating 'vec.h.gcov'
+
+File '../../gcc/ggc-common.c'
+Lines executed:14.44% of 381
+Creating 'ggc-common.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:0.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/plugin.h'
+Lines executed:0.00% of 4
+Creating 'plugin.h.gcov'
+
+File '../../gcc/ggc.h'
+Lines executed:100.00% of 2
+Creating 'ggc.h.gcov'
+
+File '../../gcc/ggc-none.c'
+Lines executed:0.00% of 11
+Creating 'ggc-none.c.gcov'
+
+File '../../gcc/ggc-page.c'
+Lines executed:37.75% of 612
+Creating 'ggc-page.c.gcov'
+
+File '../../gcc/plugin.h'
+Lines executed:0.00% of 4
+Creating 'plugin.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:0.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:83.33% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/gimple-fold.c'
+Lines executed:69.45% of 1447
+Creating 'gimple-fold.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:67.12% of 73
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 8
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:84.92% of 199
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:55.00% of 20
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:13.33% of 15
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 94
+Creating 'vec.h.gcov'
+
+File '../../gcc/gimple.c'
+Lines executed:51.73% of 1736
+Creating 'gimple.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:60.38% of 53
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:52.76% of 635
+Creating 'gimple.h.gcov'
+
+File '../../gcc/internal-fn.h'
+Lines executed:0.00% of 2
+Creating 'internal-fn.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:94.12% of 17
+Creating 'tree.h.gcov'
+
+File '../../gcc/ggc.h'
+Lines executed:33.33% of 6
+Creating 'ggc.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/gimple-iterator.c'
+Lines executed:92.21% of 308
+Creating 'gimple-iterator.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:84.21% of 76
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:100.00% of 4
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:91.43% of 105
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 27
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:70.97% of 93
+Creating 'vec.h.gcov'
+
+File '../../gcc/gimple-low.c'
+Lines executed:76.79% of 336
+Creating 'gimple-low.c.gcov'
+
+File '../../gcc/tree-iterator.h'
+Lines executed:0.00% of 11
+Creating 'tree-iterator.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:75.71% of 140
+Creating 'gimple.h.gcov'
+
+File '../../gcc/function.h'
+Lines executed:100.00% of 3
+Creating 'function.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:80.00% of 5
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/gimple-pretty-print.c'
+Lines executed:0.00% of 1140
+Creating 'gimple-pretty-print.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:0.00% of 18
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 9
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 298
+Creating 'gimple.h.gcov'
+
+File '../../gcc/internal-fn.h'
+Lines executed:0.00% of 2
+Creating 'internal-fn.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 24
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 46
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:95.52% of 67
+Creating 'vec.h.gcov'
+
+File '../../gcc/gimple-ssa-strength-reduction.c'
+Lines executed:78.06% of 989
+Creating 'gimple-ssa-strength-reduction.c.gcov'
+
+File '../../gcc/expmed.h'
+Lines executed:89.66% of 29
+Creating 'expmed.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:81.82% of 11
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:88.35% of 103
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 6
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 22
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/gimple-streamer-in.c'
+Lines executed:0.00% of 158
+Creating 'gimple-streamer-in.c.gcov'
+
+File '../../gcc/data-streamer.h'
+Lines executed:0.00% of 35
+Creating 'data-streamer.h.gcov'
+
+File '../../gcc/lto-streamer.h'
+Lines executed:0.00% of 7
+Creating 'lto-streamer.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 76
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 2
+Creating 'vec.h.gcov'
+
+File '../../gcc/gimple-streamer-out.c'
+Lines executed:0.00% of 91
+Creating 'gimple-streamer-out.c.gcov'
+
+File '../../gcc/data-streamer.h'
+Lines executed:0.00% of 44
+Creating 'data-streamer.h.gcov'
+
+File '../../gcc/lto-streamer.h'
+Lines executed:0.00% of 2
+Creating 'lto-streamer.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:0.00% of 13
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 94
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:50.00% of 150
+Creating 'vec.h.gcov'
+
+File '../../gcc/gimplify.c'
+Lines executed:60.32% of 3591
+Creating 'gimplify.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:100.00% of 6
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:100.00% of 4
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/tree-iterator.h'
+Lines executed:66.67% of 12
+Creating 'tree-iterator.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:60.61% of 198
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:81.08% of 37
+Creating 'tree.h.gcov'
+
+File '../../gcc/config/glibc-c.c'
+Lines executed:100.00% of 2
+Creating 'glibc-c.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 54
+Creating 'vec.h.gcov'
+
+File '../../gcc/godump.c'
+Lines executed:0.00% of 563
+Creating 'godump.c.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 9
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 50
+Creating 'vec.h.gcov'
+
+File '../../gcc/graphds.c'
+Lines executed:89.42% of 189
+Creating 'graphds.c.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:90.91% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/graph.c'
+Lines executed:0.00% of 138
+Creating 'graph.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:0.00% of 2
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/graphite.c'
+Lines executed:0.00% of 3
+Creating 'graphite.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:15.79% of 19
+Creating 'vec.h.gcov'
+
+File 'gtype-desc.c'
+Lines executed:0.07% of 5841
+Creating 'gtype-desc.c.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 6
+Creating 'gimple.h.gcov'
+
+File '../../gcc/haifa-sched.c'
+Lines executed:28.59% of 3375
+Creating 'haifa-sched.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:51.85% of 135
+Creating 'vec.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/sched-int.h'
+Lines executed:100.00% of 24
+Creating 'sched-int.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:0.00% of 12
+Creating 'df.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 29
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 48
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:100.00% of 4
+Creating 'recog.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 11
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/hash-table.c'
+Lines executed:88.89% of 18
+Creating 'hash-table.c.gcov'
+
+File '../../gcc/hooks.c'
+Lines executed:31.67% of 120
+Creating 'hooks.c.gcov'
+
+File '../../gcc/config/host-linux.c'
+Lines executed:6.00% of 50
+Creating 'host-linux.c.gcov'
+
+File '../../gcc/hwint.c'
+Lines executed:83.33% of 24
+Creating 'hwint.c.gcov'
+
+File '../../gcc/config/i386/i386-c.c'
+Lines executed:46.13% of 271
+Creating 'i386-c.c.gcov'
+
+File '../../gcc/common/config/i386/i386-common.c'
+Lines executed:26.85% of 257
+Creating 'i386-common.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 70
+Creating 'vec.h.gcov'
+
+File 'gt-i386.h'
+Lines executed:0.00% of 19
+Creating 'gt-i386.h.gcov'
+
+File '../../gcc/config/i386/i386.c'
+Lines executed:46.74% of 16339
+Creating 'i386.c.gcov'
+
+File '../../gcc/sched-int.h'
+Lines executed:0.00% of 22
+Creating 'sched-int.h.gcov'
+
+File '../../gcc/config/i386/constraints.md'
+Lines executed:100.00% of 9
+Creating 'constraints.md.gcov'
+
+File '../../gcc/df.h'
+Lines executed:0.00% of 12
+Creating 'df.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 32
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 51
+Creating 'gimple.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:100.00% of 4
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/target.h'
+Lines executed:100.00% of 5
+Creating 'target.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:100.00% of 7
+Creating 'expr.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:36.36% of 11
+Creating 'recog.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:100.00% of 7
+Creating 'regs.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:46.15% of 26
+Creating 'tree.h.gcov'
+
+File 'genrtl.h'
+Lines executed:82.93% of 41
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 4
+Creating 'double-int.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:83.33% of 12
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 59
+Creating 'vec.h.gcov'
+
+File '../../gcc/ifcvt.c'
+Lines executed:56.08% of 1940
+Creating 'ifcvt.c.gcov'
+
+File '../../gcc/df.h'
+Lines executed:56.25% of 16
+Creating 'df.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:89.13% of 46
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:66.67% of 6
+Creating 'optabs.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:22.22% of 36
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:100.00% of 4
+Creating 'recog.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 13
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:66.67% of 9
+Creating 'rtl.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:0.00% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/incpath.c'
+Lines executed:53.33% of 180
+Creating 'incpath.c.gcov'
+
+File '../../gcc/init-regs.c'
+Lines executed:95.35% of 43
+Creating 'init-regs.c.gcov'
+
+File '../../gcc/df.h'
+Lines executed:75.00% of 8
+Creating 'df.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/input.c'
+Lines executed:51.19% of 84
+Creating 'input.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 6
+Creating 'vec.h.gcov'
+
+File '../../gcc/config/i386/i386.md'
+Lines executed:43.55% of 2365
+Creating 'i386.md.gcov'
+
+File '../../gcc/config/i386/sse.md'
+Lines executed:12.45% of 723
+Creating 'sse.md.gcov'
+
+File '../../gcc/config/i386/mmx.md'
+Lines executed:47.83% of 23
+Creating 'mmx.md.gcov'
+
+File 'insn-attrtab.c'
+Lines executed:100.00% of 2
+Creating 'insn-attrtab.c.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:100.00% of 4
+Creating 'recog.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 2
+Creating 'rtl.h.gcov'
+
+File 'insn-automata.c'
+Lines executed:7.98% of 4125
+Creating 'insn-automata.c.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/config/i386/sse.md'
+Lines executed:0.00% of 1119
+Creating 'sse.md.gcov'
+
+File '../../gcc/config/i386/i386.md'
+Lines executed:7.71% of 2919
+Creating 'i386.md.gcov'
+
+File 'insn-dfatab.c'
+Lines executed:0.00% of 670
+Creating 'insn-dfatab.c.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:75.00% of 4
+Creating 'recog.h.gcov'
+
+File '../../gcc/config/i386/sync.md'
+Lines executed:25.30% of 336
+Creating 'sync.md.gcov'
+
+File '../../gcc/config/i386/sse.md'
+Lines executed:26.12% of 2519
+Creating 'sse.md.gcov'
+
+File '../../gcc/config/i386/mmx.md'
+Lines executed:47.38% of 439
+Creating 'mmx.md.gcov'
+
+File '../../gcc/config/i386/i386.md'
+Lines executed:36.88% of 5947
+Creating 'i386.md.gcov'
+
+File 'insn-emit.c'
+Lines executed:17.13% of 1769
+Creating 'insn-emit.c.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 43
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:0.00% of 6
+Creating 'hwint.h.gcov'
+
+File 'insn-extract.c'
+Lines executed:37.14% of 1656
+Creating 'insn-extract.c.gcov'
+
+File '../../gcc/config/i386/sse.md'
+Lines executed:0.00% of 1359
+Creating 'sse.md.gcov'
+
+File '../../gcc/config/i386/i386.md'
+Lines executed:7.74% of 2570
+Creating 'i386.md.gcov'
+
+File 'insn-latencytab.c'
+Lines executed:0.00% of 154
+Creating 'insn-latencytab.c.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:75.00% of 4
+Creating 'recog.h.gcov'
+
+File 'insn-modes.c'
+Lines executed:100.00% of 11
+Creating 'insn-modes.c.gcov'
+
+File 'insn-opinit.c'
+Lines executed:99.71% of 1035
+Creating 'insn-opinit.c.gcov'
+
+File '../../gcc/config/i386/sync.md'
+Lines executed:18.60% of 43
+Creating 'sync.md.gcov'
+
+File '../../gcc/config/i386/sse.md'
+Lines executed:34.11% of 343
+Creating 'sse.md.gcov'
+
+File '../../gcc/config/i386/mmx.md'
+Lines executed:82.35% of 17
+Creating 'mmx.md.gcov'
+
+File '../../gcc/config/i386/i386.md'
+Lines executed:40.35% of 808
+Creating 'i386.md.gcov'
+
+File 'insn-output.c'
+Lines executed:0.00% of 1
+Creating 'insn-output.c.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:83.33% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/config/i386/predicates.md'
+Lines executed:71.23% of 782
+Creating 'predicates.md.gcov'
+
+File '../../gcc/config/i386/constraints.md'
+Lines executed:50.00% of 48
+Creating 'constraints.md.gcov'
+
+File 'insn-preds.c'
+Lines executed:100.00% of 2
+Creating 'insn-preds.c.gcov'
+
+File 'tm-constrs.h'
+Lines executed:100.00% of 5
+Creating 'tm-constrs.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:85.71% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/config/i386/i386.md'
+Lines executed:68.72% of 13080
+Creating 'i386.md.gcov'
+
+File '../../gcc/config/i386/sync.md'
+Lines executed:60.14% of 715
+Creating 'sync.md.gcov'
+
+File '../../gcc/config/i386/sse.md'
+Lines executed:42.95% of 8902
+Creating 'sse.md.gcov'
+
+File '../../gcc/config/i386/mmx.md'
+Lines executed:61.17% of 1236
+Creating 'mmx.md.gcov'
+
+File 'insn-recog.c'
+Lines executed:75.00% of 36
+Creating 'insn-recog.c.gcov'
+
+File '../../gcc/config/i386/constraints.md'
+Lines executed:100.00% of 5
+Creating 'constraints.md.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:83.33% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/internal-fn.c'
+Lines executed:0.00% of 34
+Creating 'internal-fn.c.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 21
+Creating 'gimple.h.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:0.00% of 20
+Creating 'optabs.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:0.00% of 4
+Creating 'expr.h.gcov'
+
+File '../../gcc/intl.c'
+Lines executed:58.62% of 29
+Creating 'intl.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:69.70% of 165
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/ipa-cp.c'
+Lines executed:71.37% of 1523
+Creating 'ipa-cp.c.gcov'
+
+File '../../gcc/ipa-inline.h'
+Lines executed:100.00% of 2
+Creating 'ipa-inline.h.gcov'
+
+File '../../gcc/ipa-prop.h'
+Lines executed:81.25% of 48
+Creating 'ipa-prop.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:82.46% of 57
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:100.00% of 2
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/tree.h'
+No executable lines
+Removing 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:4.76% of 84
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/ipa.c'
+Lines executed:55.78% of 554
+Creating 'ipa.c.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:68.33% of 120
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:66.67% of 6
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:83.95% of 162
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/ipa-inline-analysis.c'
+Lines executed:75.26% of 1738
+Creating 'ipa-inline-analysis.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:67.21% of 61
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/ipa-inline.h'
+Lines executed:77.27% of 22
+Creating 'ipa-inline.h.gcov'
+
+File '../../gcc/data-streamer.h'
+Lines executed:0.00% of 46
+Creating 'data-streamer.h.gcov'
+
+File '../../gcc/lto-streamer.h'
+Lines executed:0.00% of 6
+Creating 'lto-streamer.h.gcov'
+
+File '../../gcc/ipa-prop.h'
+Lines executed:70.00% of 20
+Creating 'ipa-prop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:60.71% of 56
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:92.73% of 110
+Creating 'gimple.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:88.64% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:73.33% of 45
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:100.00% of 2
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 27
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:5.26% of 76
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/ipa-inline.c'
+Lines executed:82.58% of 844
+Creating 'ipa-inline.c.gcov'
+
+File '../../gcc/ipa-inline.h'
+Lines executed:94.44% of 36
+Creating 'ipa-inline.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:100.00% of 2
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 6
+Creating 'gimple.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:84.48% of 58
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:100.00% of 4
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 23
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 2
+Creating 'is-a.h.gcov'
+
+File '../../gcc/ipa-inline-transform.c'
+Lines executed:88.05% of 159
+Creating 'ipa-inline-transform.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/ipa-inline.h'
+Lines executed:100.00% of 2
+Creating 'ipa-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:33.33% of 27
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:0.00% of 2
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:86.67% of 165
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/ipa-prop.c'
+Lines executed:53.64% of 1788
+Creating 'ipa-prop.c.gcov'
+
+File '../../gcc/data-streamer.h'
+Lines executed:0.00% of 46
+Creating 'data-streamer.h.gcov'
+
+File '../../gcc/lto-streamer.h'
+Lines executed:0.00% of 34
+Creating 'lto-streamer.h.gcov'
+
+File '../../gcc/ipa-inline.h'
+Lines executed:100.00% of 2
+Creating 'ipa-inline.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:92.31% of 13
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/ipa-prop.h'
+Lines executed:70.21% of 47
+Creating 'ipa-prop.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:90.00% of 160
+Creating 'gimple.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:28.30% of 53
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:100.00% of 2
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 12
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 6
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:58.59% of 99
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/ipa-pure-const.c'
+Lines executed:72.23% of 695
+Creating 'ipa-pure-const.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:64.91% of 57
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/data-streamer.h'
+Lines executed:0.00% of 38
+Creating 'data-streamer.h.gcov'
+
+File '../../gcc/lto-streamer.h'
+Lines executed:0.00% of 34
+Creating 'lto-streamer.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:67.27% of 55
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:50.00% of 4
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:93.67% of 79
+Creating 'gimple.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:82.72% of 81
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/ipa-reference.c'
+Lines executed:57.42% of 472
+Creating 'ipa-reference.c.gcov'
+
+File '../../gcc/lto-streamer.h'
+Lines executed:0.00% of 7
+Creating 'lto-streamer.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:60.00% of 55
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:50.00% of 4
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 98
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:60.33% of 121
+Creating 'vec.h.gcov'
+
+File '../../gcc/ipa-ref.c'
+Lines executed:76.81% of 69
+Creating 'ipa-ref.c.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:100.00% of 6
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:100.00% of 2
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:64.71% of 119
+Creating 'vec.h.gcov'
+
+File '../../gcc/ipa-split.c'
+Lines executed:76.97% of 712
+Creating 'ipa-split.c.gcov'
+
+File '../../gcc/ipa-inline.h'
+Lines executed:100.00% of 2
+Creating 'ipa-inline.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:93.24% of 74
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 49
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:88.13% of 160
+Creating 'gimple.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:100.00% of 4
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:85.19% of 27
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:50.60% of 83
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/ipa-utils.c'
+Lines executed:58.62% of 232
+Creating 'ipa-utils.c.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:51.69% of 89
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:100.00% of 4
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:88.37% of 86
+Creating 'vec.h.gcov'
+
+File '../../gcc/ira-build.c'
+Lines executed:68.03% of 1517
+Creating 'ira-build.c.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/ira-int.h'
+Lines executed:74.60% of 63
+Creating 'ira-int.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:86.67% of 15
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/sparseset.h'
+Lines executed:0.00% of 26
+Creating 'sparseset.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:56.25% of 16
+Creating 'df.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:91.67% of 48
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:93.90% of 82
+Creating 'vec.h.gcov'
+
+File '../../gcc/ira-color.c'
+Lines executed:63.68% of 2007
+Creating 'ira-color.c.gcov'
+
+File '../../gcc/ira-int.h'
+Lines executed:97.53% of 81
+Creating 'ira-int.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:0.00% of 2
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:56.25% of 16
+Creating 'df.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:89.58% of 48
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:0.00% of 2
+Creating 'regs.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:100.00% of 8
+Creating 'hard-reg-set.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:83.33% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/ira-conflicts.c'
+Lines executed:79.29% of 420
+Creating 'ira-conflicts.c.gcov'
+
+File '../../gcc/addresses.h'
+Lines executed:100.00% of 2
+Creating 'addresses.h.gcov'
+
+File '../../gcc/ira-int.h'
+Lines executed:66.98% of 106
+Creating 'ira-int.h.gcov'
+
+File '../../gcc/sparseset.h'
+Lines executed:100.00% of 26
+Creating 'sparseset.h.gcov'
+
+File 'tm-preds.h'
+Lines executed:100.00% of 6
+Creating 'tm-preds.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/ira-costs.c'
+Lines executed:87.74% of 930
+Creating 'ira-costs.c.gcov'
+
+File '../../gcc/ira-int.h'
+Lines executed:97.22% of 36
+Creating 'ira-int.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:100.00% of 7
+Creating 'recog.h.gcov'
+
+File '../../gcc/addresses.h'
+Lines executed:100.00% of 4
+Creating 'addresses.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:50.00% of 4
+Creating 'regs.h.gcov'
+
+File 'tm-preds.h'
+Lines executed:100.00% of 6
+Creating 'tm-preds.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:100.00% of 2
+Creating 'hard-reg-set.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:83.33% of 84
+Creating 'vec.h.gcov'
+
+File '../../gcc/ira-emit.c'
+Lines executed:94.38% of 569
+Creating 'ira-emit.c.gcov'
+
+File '../../gcc/ira-int.h'
+Lines executed:91.30% of 23
+Creating 'ira-int.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:75.00% of 4
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:56.25% of 16
+Creating 'df.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:100.00% of 4
+Creating 'recog.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:50.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:97.73% of 44
+Creating 'bitmap.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 6
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:11.11% of 63
+Creating 'vec.h.gcov'
+
+File '../../gcc/ira.c'
+Lines executed:77.28% of 1897
+Creating 'ira.c.gcov'
+
+File '../../gcc/ira-int.h'
+Lines executed:100.00% of 25
+Creating 'ira-int.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:50.00% of 4
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:100.00% of 4
+Creating 'recog.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:56.25% of 16
+Creating 'df.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:94.00% of 50
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:81.82% of 22
+Creating 'regs.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 24
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:100.00% of 8
+Creating 'hard-reg-set.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/ira-lives.c'
+Lines executed:81.74% of 734
+Creating 'ira-lives.c.gcov'
+
+File '../../gcc/ira-int.h'
+Lines executed:64.52% of 31
+Creating 'ira-int.h.gcov'
+
+File '../../gcc/sparseset.h'
+Lines executed:100.00% of 30
+Creating 'sparseset.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:50.00% of 12
+Creating 'df.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:86.11% of 36
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:90.91% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:96.55% of 29
+Creating 'basic-block.h.gcov'
+
+File 'tm-preds.h'
+Lines executed:83.33% of 6
+Creating 'tm-preds.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:0.00% of 7
+Creating 'regs.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/jump.c'
+Lines executed:65.84% of 726
+Creating 'jump.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 11
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/langhooks.c'
+Lines executed:27.31% of 216
+Creating 'langhooks.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/lcm.c'
+Lines executed:64.71% of 255
+Creating 'lcm.c.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 7
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/lists.c'
+Lines executed:71.28% of 94
+Creating 'lists.c.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 12
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 67
+Creating 'vec.h.gcov'
+
+File '../../gcc/loop-init.c'
+Lines executed:82.52% of 143
+Creating 'loop-init.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:87.50% of 72
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:86.49% of 74
+Creating 'vec.h.gcov'
+
+File '../../gcc/loop-invariant.c'
+Lines executed:70.60% of 779
+Creating 'loop-invariant.c.gcov'
+
+File '../../gcc/df.h'
+Lines executed:0.00% of 4
+Creating 'df.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:83.05% of 59
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:86.27% of 51
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 6
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/loop-iv.c'
+Lines executed:34.78% of 1432
+Creating 'loop-iv.c.gcov'
+
+File '../../gcc/df.h'
+Lines executed:75.00% of 4
+Creating 'df.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:100.00% of 2
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 25
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:0.00% of 29
+Creating 'hard-reg-set.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 6
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 8
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:9.46% of 74
+Creating 'vec.h.gcov'
+
+File '../../gcc/loop-unroll.c'
+Lines executed:0.00% of 970
+Creating 'loop-unroll.c.gcov'
+
+File '../../gcc/dumpfile.h'
+Lines executed:0.00% of 2
+Creating 'dumpfile.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:0.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:0.00% of 57
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 8
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 4
+Creating 'basic-block.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 5
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 18
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 67
+Creating 'vec.h.gcov'
+
+File '../../gcc/loop-unswitch.c'
+Lines executed:78.57% of 196
+Creating 'loop-unswitch.c.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:45.61% of 57
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 4
+Creating 'basic-block.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 6
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 73
+Creating 'vec.h.gcov'
+
+File '../../gcc/lower-subreg.c'
+Lines executed:77.76% of 652
+Creating 'lower-subreg.c.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:43.75% of 32
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:89.13% of 46
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:100.00% of 4
+Creating 'recog.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 11
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 11
+Creating 'rtl.h.gcov'
+
+File '../../gcc/lra-assigns.c'
+Lines executed:93.13% of 655
+Creating 'lra-assigns.c.gcov'
+
+File '../../gcc/lra-int.h'
+Lines executed:83.33% of 6
+Creating 'lra-int.h.gcov'
+
+File '../../gcc/lra.h'
+Lines executed:100.00% of 3
+Creating 'lra.h.gcov'
+
+File '../../gcc/sparseset.h'
+Lines executed:100.00% of 30
+Creating 'sparseset.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:97.92% of 48
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:100.00% of 15
+Creating 'regs.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 5
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:100.00% of 2
+Creating 'hard-reg-set.h.gcov'
+
+File '../../gcc/lra-coalesce.c'
+Lines executed:86.67% of 135
+Creating 'lra-coalesce.c.gcov'
+
+File '../../gcc/df.h'
+Lines executed:56.25% of 16
+Creating 'df.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:80.60% of 67
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/lra-constraints.c'
+Lines executed:80.13% of 2214
+Creating 'lra-constraints.c.gcov'
+
+File '../../gcc/lra-int.h'
+Lines executed:95.45% of 22
+Creating 'lra-int.h.gcov'
+
+File '../../gcc/lra.h'
+Lines executed:100.00% of 3
+Creating 'lra.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:56.25% of 16
+Creating 'df.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:94.00% of 50
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 24
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:66.67% of 6
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/addresses.h'
+Lines executed:100.00% of 2
+Creating 'addresses.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:20.00% of 5
+Creating 'recog.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:88.46% of 26
+Creating 'regs.h.gcov'
+
+File 'tm-preds.h'
+Lines executed:100.00% of 6
+Creating 'tm-preds.h.gcov'
+
+File 'genrtl.h'
+Lines executed:45.45% of 11
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:85.71% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:100.00% of 2
+Creating 'hard-reg-set.h.gcov'
+
+File '../../gcc/lra-eliminations.c'
+Lines executed:66.52% of 457
+Creating 'lra-eliminations.c.gcov'
+
+File '../../gcc/lra-int.h'
+Lines executed:83.33% of 6
+Creating 'lra-int.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:94.00% of 50
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:0.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:100.00% of 4
+Creating 'recog.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:0.00% of 10
+Creating 'regs.h.gcov'
+
+File 'genrtl.h'
+Lines executed:54.55% of 11
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:100.00% of 2
+Creating 'hard-reg-set.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:93.15% of 73
+Creating 'vec.h.gcov'
+
+File '../../gcc/lra.c'
+Lines executed:88.84% of 959
+Creating 'lra.c.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:75.00% of 16
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/lra-int.h'
+Lines executed:93.33% of 15
+Creating 'lra-int.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:100.00% of 4
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 6
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/addresses.h'
+Lines executed:100.00% of 2
+Creating 'addresses.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:100.00% of 4
+Creating 'recog.h.gcov'
+
+File 'tm-preds.h'
+Lines executed:100.00% of 6
+Creating 'tm-preds.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 11
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 56
+Creating 'vec.h.gcov'
+
+File '../../gcc/lra-lives.c'
+Lines executed:89.43% of 454
+Creating 'lra-lives.c.gcov'
+
+File '../../gcc/lra-int.h'
+Lines executed:88.89% of 9
+Creating 'lra-int.h.gcov'
+
+File '../../gcc/sparseset.h'
+Lines executed:100.00% of 32
+Creating 'sparseset.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:56.25% of 16
+Creating 'df.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:86.11% of 36
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:90.91% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:96.55% of 29
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/lra-spills.c'
+Lines executed:73.81% of 252
+Creating 'lra-spills.c.gcov'
+
+File '../../gcc/df.h'
+Lines executed:56.25% of 16
+Creating 'df.h.gcov'
+
+File '../../gcc/lra-int.h'
+Lines executed:90.91% of 22
+Creating 'lra-int.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:100.00% of 4
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/lra.h'
+Lines executed:0.00% of 3
+Creating 'lra.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:0.00% of 15
+Creating 'regs.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:51.72% of 116
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/lto-cgraph.c'
+Lines executed:0.00% of 756
+Creating 'lto-cgraph.c.gcov'
+
+File '../../gcc/data-streamer.h'
+Lines executed:0.00% of 87
+Creating 'data-streamer.h.gcov'
+
+File '../../gcc/lto-streamer.h'
+Lines executed:0.00% of 69
+Creating 'lto-streamer.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:0.00% of 4
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 19
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 2
+Creating 'gimple.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:0.00% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/lto-compress.c'
+Lines executed:0.00% of 129
+Creating 'lto-compress.c.gcov'
+
+File '../../gcc/lto-opts.c'
+Lines executed:0.00% of 42
+Creating 'lto-opts.c.gcov'
+
+File '../../gcc/lto-section-in.c'
+Lines executed:0.00% of 111
+Creating 'lto-section-in.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 60
+Creating 'vec.h.gcov'
+
+File '../../gcc/lto-section-out.c'
+Lines executed:0.00% of 164
+Creating 'lto-section-out.c.gcov'
+
+File '../../gcc/lto-streamer.h'
+Lines executed:0.00% of 10
+Creating 'lto-streamer.h.gcov'
+
+File '../../gcc/lto-streamer.c'
+Lines executed:3.13% of 96
+Creating 'lto-streamer.c.gcov'
+
+File '../../gcc/lto-streamer.h'
+Lines executed:0.00% of 10
+Creating 'lto-streamer.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 76
+Creating 'vec.h.gcov'
+
+File '../../gcc/lto-streamer-in.c'
+Lines executed:0.00% of 465
+Creating 'lto-streamer-in.c.gcov'
+
+File '../../gcc/tree-streamer.h'
+Lines executed:0.00% of 5
+Creating 'tree-streamer.h.gcov'
+
+File '../../gcc/data-streamer.h'
+Lines executed:0.00% of 47
+Creating 'data-streamer.h.gcov'
+
+File '../../gcc/lto-streamer.h'
+Lines executed:0.00% of 14
+Creating 'lto-streamer.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:0.00% of 7
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 4
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 28
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 8
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 67
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/lto-streamer-out.c'
+Lines executed:0.00% of 625
+Creating 'lto-streamer-out.c.gcov'
+
+File '../../gcc/tree-streamer.h'
+Lines executed:0.00% of 5
+Creating 'tree-streamer.h.gcov'
+
+File '../../gcc/data-streamer.h'
+Lines executed:0.00% of 56
+Creating 'data-streamer.h.gcov'
+
+File '../../gcc/lto-streamer.h'
+Lines executed:0.00% of 23
+Creating 'lto-streamer.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:0.00% of 5
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 19
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 20
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 2
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 58
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/lto-symtab.c'
+Lines executed:0.00% of 235
+Creating 'lto-symtab.c.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 44
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/main.c'
+Lines executed:100.00% of 2
+Creating 'main.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 60
+Creating 'vec.h.gcov'
+
+File '../../gcc/mcf.c'
+Lines executed:0.00% of 555
+Creating 'mcf.c.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/mode-switching.c'
+Lines executed:73.82% of 275
+Creating 'mode-switching.c.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:37.50% of 16
+Creating 'df.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:80.00% of 15
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 21
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:100.00% of 12
+Creating 'regs.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 104
+Creating 'vec.h.gcov'
+
+File '../../gcc/modulo-sched.c'
+Lines executed:0.15% of 1318
+Creating 'modulo-sched.c.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:0.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:0.00% of 57
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 40
+Creating 'sbitmap.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 6
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/omega.c'
+Lines executed:0.00% of 2890
+Creating 'omega.c.gcov'
+
+File '../../gcc/omega.h'
+Lines executed:0.00% of 65
+Creating 'omega.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:6.42% of 109
+Creating 'vec.h.gcov'
+
+File '../../gcc/omp-low.c'
+Lines executed:0.20% of 3494
+Creating 'omp-low.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:0.00% of 48
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 4
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 325
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 29
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 16
+Creating 'tree.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:0.00% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/optabs.c'
+Lines executed:50.41% of 3507
+Creating 'optabs.c.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:62.50% of 8
+Creating 'recog.h.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:96.30% of 54
+Creating 'optabs.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:100.00% of 4
+Creating 'expr.h.gcov'
+
+File 'genrtl.h'
+Lines executed:34.38% of 32
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:44.44% of 9
+Creating 'rtl.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 8
+Creating 'double-int.h.gcov'
+
+File '../../gcc/ggc.h'
+Lines executed:100.00% of 2
+Creating 'ggc.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:0.00% of 6
+Creating 'hwint.h.gcov'
+
+File 'options.c'
+Lines executed:3.67% of 518
+Creating 'options.c.gcov'
+
+File 'options-save.c'
+Lines executed:59.77% of 952
+Creating 'options-save.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 39
+Creating 'vec.h.gcov'
+
+File '../../gcc/opts-common.c'
+Lines executed:62.48% of 589
+Creating 'opts-common.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 54
+Creating 'vec.h.gcov'
+
+File '../../gcc/opts.c'
+Lines executed:23.94% of 852
+Creating 'opts.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:12.07% of 58
+Creating 'vec.h.gcov'
+
+File '../../gcc/opts-global.c'
+Lines executed:34.94% of 166
+Creating 'opts-global.c.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 7
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/params.c'
+Lines executed:71.70% of 53
+Creating 'params.c.gcov'
+
+File 'gt-passes.h'
+Lines executed:4.76% of 21
+Creating 'gt-passes.h.gcov'
+
+File '../../gcc/passes.c'
+Lines executed:60.55% of 1265
+Creating 'passes.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:10.14% of 69
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/plugin.h'
+Lines executed:75.00% of 4
+Creating 'plugin.h.gcov'
+
+File '../../gcc/lto-streamer.h'
+Lines executed:0.00% of 30
+Creating 'lto-streamer.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:65.31% of 49
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:0.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/ggc.h'
+Lines executed:100.00% of 2
+Creating 'ggc.h.gcov'
+
+File '../../gcc/plugin.c'
+Lines executed:5.48% of 292
+Creating 'plugin.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:0.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/pointer-set.c'
+Lines executed:94.44% of 108
+Creating 'pointer-set.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 3
+Creating 'vec.h.gcov'
+
+File '../../gcc/postreload.c'
+Lines executed:92.13% of 940
+Creating 'postreload.c.gcov'
+
+File '../../gcc/df.h'
+Lines executed:50.00% of 12
+Creating 'df.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File 'tm-preds.h'
+Lines executed:100.00% of 6
+Creating 'tm-preds.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 11
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:75.76% of 33
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/postreload-gcse.c'
+Lines executed:86.00% of 450
+Creating 'postreload-gcse.c.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:100.00% of 2
+Creating 'regs.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:86.21% of 29
+Creating 'hard-reg-set.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 69
+Creating 'vec.h.gcov'
+
+File '../../gcc/predict.c'
+Lines executed:87.37% of 1235
+Creating 'predict.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:67.12% of 73
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:100.00% of 4
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:90.52% of 116
+Creating 'gimple.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:64.91% of 57
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:93.18% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 23
+Creating 'basic-block.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 6
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:90.00% of 10
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:18.75% of 16
+Creating 'double-int.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:75.00% of 4
+Creating 'hwint.h.gcov'
+
+File '../../gcc/prefix.c'
+Lines executed:62.07% of 87
+Creating 'prefix.c.gcov'
+
+File '../../gcc/pretty-print.c'
+Lines executed:50.97% of 463
+Creating 'pretty-print.c.gcov'
+
+File '../../gcc/pretty-print.h'
+Lines executed:100.00% of 5
+Creating 'pretty-print.h.gcov'
+
+File '../../gcc/print-rtl.c'
+Lines executed:35.92% of 373
+Creating 'print-rtl.c.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:28.57% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 12
+Creating 'vec.h.gcov'
+
+File '../../gcc/print-tree.c'
+Lines executed:0.00% of 550
+Creating 'print-tree.c.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 9
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/tree-iterator.h'
+Lines executed:0.00% of 11
+Creating 'tree-iterator.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 18
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 18
+Creating 'vec.h.gcov'
+
+File '../../gcc/profile.c'
+Lines executed:0.00% of 633
+Creating 'profile.c.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 92
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 23
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/real.c'
+Lines executed:61.31% of 1812
+Creating 'real.c.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:100.00% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/realmpfr.c'
+Lines executed:62.96% of 27
+Creating 'realmpfr.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/recog.c'
+Lines executed:77.08% of 1518
+Creating 'recog.c.gcov'
+
+File '../../gcc/df.h'
+Lines executed:75.00% of 4
+Creating 'df.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:50.00% of 8
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:100.00% of 4
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:0.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/addresses.h'
+Lines executed:100.00% of 2
+Creating 'addresses.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:94.44% of 18
+Creating 'regs.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:100.00% of 11
+Creating 'recog.h.gcov'
+
+File 'tm-preds.h'
+Lines executed:100.00% of 6
+Creating 'tm-preds.h.gcov'
+
+File 'genrtl.h'
+Lines executed:68.75% of 16
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:67.74% of 93
+Creating 'vec.h.gcov'
+
+File '../../gcc/ree.c'
+Lines executed:88.00% of 275
+Creating 'ree.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 18
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/regcprop.c'
+Lines executed:73.18% of 481
+Creating 'regcprop.c.gcov'
+
+File '../../gcc/df.h'
+Lines executed:0.00% of 12
+Creating 'df.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:66.67% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 6
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/addresses.h'
+Lines executed:87.50% of 8
+Creating 'addresses.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:76.92% of 13
+Creating 'regs.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:86.21% of 29
+Creating 'hard-reg-set.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 7
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/reginfo.c'
+Lines executed:86.81% of 455
+Creating 'reginfo.c.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:90.91% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:100.00% of 4
+Creating 'hard-reg-set.h.gcov'
+
+File '../../gcc/regmove.c'
+Lines executed:75.20% of 496
+Creating 'regmove.c.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:100.00% of 2
+Creating 'regs.h.gcov'
+
+File 'tm-preds.h'
+Lines executed:100.00% of 6
+Creating 'tm-preds.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 5
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 93
+Creating 'vec.h.gcov'
+
+File '../../gcc/regrename.c'
+Lines executed:0.26% of 783
+Creating 'regrename.c.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:0.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:0.00% of 22
+Creating 'df.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 48
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/addresses.h'
+Lines executed:0.00% of 8
+Creating 'addresses.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:0.00% of 26
+Creating 'regs.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 5
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:95.45% of 66
+Creating 'vec.h.gcov'
+
+File '../../gcc/reg-stack.c'
+Lines executed:75.51% of 1225
+Creating 'reg-stack.c.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:75.00% of 4
+Creating 'df.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:100.00% of 4
+Creating 'recog.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:100.00% of 2
+Creating 'regs.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:100.00% of 2
+Creating 'hard-reg-set.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 11
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 2
+Creating 'vec.h.gcov'
+
+File '../../gcc/regstat.c'
+Lines executed:78.88% of 251
+Creating 'regstat.c.gcov'
+
+File '../../gcc/df.h'
+Lines executed:85.00% of 20
+Creating 'df.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:97.73% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:50.00% of 4
+Creating 'regs.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:39.53% of 86
+Creating 'vec.h.gcov'
+
+File '../../gcc/reload1.c'
+Lines executed:13.36% of 3511
+Creating 'reload1.c.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:80.00% of 5
+Creating 'recog.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:0.00% of 12
+Creating 'df.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 4
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:60.00% of 50
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 24
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/addresses.h'
+Lines executed:0.00% of 2
+Creating 'addresses.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:0.00% of 11
+Creating 'regs.h.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:0.00% of 4
+Creating 'optabs.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:33.33% of 6
+Creating 'emit-rtl.h.gcov'
+
+File 'tm-preds.h'
+Lines executed:0.00% of 6
+Creating 'tm-preds.h.gcov'
+
+File 'genrtl.h'
+Lines executed:72.22% of 18
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:44.44% of 9
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 2
+Creating 'vec.h.gcov'
+
+File '../../gcc/reload.c'
+Lines executed:3.52% of 2899
+Creating 'reload.c.gcov'
+
+File '../../gcc/addresses.h'
+Lines executed:0.00% of 8
+Creating 'addresses.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:15.38% of 13
+Creating 'regs.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:0.00% of 4
+Creating 'df.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:0.00% of 11
+Creating 'recog.h.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:0.00% of 4
+Creating 'optabs.h.gcov'
+
+File 'tm-preds.h'
+Lines executed:0.00% of 6
+Creating 'tm-preds.h.gcov'
+
+File 'genrtl.h'
+Lines executed:54.55% of 11
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:85.71% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/reorg.c'
+Lines executed:77.78% of 9
+Creating 'reorg.c.gcov'
+
+File '../../gcc/rtlanal.c'
+Lines executed:76.75% of 2211
+Creating 'rtlanal.c.gcov'
+
+File '../../gcc/addresses.h'
+Lines executed:100.00% of 2
+Creating 'addresses.h.gcov'
+
+File '../../gcc/tree.h'
+No executable lines
+Removing 'tree.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:86.67% of 15
+Creating 'regs.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 6
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 9
+Creating 'rtl.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:91.67% of 12
+Creating 'hwint.h.gcov'
+
+File '../../gcc/rtl-error.c'
+Lines executed:75.00% of 40
+Creating 'rtl-error.c.gcov'
+
+File '../../gcc/rtl.c'
+Lines executed:44.17% of 206
+Creating 'rtl.c.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/ggc.h'
+Lines executed:100.00% of 2
+Creating 'ggc.h.gcov'
+
+File '../../gcc/rtlhooks.c'
+Lines executed:89.47% of 38
+Creating 'rtlhooks.c.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:80.00% of 5
+Creating 'rtl.h.gcov'
+
+File '../../gcc/sbitmap.c'
+Lines executed:57.58% of 297
+Creating 'sbitmap.c.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:79.17% of 24
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/sched-deps.c'
+Lines executed:57.44% of 2037
+Creating 'sched-deps.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:70.69% of 58
+Creating 'vec.h.gcov'
+
+File '../../gcc/sched-int.h'
+Lines executed:100.00% of 24
+Creating 'sched-int.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:89.58% of 48
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:100.00% of 7
+Creating 'regs.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 11
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 7
+Creating 'vec.h.gcov'
+
+File '../../gcc/sched-ebb.c'
+Lines executed:0.00% of 254
+Creating 'sched-ebb.c.gcov'
+
+File '../../gcc/sched-int.h'
+Lines executed:0.00% of 22
+Creating 'sched-int.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:0.00% of 12
+Creating 'df.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 24
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 4
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:57.14% of 7
+Creating 'vec.h.gcov'
+
+File '../../gcc/sched-rgn.c'
+Lines executed:23.47% of 1325
+Creating 'sched-rgn.c.gcov'
+
+File '../../gcc/sched-int.h'
+Lines executed:8.33% of 24
+Creating 'sched-int.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:0.00% of 12
+Creating 'df.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:66.67% of 36
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:18.60% of 43
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:8.33% of 48
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:0.00% of 4
+Creating 'recog.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 2
+Creating 'vec.h.gcov'
+
+File '../../gcc/sched-vis.c'
+Lines executed:0.00% of 471
+Creating 'sched-vis.c.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 20
+Creating 'vec.h.gcov'
+
+File '../../gcc/sel-sched-dump.c'
+Lines executed:0.00% of 429
+Creating 'sel-sched-dump.c.gcov'
+
+File '../../gcc/sel-sched-ir.h'
+Lines executed:0.00% of 27
+Creating 'sel-sched-ir.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/sel-sched.c'
+Lines executed:0.10% of 2859
+Creating 'sel-sched.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:7.30% of 137
+Creating 'vec.h.gcov'
+
+File '../../gcc/sel-sched-ir.h'
+Lines executed:0.00% of 234
+Creating 'sel-sched-ir.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:0.00% of 9
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:0.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 29
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 16
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 50
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:0.00% of 4
+Creating 'recog.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:0.00% of 7
+Creating 'regs.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:0.00% of 29
+Creating 'hard-reg-set.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 6
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/sel-sched-ir.c'
+Lines executed:0.24% of 2553
+Creating 'sel-sched-ir.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:3.03% of 198
+Creating 'vec.h.gcov'
+
+File '../../gcc/sel-sched-ir.h'
+Lines executed:0.00% of 232
+Creating 'sel-sched-ir.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:0.00% of 59
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:0.00% of 4
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/df.h'
+Lines executed:0.00% of 4
+Creating 'df.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 38
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/recog.h'
+Lines executed:0.00% of 4
+Creating 'recog.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:0.00% of 2
+Creating 'regs.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/simplify-rtx.c'
+Lines executed:76.13% of 2907
+Creating 'simplify-rtx.c.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 23
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 9
+Creating 'rtl.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 34
+Creating 'double-int.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:35.71% of 14
+Creating 'hwint.h.gcov'
+
+File '../../gcc/sparseset.c'
+Lines executed:47.73% of 88
+Creating 'sparseset.c.gcov'
+
+File '../../gcc/sparseset.h'
+Lines executed:93.75% of 32
+Creating 'sparseset.h.gcov'
+
+File '../../gcc/sreal.c'
+Lines executed:86.61% of 112
+Creating 'sreal.c.gcov'
+
+File '../../gcc/stack-ptr-mod.c'
+Lines executed:95.24% of 21
+Creating 'stack-ptr-mod.c.gcov'
+
+File '../../gcc/statistics.c'
+Lines executed:29.92% of 127
+Creating 'statistics.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 13
+Creating 'vec.h.gcov'
+
+File '../../gcc/stmt.c'
+Lines executed:79.28% of 1081
+Creating 'stmt.c.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:70.00% of 10
+Creating 'regs.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:94.34% of 53
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:79.17% of 24
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:100.00% of 4
+Creating 'expr.h.gcov'
+
+File 'tm-preds.h'
+Lines executed:66.67% of 6
+Creating 'tm-preds.h.gcov'
+
+File '../../gcc/tree.h'
+No executable lines
+Removing 'tree.h.gcov'
+
+File 'genrtl.h'
+Lines executed:82.69% of 52
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:0.00% of 8
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/store-motion.c'
+Lines executed:0.60% of 498
+Creating 'store-motion.c.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 19
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 75
+Creating 'vec.h.gcov'
+
+File '../../gcc/stor-layout.c'
+Lines executed:72.77% of 1087
+Creating 'stor-layout.c.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 2
+Creating 'tree.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:100.00% of 2
+Creating 'hwint.h.gcov'
+
+File '../../gcc/streamer-hooks.c'
+Lines executed:0.00% of 3
+Creating 'streamer-hooks.c.gcov'
+
+File 'gt-stringpool.h'
+Lines executed:0.00% of 32
+Creating 'gt-stringpool.h.gcov'
+
+File '../../gcc/stringpool.c'
+Lines executed:41.89% of 74
+Creating 'stringpool.c.gcov'
+
+File '../../gcc/ggc.h'
+Lines executed:50.00% of 4
+Creating 'ggc.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:89.19% of 37
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:100.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/symtab.c'
+Lines executed:45.10% of 357
+Creating 'symtab.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:0.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:100.00% of 4
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:100.00% of 4
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/targhooks.c'
+Lines executed:23.16% of 475
+Creating 'targhooks.c.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:66.67% of 6
+Creating 'optabs.h.gcov'
+
+File '../../gcc/tree.h'
+No executable lines
+Removing 'tree.h.gcov'
+
+File '../../gcc/timevar.c'
+Lines executed:7.89% of 152
+Creating 'timevar.c.gcov'
+
+File '../../gcc/timevar.def'
+Lines executed:0.00% of 219
+Creating 'timevar.def.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 52
+Creating 'vec.h.gcov'
+
+File '../../gcc/tlink.c'
+Lines executed:13.78% of 341
+Creating 'tlink.c.gcov'
+
+File '../../gcc/toplev.c'
+Lines executed:50.63% of 709
+Creating 'toplev.c.gcov'
+
+File '../../gcc/plugin.h'
+Lines executed:75.00% of 4
+Creating 'plugin.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:100.00% of 4
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/diagnostic.h'
+Lines executed:0.00% of 3
+Creating 'diagnostic.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/ggc.h'
+Lines executed:0.00% of 2
+Creating 'ggc.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:83.33% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/tracer.c'
+Lines executed:1.14% of 176
+Creating 'tracer.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:0.00% of 3
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 19
+Creating 'gimple.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:8.41% of 107
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/trans-mem.c'
+Lines executed:0.49% of 2045
+Creating 'trans-mem.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:0.00% of 32
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 38
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:0.00% of 4
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 46
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 195
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 28
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 19
+Creating 'tree.h.gcov'
+
+File '../../gcc/tree-affine.c'
+Lines executed:74.94% of 431
+Creating 'tree-affine.c.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:94.12% of 34
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 18
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:8.20% of 61
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-call-cdce.c'
+Lines executed:85.32% of 293
+Creating 'tree-call-cdce.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:100.00% of 2
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:94.87% of 78
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:25.00% of 32
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:38.89% of 18
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-cfgcleanup.c'
+Lines executed:90.96% of 365
+Creating 'tree-cfgcleanup.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:100.00% of 5
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:18.58% of 183
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:77.42% of 124
+Creating 'gimple.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 46
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:94.12% of 34
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:5.88% of 136
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-cfg.c'
+Lines executed:34.50% of 3438
+Creating 'tree-cfg.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:66.10% of 59
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/except.h'
+Lines executed:0.00% of 12
+Creating 'except.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:0.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:94.20% of 207
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 9
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:66.11% of 360
+Creating 'gimple.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 4
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:97.73% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 29
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/function.h'
+Lines executed:0.00% of 3
+Creating 'function.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:42.86% of 14
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 6
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 13
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-chrec.c'
+Lines executed:68.01% of 622
+Creating 'tree-chrec.c.gcov'
+
+File '../../gcc/tree-scalar-evolution.h'
+Lines executed:100.00% of 2
+Creating 'tree-scalar-evolution.h.gcov'
+
+File '../../gcc/tree-chrec.h'
+Lines executed:92.45% of 53
+Creating 'tree-chrec.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:90.00% of 10
+Creating 'tree.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:100.00% of 2
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 17
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 64
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-complex.c'
+Lines executed:67.58% of 697
+Creating 'tree-complex.c.gcov'
+
+File '../../gcc/tree-ssa-propagate.h'
+Lines executed:100.00% of 3
+Creating 'tree-ssa-propagate.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:88.89% of 36
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:83.46% of 133
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:7.69% of 26
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 2
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:89.77% of 88
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-data-ref.c'
+Lines executed:59.62% of 2105
+Creating 'tree-data-ref.c.gcov'
+
+File '../../gcc/tree-scalar-evolution.h'
+Lines executed:100.00% of 5
+Creating 'tree-scalar-evolution.h.gcov'
+
+File '../../gcc/tree-data-ref.h'
+Lines executed:80.00% of 50
+Creating 'tree-data-ref.h.gcov'
+
+File '../../gcc/tree-chrec.h'
+Lines executed:63.24% of 68
+Creating 'tree-chrec.h.gcov'
+
+File '../../gcc/omega.h'
+Lines executed:0.00% of 59
+Creating 'omega.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:3.51% of 57
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:89.53% of 86
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:87.37% of 95
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:60.00% of 10
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 4
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 71
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-dfa.c'
+Lines executed:54.60% of 315
+Creating 'tree-dfa.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:51.43% of 140
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:56.14% of 57
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 2
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 16
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:92.73% of 55
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-diagnostic.c'
+Lines executed:57.97% of 69
+Creating 'tree-diagnostic.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 11
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-dump.c'
+Lines executed:1.15% of 348
+Creating 'tree-dump.c.gcov'
+
+File '../../gcc/tree-iterator.h'
+Lines executed:0.00% of 11
+Creating 'tree-iterator.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 14
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 83
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 2
+Creating 'is-a.h.gcov'
+
+File '../../gcc/tree-eh.c'
+Lines executed:25.05% of 1820
+Creating 'tree-eh.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:0.00% of 3
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:0.00% of 180
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:17.31% of 52
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:0.00% of 4
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:28.91% of 294
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 27
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 2
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:58.33% of 12
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 121
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/tree-emutls.c'
+Lines executed:0.61% of 326
+Creating 'tree-emutls.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:0.00% of 23
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 51
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:0.00% of 2
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 59
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 2
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 118
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File 'gt-tree.h'
+Lines executed:0.00% of 43
+Creating 'gt-tree.h.gcov'
+
+File '../../gcc/tree.c'
+Lines executed:66.97% of 4327
+Creating 'tree.c.gcov'
+
+File '../../gcc/except.h'
+Lines executed:0.00% of 12
+Creating 'except.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:50.00% of 4
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:13.33% of 30
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:8.00% of 50
+Creating 'gimple.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 2
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/tree-iterator.h'
+Lines executed:100.00% of 11
+Creating 'tree-iterator.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:96.15% of 52
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 10
+Creating 'double-int.h.gcov'
+
+File '../../gcc/ggc.h'
+Lines executed:100.00% of 4
+Creating 'ggc.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:83.33% of 12
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:68.12% of 69
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-if-conv.c'
+Lines executed:70.22% of 648
+Creating 'tree-if-conv.c.gcov'
+
+File '../../gcc/tree-data-ref.h'
+Lines executed:0.00% of 3
+Creating 'tree-data-ref.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:64.91% of 57
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:75.86% of 29
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:65.77% of 149
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 27
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 5
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:16.03% of 156
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 2
+Creating 'is-a.h.gcov'
+
+File '../../gcc/tree-inline.c'
+Lines executed:68.25% of 2217
+Creating 'tree-inline.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:86.36% of 88
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:46.71% of 426
+Creating 'gimple.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:12.50% of 32
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:0.00% of 2
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/tree-iterator.h'
+Lines executed:0.00% of 11
+Creating 'tree-iterator.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:72.41% of 29
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/function.h'
+Lines executed:100.00% of 3
+Creating 'function.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:30.00% of 20
+Creating 'tree.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:83.33% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:90.10% of 101
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-into-ssa.c'
+Lines executed:75.96% of 1098
+Creating 'tree-into-ssa.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:97.04% of 169
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:81.88% of 138
+Creating 'gimple.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:87.50% of 40
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:94.00% of 50
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:75.00% of 32
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 44
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-iterator.c'
+Lines executed:60.14% of 138
+Creating 'tree-iterator.c.gcov'
+
+File '../../gcc/tree-iterator.h'
+Lines executed:100.00% of 4
+Creating 'tree-iterator.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:82.80% of 93
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-loop-distribution.c'
+Lines executed:84.56% of 680
+Creating 'tree-loop-distribution.c.gcov'
+
+File '../../gcc/tree-data-ref.h'
+Lines executed:100.00% of 14
+Creating 'tree-data-ref.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:45.61% of 57
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:91.55% of 71
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:90.48% of 105
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:85.71% of 7
+Creating 'tree.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:42.42% of 99
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:9.62% of 52
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-mudflap.c'
+Lines executed:0.41% of 492
+Creating 'tree-mudflap.c.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 90
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/tree-nested.c'
+Lines executed:0.87% of 1156
+Creating 'tree-nested.c.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 4
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 175
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:33.33% of 9
+Creating 'tree.h.gcov'
+
+File '../../gcc/tree-nrv.c'
+Lines executed:51.35% of 111
+Creating 'tree-nrv.c.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:80.00% of 80
+Creating 'gimple.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-object-size.c'
+Lines executed:46.02% of 591
+Creating 'tree-object-size.c.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:90.36% of 83
+Creating 'gimple.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:56.52% of 46
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 8
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 10
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:44.44% of 9
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-optimize.c'
+Lines executed:71.43% of 77
+Creating 'tree-optimize.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:100.00% of 2
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:100.00% of 4
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:95.38% of 65
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:80.00% of 5
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:82.50% of 80
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-outof-ssa.c'
+Lines executed:90.96% of 376
+Creating 'tree-outof-ssa.c.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:100.00% of 2
+Creating 'expr.h.gcov'
+
+File '../../gcc/tree-ssa-live.h'
+Lines executed:100.00% of 11
+Creating 'tree-ssa-live.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:91.67% of 108
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:92.19% of 64
+Creating 'gimple.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:66.67% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 27
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:23.94% of 71
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-parloops.c'
+Lines executed:0.00% of 878
+Creating 'tree-parloops.c.gcov'
+
+File '../../gcc/tree-data-ref.h'
+Lines executed:0.00% of 19
+Creating 'tree-data-ref.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:0.00% of 57
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:0.00% of 148
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 185
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 8
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:74.00% of 50
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-phinodes.c'
+Lines executed:97.24% of 145
+Creating 'tree-phinodes.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:98.33% of 60
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:100.00% of 39
+Creating 'gimple.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:87.50% of 8
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:92.73% of 110
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-predcom.c'
+Lines executed:86.79% of 992
+Creating 'tree-predcom.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:82.88% of 146
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:86.92% of 107
+Creating 'gimple.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:45.61% of 57
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 2
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 8
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 14
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 11
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-pretty-print.c'
+Lines executed:2.21% of 1628
+Creating 'tree-pretty-print.c.gcov'
+
+File '../../gcc/tree-iterator.h'
+Lines executed:0.00% of 11
+Creating 'tree-iterator.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 4
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 22
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 9
+Creating 'double-int.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:0.00% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 2
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-profile.c'
+Lines executed:1.90% of 211
+Creating 'tree-profile.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:0.00% of 4
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 19
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 50
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 4
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 70
+Creating 'vec.h.gcov'
+
+File 'gt-tree-scalar-evolution.h'
+Lines executed:0.00% of 51
+Creating 'gt-tree-scalar-evolution.h.gcov'
+
+File '../../gcc/tree-scalar-evolution.c'
+Lines executed:78.17% of 1113
+Creating 'tree-scalar-evolution.c.gcov'
+
+File '../../gcc/tree-scalar-evolution.h'
+Lines executed:100.00% of 7
+Creating 'tree-scalar-evolution.h.gcov'
+
+File '../../gcc/tree-chrec.h'
+Lines executed:81.82% of 44
+Creating 'tree-chrec.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:86.44% of 59
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:92.31% of 13
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:81.44% of 97
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:83.33% of 12
+Creating 'tree.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 2
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:93.18% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:61.48% of 122
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-sra.c'
+Lines executed:86.18% of 2157
+Creating 'tree-sra.c.gcov'
+
+File '../../gcc/ipa-inline.h'
+Lines executed:100.00% of 2
+Creating 'ipa-inline.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:83.93% of 168
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:97.73% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:66.67% of 6
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:88.42% of 190
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:84.00% of 25
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/function.h'
+Lines executed:100.00% of 3
+Creating 'function.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:78.13% of 64
+Creating 'vec.h.gcov'
+
+File 'gt-tree-ssa-address.h'
+Lines executed:0.00% of 26
+Creating 'gt-tree-ssa-address.h.gcov'
+
+File '../../gcc/tree-ssa-address.c'
+Lines executed:73.51% of 419
+Creating 'tree-ssa-address.c.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:100.00% of 2
+Creating 'expr.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 18
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:87.50% of 8
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 12
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 16
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-alias.c'
+Lines executed:85.98% of 870
+Creating 'tree-ssa-alias.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:100.00% of 31
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:100.00% of 4
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:96.67% of 90
+Creating 'gimple.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 2
+Creating 'double-int.h.gcov'
+
+File '../../gcc/hash-table.h'
+Lines executed:4.03% of 124
+Creating 'hash-table.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-ccp.c'
+Lines executed:84.44% of 990
+Creating 'tree-ssa-ccp.c.gcov'
+
+File '../../gcc/tree-ssa-propagate.h'
+Lines executed:100.00% of 3
+Creating 'tree-ssa-propagate.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:72.84% of 162
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:88.58% of 219
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 21
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:33.33% of 6
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:5.26% of 38
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:93.33% of 75
+Creating 'vec.h.gcov'
+
+File '../../gcc/hash-table.h'
+Lines executed:32.20% of 118
+Creating 'hash-table.h.gcov'
+
+File '../../gcc/tree-ssa-coalesce.c'
+Lines executed:83.72% of 516
+Creating 'tree-ssa-coalesce.c.gcov'
+
+File '../../gcc/tree-ssa-live.h'
+Lines executed:100.00% of 23
+Creating 'tree-ssa-live.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:92.63% of 95
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:94.19% of 86
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:87.76% of 49
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-copy.c'
+Lines executed:82.93% of 287
+Creating 'tree-ssa-copy.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:100.00% of 6
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-ssa-propagate.h'
+Lines executed:100.00% of 5
+Creating 'tree-ssa-propagate.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:95.06% of 81
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:86.09% of 115
+Creating 'gimple.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-copyrename.c'
+Lines executed:80.50% of 159
+Creating 'tree-ssa-copyrename.c.gcov'
+
+File '../../gcc/tree-ssa-live.h'
+Lines executed:87.50% of 8
+Creating 'tree-ssa-live.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:100.00% of 4
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:97.62% of 42
+Creating 'gimple.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 76
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-dce.c'
+Lines executed:87.44% of 629
+Creating 'tree-ssa-dce.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:64.91% of 57
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:82.14% of 196
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:86.86% of 175
+Creating 'gimple.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:66.67% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:97.73% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 25
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:90.41% of 73
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-dom.c'
+Lines executed:84.31% of 1173
+Creating 'tree-ssa-dom.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:91.78% of 146
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:92.47% of 186
+Creating 'gimple.h.gcov'
+
+File '../../gcc/internal-fn.h'
+Lines executed:0.00% of 2
+Creating 'internal-fn.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:100.00% of 7
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:89.13% of 46
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 27
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree-ssa-dse.c'
+Lines executed:91.59% of 107
+Creating 'tree-ssa-dse.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:74.62% of 130
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:83.84% of 99
+Creating 'gimple.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 2
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 66
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-forwprop.c'
+Lines executed:88.48% of 1554
+Creating 'tree-ssa-forwprop.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:100.00% of 4
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:88.10% of 168
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:90.00% of 220
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 15
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 18
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 11
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:50.00% of 76
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa.c'
+Lines executed:55.41% of 888
+Creating 'tree-ssa.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:100.00% of 6
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:59.00% of 239
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:74.84% of 155
+Creating 'gimple.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:89.13% of 46
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:17.39% of 23
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 6
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 2
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-ifcombine.c'
+Lines executed:85.13% of 269
+Creating 'tree-ssa-ifcombine.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:84.62% of 13
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:97.37% of 76
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 6
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 19
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-live.c'
+Lines executed:79.96% of 504
+Creating 'tree-ssa-live.c.gcov'
+
+File '../../gcc/tree-ssa-live.h'
+Lines executed:100.00% of 15
+Creating 'tree-ssa-live.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:91.43% of 70
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:90.79% of 76
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:75.00% of 16
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:97.92% of 48
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 6
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 67
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-loop-ch.c'
+Lines executed:80.43% of 92
+Creating 'tree-ssa-loop-ch.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:64.91% of 57
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:46.00% of 50
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:66.67% of 6
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 3
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-loop.c'
+Lines executed:80.53% of 113
+Creating 'tree-ssa-loop.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:75.00% of 4
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:90.00% of 90
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-loop-im.c'
+Lines executed:86.67% of 1080
+Creating 'tree-ssa-loop-im.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:86.44% of 59
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:73.83% of 149
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:91.56% of 154
+Creating 'gimple.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:66.67% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:95.40% of 87
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 21
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 4
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:49.19% of 124
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-loop-ivcanon.c'
+Lines executed:89.06% of 530
+Creating 'tree-ssa-loop-ivcanon.c.gcov'
+
+File '../../gcc/dumpfile.h'
+Lines executed:100.00% of 2
+Creating 'dumpfile.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:69.49% of 59
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:87.18% of 156
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:89.66% of 145
+Creating 'gimple.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:100.00% of 4
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 2
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:90.91% of 11
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 4
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:80.21% of 96
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-loop-ivopts.c'
+Lines executed:82.50% of 2845
+Creating 'tree-ssa-loop-ivopts.c.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:100.00% of 2
+Creating 'expr.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 18
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/expmed.h'
+Lines executed:88.00% of 25
+Creating 'expmed.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:69.49% of 59
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:37.97% of 158
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:100.00% of 4
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:85.71% of 175
+Creating 'gimple.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:100.00% of 8
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:86.87% of 99
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:92.86% of 14
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 13
+Creating 'double-int.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:85.71% of 14
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 78
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-loop-manip.c'
+Lines executed:75.75% of 532
+Creating 'tree-ssa-loop-manip.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:0.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:68.75% of 64
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:73.91% of 92
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:74.07% of 108
+Creating 'gimple.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:100.00% of 4
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:93.48% of 46
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 27
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 2
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:70.83% of 96
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-loop-niter.c'
+Lines executed:87.70% of 1658
+Creating 'tree-ssa-loop-niter.c.gcov'
+
+File '../../gcc/tree-scalar-evolution.h'
+Lines executed:100.00% of 5
+Creating 'tree-scalar-evolution.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:64.91% of 57
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:65.15% of 66
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:79.67% of 123
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 25
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:91.67% of 12
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 22
+Creating 'double-int.h.gcov'
+
+File '/project/alipour/rabin/bin/gcc-4.8.2/build/gmp/gmp.h'
+Lines executed:0.00% of 5
+Creating 'gmp.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:1.33% of 75
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-loop-prefetch.c'
+Lines executed:0.00% of 692
+Creating 'tree-ssa-loop-prefetch.c.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:0.00% of 4
+Creating 'optabs.h.gcov'
+
+File '../../gcc/tree-data-ref.h'
+Lines executed:0.00% of 5
+Creating 'tree-data-ref.h.gcov'
+
+File '../../gcc/tree-scalar-evolution.h'
+Lines executed:0.00% of 2
+Creating 'tree-scalar-evolution.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:0.00% of 64
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:0.00% of 5
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 54
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 2
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 17
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 67
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-loop-unswitch.c'
+Lines executed:94.59% of 148
+Creating 'tree-ssa-loop-unswitch.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:45.61% of 57
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:56.86% of 51
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:79.73% of 74
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 23
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 55
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-math-opts.c'
+Lines executed:59.98% of 1072
+Creating 'tree-ssa-math-opts.c.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:100.00% of 4
+Creating 'optabs.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:49.56% of 226
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:79.06% of 191
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:87.50% of 8
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 59
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssanames.c'
+Lines executed:94.44% of 144
+Creating 'tree-ssanames.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:88.33% of 60
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:69.70% of 33
+Creating 'gimple.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 125
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-operands.c'
+Lines executed:72.74% of 521
+Creating 'tree-ssa-operands.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:62.00% of 200
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:76.92% of 104
+Creating 'gimple.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:2.86% of 70
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-phiopt.c'
+Lines executed:84.18% of 784
+Creating 'tree-ssa-phiopt.c.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:100.00% of 4
+Creating 'optabs.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:100.00% of 46
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:87.66% of 154
+Creating 'gimple.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:66.67% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 29
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+No executable lines
+Removing 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 6
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 25
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-phiprop.c'
+Lines executed:76.06% of 142
+Creating 'tree-ssa-phiprop.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:84.56% of 149
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:77.55% of 98
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 23
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree-ssa-pre.c'
+Lines executed:83.08% of 1992
+Creating 'tree-ssa-pre.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:80.82% of 146
+Creating 'vec.h.gcov'
+
+File '../../gcc/hash-table.h'
+Lines executed:91.74% of 121
+Creating 'hash-table.h.gcov'
+
+File '../../gcc/tree-ssa-sccvn.h'
+Lines executed:100.00% of 12
+Creating 'tree-ssa-sccvn.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:100.00% of 4
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:93.64% of 110
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:94.85% of 194
+Creating 'gimple.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:75.00% of 16
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:90.20% of 102
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 27
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:87.50% of 8
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 6
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:16.19% of 105
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-propagate.c'
+Lines executed:89.49% of 447
+Creating 'tree-ssa-propagate.c.gcov'
+
+File '../../gcc/tree-ssa-propagate.h'
+Lines executed:100.00% of 5
+Creating 'tree-ssa-propagate.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:86.46% of 96
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:96.69% of 151
+Creating 'gimple.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:75.00% of 16
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:83.33% of 114
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-reassoc.c'
+Lines executed:72.98% of 1869
+Creating 'tree-ssa-reassoc.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:81.82% of 209
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:79.17% of 216
+Creating 'gimple.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:81.25% of 32
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 31
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:75.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:0.00% of 12
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:61.04% of 154
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-sccvn.c'
+Lines executed:90.95% of 1956
+Creating 'tree-ssa-sccvn.c.gcov'
+
+File '../../gcc/tree-ssa-sccvn.h'
+Lines executed:100.00% of 17
+Creating 'tree-ssa-sccvn.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:94.17% of 120
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:86.72% of 128
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 6
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 10
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-sink.c'
+Lines executed:93.75% of 192
+Creating 'tree-ssa-sink.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:100.00% of 4
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:87.29% of 236
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:90.60% of 117
+Creating 'gimple.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:93.18% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:71.96% of 107
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-strlen.c'
+Lines executed:72.08% of 1046
+Creating 'tree-ssa-strlen.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:75.00% of 16
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:85.40% of 137
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:58.82% of 17
+Creating 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:94.44% of 144
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/tree-ssa-structalias.c'
+Lines executed:70.01% of 3044
+Creating 'tree-ssa-structalias.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:100.00% of 19
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:15.25% of 59
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:0.00% of 2
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:73.29% of 146
+Creating 'gimple.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:75.00% of 16
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 11
+Creating 'tree.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:93.48% of 46
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/tree-ssa-tail-merge.c'
+Lines executed:83.28% of 670
+Creating 'tree-ssa-tail-merge.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:95.95% of 74
+Creating 'vec.h.gcov'
+
+File '../../gcc/hash-table.h'
+Lines executed:82.86% of 140
+Creating 'hash-table.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/tree-ssa-sccvn.h'
+Lines executed:100.00% of 5
+Creating 'tree-ssa-sccvn.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:75.84% of 149
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:73.84% of 172
+Creating 'gimple.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:100.00% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-ter.c'
+Lines executed:88.94% of 235
+Creating 'tree-ssa-ter.c.gcov'
+
+File '../../gcc/tree-ssa-live.h'
+Lines executed:100.00% of 7
+Creating 'tree-ssa-live.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:91.43% of 105
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:75.21% of 121
+Creating 'gimple.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:89.13% of 46
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 90
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-threadedge.c'
+Lines executed:81.77% of 373
+Creating 'tree-ssa-threadedge.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:77.88% of 113
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:71.86% of 167
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:85.19% of 27
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree-ssa-threadupdate.c'
+Lines executed:95.20% of 396
+Creating 'tree-ssa-threadupdate.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 76
+Creating 'vec.h.gcov'
+
+File '../../gcc/hash-table.h'
+Lines executed:58.96% of 134
+Creating 'hash-table.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:70.97% of 62
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:100.00% of 7
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:100.00% of 33
+Creating 'gimple.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:97.73% of 44
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 29
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 62
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-uncprop.c'
+Lines executed:99.48% of 192
+Creating 'tree-ssa-uncprop.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:96.97% of 33
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:98.39% of 62
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:4.44% of 90
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-ssa-uninit.c'
+Lines executed:3.74% of 803
+Creating 'tree-ssa-uninit.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:0.00% of 27
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:8.96% of 67
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 23
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 55
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-stdarg.c'
+Lines executed:58.62% of 464
+Creating 'tree-stdarg.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:40.91% of 88
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:79.81% of 104
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:66.67% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 2
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/tree.h'
+No executable lines
+Removing 'tree.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 49
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-streamer.c'
+Lines executed:0.00% of 122
+Creating 'tree-streamer.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 55
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-streamer-in.c'
+Lines executed:0.00% of 469
+Creating 'tree-streamer-in.c.gcov'
+
+File '../../gcc/data-streamer.h'
+Lines executed:0.00% of 40
+Creating 'data-streamer.h.gcov'
+
+File '../../gcc/tree-streamer.h'
+Lines executed:0.00% of 2
+Creating 'tree-streamer.h.gcov'
+
+File '../../gcc/lto-streamer.h'
+Lines executed:0.00% of 11
+Creating 'lto-streamer.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 6
+Creating 'tree.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:0.00% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 16
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-streamer-out.c'
+Lines executed:0.00% of 420
+Creating 'tree-streamer-out.c.gcov'
+
+File '../../gcc/data-streamer.h'
+Lines executed:0.00% of 40
+Creating 'data-streamer.h.gcov'
+
+File '../../gcc/tree-streamer.h'
+Lines executed:0.00% of 5
+Creating 'tree-streamer.h.gcov'
+
+File '../../gcc/lto-streamer.h'
+Lines executed:0.00% of 2
+Creating 'lto-streamer.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 6
+Creating 'tree.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:0.00% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 104
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-switch-conversion.c'
+Lines executed:89.58% of 528
+Creating 'tree-switch-conversion.c.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:100.00% of 4
+Creating 'optabs.h.gcov'
+
+File 'genrtl.h'
+Lines executed:100.00% of 6
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:100.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:100.00% of 15
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:98.67% of 75
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 33
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+No executable lines
+Removing 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 2
+Creating 'double-int.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 16
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-tailcall.c'
+Lines executed:95.15% of 412
+Creating 'tree-tailcall.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:0.00% of 3
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:100.00% of 16
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:95.57% of 158
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 29
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:15.53% of 103
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-vect-data-refs.c'
+Lines executed:75.20% of 1964
+Creating 'tree-vect-data-refs.c.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:50.00% of 8
+Creating 'optabs.h.gcov'
+
+File '../../gcc/tree-vectorizer.h'
+Lines executed:81.82% of 33
+Creating 'tree-vectorizer.h.gcov'
+
+File '../../gcc/tree-data-ref.h'
+Lines executed:100.00% of 5
+Creating 'tree-data-ref.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:79.49% of 78
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:77.60% of 125
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 2
+Creating 'tree.h.gcov'
+
+File '../../gcc/dumpfile.h'
+Lines executed:100.00% of 2
+Creating 'dumpfile.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:83.33% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 47
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-vect-generic.c'
+Lines executed:74.75% of 705
+Creating 'tree-vect-generic.c.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:100.00% of 4
+Creating 'optabs.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:100.00% of 2
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:78.50% of 107
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+No executable lines
+Removing 'tree.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:83.33% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:53.28% of 122
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-vect-loop.c'
+Lines executed:80.42% of 2380
+Creating 'tree-vect-loop.c.gcov'
+
+File '../../gcc/tree-vectorizer.h'
+Lines executed:97.62% of 42
+Creating 'tree-vectorizer.h.gcov'
+
+File '../../gcc/tree-chrec.h'
+Lines executed:100.00% of 8
+Creating 'tree-chrec.h.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:100.00% of 4
+Creating 'optabs.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:80.00% of 5
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:72.91% of 203
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:81.87% of 182
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 2
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 10
+Creating 'double-int.h.gcov'
+
+File '../../gcc/dumpfile.h'
+Lines executed:100.00% of 2
+Creating 'dumpfile.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:41.67% of 12
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:2.88% of 104
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-vect-loop-manip.c'
+Lines executed:82.86% of 782
+Creating 'tree-vect-loop-manip.c.gcov'
+
+File '../../gcc/tree-vectorizer.h'
+Lines executed:85.71% of 7
+Creating 'tree-vectorizer.h.gcov'
+
+File '../../gcc/tree-chrec.h'
+Lines executed:100.00% of 8
+Creating 'tree-chrec.h.gcov'
+
+File '../../gcc/tree-scalar-evolution.h'
+Lines executed:100.00% of 5
+Creating 'tree-scalar-evolution.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:80.00% of 5
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:82.91% of 158
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:61.46% of 96
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 39
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 2
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 4
+Creating 'double-int.h.gcov'
+
+File '../../gcc/dumpfile.h'
+Lines executed:100.00% of 2
+Creating 'dumpfile.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:83.33% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 67
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/tree-vectorizer.c'
+Lines executed:64.29% of 70
+Creating 'tree-vectorizer.c.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:64.91% of 57
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 15
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/dumpfile.h'
+Lines executed:100.00% of 2
+Creating 'dumpfile.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:7.87% of 89
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-vect-patterns.c'
+Lines executed:84.90% of 1126
+Creating 'tree-vect-patterns.c.gcov'
+
+File '../../gcc/dumpfile.h'
+Lines executed:100.00% of 2
+Creating 'dumpfile.h.gcov'
+
+File '../../gcc/tree-vectorizer.h'
+Lines executed:93.33% of 15
+Creating 'tree-vectorizer.h.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:100.00% of 4
+Creating 'optabs.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:86.67% of 30
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:77.61% of 134
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 5
+Creating 'tree.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:83.33% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:59.02% of 122
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-vect-slp.c'
+Lines executed:79.01% of 1391
+Creating 'tree-vect-slp.c.gcov'
+
+File '../../gcc/tree-vectorizer.h'
+Lines executed:90.32% of 62
+Creating 'tree-vectorizer.h.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:100.00% of 4
+Creating 'optabs.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:85.83% of 127
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:75.76% of 132
+Creating 'gimple.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:66.67% of 12
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/dumpfile.h'
+Lines executed:100.00% of 2
+Creating 'dumpfile.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:0.00% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:57.66% of 111
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-vect-stmts.c'
+Lines executed:71.68% of 2903
+Creating 'tree-vect-stmts.c.gcov'
+
+File '../../gcc/tree-vectorizer.h'
+Lines executed:100.00% of 44
+Creating 'tree-vectorizer.h.gcov'
+
+File '../../gcc/optabs.h'
+Lines executed:100.00% of 4
+Creating 'optabs.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:95.00% of 140
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:87.31% of 197
+Creating 'gimple.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 4
+Creating 'tree.h.gcov'
+
+File '../../gcc/dumpfile.h'
+Lines executed:100.00% of 2
+Creating 'dumpfile.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:83.33% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:74.36% of 78
+Creating 'vec.h.gcov'
+
+File '../../gcc/tree-vrp.c'
+Lines executed:82.59% of 4072
+Creating 'tree-vrp.c.gcov'
+
+File '../../gcc/tree-ssa-propagate.h'
+Lines executed:100.00% of 3
+Creating 'tree-ssa-propagate.h.gcov'
+
+File '../../gcc/tree-scalar-evolution.h'
+Lines executed:100.00% of 7
+Creating 'tree-scalar-evolution.h.gcov'
+
+File '../../gcc/cfgloop.h'
+Lines executed:100.00% of 7
+Creating 'cfgloop.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:93.91% of 197
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:86.92% of 237
+Creating 'gimple.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:75.00% of 16
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:93.48% of 46
+Creating 'bitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:100.00% of 19
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:50.00% of 10
+Creating 'tree.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:6.38% of 47
+Creating 'double-int.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:83.33% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 5
+Creating 'vec.h.gcov'
+
+File '../../gcc/tsan.c'
+Lines executed:1.66% of 241
+Creating 'tsan.c.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:0.00% of 12
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 130
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 28
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 5
+Creating 'tree.h.gcov'
+
+File '../../gcc/hash-table.h'
+Lines executed:1.48% of 135
+Creating 'hash-table.h.gcov'
+
+File '../../gcc/valtrack.c'
+Lines executed:15.41% of 279
+Creating 'valtrack.c.gcov'
+
+File '../../gcc/valtrack.h'
+Lines executed:0.00% of 7
+Creating 'valtrack.h.gcov'
+
+File '../../gcc/bitmap.h'
+Lines executed:0.00% of 44
+Creating 'bitmap.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 18
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 2
+Creating 'rtl.h.gcov'
+
+File '../../gcc/value-prof.c'
+Lines executed:2.98% of 838
+Creating 'value-prof.c.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 85
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:0.00% of 35
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:0.00% of 15
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/gimple.h'
+Lines executed:0.00% of 106
+Creating 'gimple.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 26
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:28.00% of 125
+Creating 'vec.h.gcov'
+
+File 'gt-varasm.h'
+Lines executed:0.00% of 86
+Creating 'gt-varasm.h.gcov'
+
+File '../../gcc/varasm.c'
+Lines executed:63.23% of 2774
+Creating 'varasm.c.gcov'
+
+File '../../gcc/asan.h'
+Lines executed:0.00% of 3
+Creating 'asan.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:72.73% of 11
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:69.23% of 13
+Creating 'regs.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:100.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/expr.h'
+Lines executed:100.00% of 2
+Creating 'expr.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:100.00% of 10
+Creating 'tree.h.gcov'
+
+File 'genrtl.h'
+Lines executed:58.33% of 24
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 5
+Creating 'rtl.h.gcov'
+
+File '../../gcc/double-int.h'
+Lines executed:0.00% of 12
+Creating 'double-int.h.gcov'
+
+File '../../gcc/hwint.h'
+Lines executed:83.33% of 6
+Creating 'hwint.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 25
+Creating 'vec.h.gcov'
+
+File '../../gcc/is-a.h'
+Lines executed:0.00% of 8
+Creating 'is-a.h.gcov'
+
+File '../../gcc/varpool.c'
+Lines executed:53.25% of 246
+Creating 'varpool.c.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:75.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/cgraph.h'
+Lines executed:53.33% of 45
+Creating 'cgraph.h.gcov'
+
+File '../../gcc/ipa-ref-inline.h'
+Lines executed:0.00% of 4
+Creating 'ipa-ref-inline.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:0.00% of 125
+Creating 'vec.h.gcov'
+
+File '../../gcc/var-tracking.c'
+Lines executed:0.05% of 4303
+Creating 'var-tracking.c.gcov'
+
+File '../../gcc/target.h'
+Lines executed:0.00% of 3
+Creating 'target.h.gcov'
+
+File '../../gcc/cselib.h'
+Lines executed:0.00% of 7
+Creating 'cselib.h.gcov'
+
+File '../../gcc/tree-flow-inline.h'
+Lines executed:0.00% of 32
+Creating 'tree-flow-inline.h.gcov'
+
+File '../../gcc/timevar.h'
+Lines executed:0.00% of 8
+Creating 'timevar.h.gcov'
+
+File '../../gcc/emit-rtl.h'
+Lines executed:0.00% of 2
+Creating 'emit-rtl.h.gcov'
+
+File '../../gcc/regs.h'
+Lines executed:0.00% of 2
+Creating 'regs.h.gcov'
+
+File '../../gcc/sbitmap.h'
+Lines executed:0.00% of 16
+Creating 'sbitmap.h.gcov'
+
+File '../../gcc/basic-block.h'
+Lines executed:0.00% of 23
+Creating 'basic-block.h.gcov'
+
+File '../../gcc/hard-reg-set.h'
+Lines executed:0.00% of 29
+Creating 'hard-reg-set.h.gcov'
+
+File '../../gcc/tree.h'
+Lines executed:0.00% of 4
+Creating 'tree.h.gcov'
+
+File 'genrtl.h'
+Lines executed:0.00% of 39
+Creating 'genrtl.h.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 7
+Creating 'rtl.h.gcov'
+
+File '../../gcc/vec.h'
+Lines executed:11.76% of 51
+Creating 'vec.h.gcov'
+
+File '../../gcc/vec.c'
+Lines executed:28.71% of 101
+Creating 'vec.c.gcov'
+
+File '../../gcc/web.c'
+Lines executed:1.16% of 173
+Creating 'web.c.gcov'
+
+File '../../gcc/rtl.h'
+Lines executed:0.00% of 2
+Creating 'rtl.h.gcov'
+

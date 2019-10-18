@@ -1,0 +1,11 @@
+$ cd ~/compiler/gcc-trunk/
+
+$ ./contrib/download_prerequisites 
+
+$ mkdir build; cd build/
+
+$../configure --disable-bootstrap --enable-languages=c --enable-coverage --disable-multilib --prefix=~/compiler/gcc-trunk-bin
+
+$ make -j 8
+
+$ make install
