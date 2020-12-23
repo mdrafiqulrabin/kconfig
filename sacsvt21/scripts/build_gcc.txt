@@ -1,0 +1,15 @@
+Steps to build gcc compiler from source version:
+------------------------------------------------
+
+Suppose, download the source code of "gcc-<version>" as zip and extract it into the "~/Desktop/compiler/" path.
+
+$ cd ~/Desktop/compiler/gcc-<vesrion>/  
+$ ./contrib/download_prerequisites  
+$ mkdir build; cd build/  
+$../configure --disable-bootstrap --enable-languages=c --enable-coverage --disable-multilib --prefix=~/Desktop/compiler/gcc-<vesrion>-bin  
+$ make -j 8  
+$ make install  
+
+Finally, use the "~/Desktop/compiler/gcc-<vesrion>-bin/bin/gcc" to access the gcc <version>.
+
+
